@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Anizette — Restaurant & Bar à manger · Anizy-le-Grand</title>
+<meta name="description" content="L'Anizette, restaurant traditionnel et bar à manger à Anizy-le-Grand (Aisne). Cuisine maison, produits frais et de saison, carte renouvelée régulièrement. ★ 4,9/5. Réservation au 03 23 21 65 23.">
+<meta property="og:title" content="L'Anizette — Restaurant & Bar à manger">
+<meta property="og:description" content="Cuisine maison, produits frais et de saison à Anizy-le-Grand. Note 4,9/5.">
+<meta property="og:type" content="restaurant">
+<meta name="theme-color" content="#14385C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314385C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%238EC9EC' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Restaurant",
+  "name":"L'Anizette","servesCuisine":"Française, traditionnelle, fait maison",
+  "priceRange":"€€","telephone":"+33323216523",
+  "address":{"@type":"PostalAddress","streetAddress":"2 Place Paul Doumer","addressLocality":"Anizy-le-Grand","postalCode":"02320","addressCountry":"FR"},
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"20"},
+  "url":"https://lanizette.fr"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Karla:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marine:#14385C;          /* bleu profond L'Anizette */
+  --marine-2:#0C2845;        /* encore plus sombre */
+  --ciel:#8EC9EC;            /* bleu clair signature */
+  --ciel-vif:#B7E2F9;
+  --creme:#F1F5F8;           /* crème légèrement bleutée */
+  --creme-2:#E4EDF3;
+  --encre:#19222B;
+  --cuivre:#C2793F;          /* touche cuivre — chaleur de table */
+  --display:'Fraunces',serif;
+  --body:'Karla',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+body{font-family:var(--body);color:var(--encre);background:var(--creme);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(20,56,92,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(142,201,236,.18)}
+.nav-inner{max-width:1140px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.45rem;color:var(--creme);text-decoration:none;letter-spacing:.01em;cursor:pointer}
+.logo .star{color:var(--ciel)}
+.nav-links{display:flex;gap:24px;align-items:center;list-style:none}
+.nav-links a{color:var(--creme);text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.82;transition:opacity .2s,color .2s;cursor:pointer;position:relative}
+.nav-links a:hover,.nav-links a:focus-visible{opacity:1;color:var(--ciel-vif)}
+.nav-links a.active{opacity:1;color:var(--ciel-vif)}
+.nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--ciel);border-radius:2px}
+.btn-resa{background:var(--ciel);color:var(--marine)!important;padding:10px 20px;border-radius:999px;opacity:1!important;transition:transform .2s,background .2s}
+.btn-resa:hover{background:var(--ciel-vif);transform:translateY(-1px)}
+.btn-resa.active::after{display:none}
+.burger{display:none;background:none;border:none;cursor:pointer;width:38px;height:38px;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.burger span{display:block;width:24px;height:2px;background:var(--creme);transition:transform .3s,opacity .3s}
+.burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:880px){
+  .burger{display:flex}
+  .nav-links{position:fixed;top:64px;right:0;left:0;background:var(--marine-2);flex-direction:column;padding:28px;gap:20px;transform:translateY(-150%);transition:transform .35s ease;border-bottom:1px solid rgba(142,201,236,.2)}
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a.active::after{display:none}
+}
+
+/* ===== ROUTER : fausses pages ===== */
+.page{display:none}
+.page.active{display:block;animation:pageIn .55s ease both}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ===== HERO ===== */
+header{background:radial-gradient(1200px 600px at 70% -10%, #1E4F7E 0%, var(--marine) 45%, var(--marine-2) 100%);color:var(--creme);padding:170px 0 0;position:relative;overflow:hidden}
+.hero-badiane{position:absolute;right:-90px;top:120px;width:420px;height:420px;opacity:.07;pointer-events:none;animation:slowspin 90s linear infinite}
+@keyframes slowspin{to{transform:rotate(360deg)}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ciel);font-weight:700;margin-bottom:22px}
+.hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--ciel)}
+h1{font-family:var(--display);font-size:clamp(3.2rem,9vw,6.5rem);font-weight:500;line-height:.98;letter-spacing:-.015em}
+h1 em{font-style:italic;color:var(--ciel-vif);font-weight:400}
+.hero-sub{max-width:540px;margin:26px 0 36px;font-size:1.12rem;color:rgba(241,245,248,.82);font-weight:300}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:56px}
+.cta{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:.92rem;letter-spacing:.04em;padding:15px 28px;border-radius:999px;transition:transform .2s,background .2s,border-color .2s;cursor:pointer;border:none}
+.cta-primary{background:var(--ciel);color:var(--marine)}
+.cta-primary:hover{background:var(--ciel-vif);transform:translateY(-2px)}
+.cta-ghost{border:1px solid rgba(241,245,248,.35);color:var(--creme);background:none}
+.cta-ghost:hover{border-color:var(--ciel);color:var(--ciel-vif)}
+.hero-note{display:flex;align-items:center;gap:10px;font-size:.95rem;color:rgba(241,245,248,.75)}
+.hero-note strong{color:var(--ciel-vif);font-size:1.15rem;font-family:var(--display)}
+.stars{color:var(--ciel-vif);letter-spacing:2px}
+
+.ticker{margin-top:70px;border-top:1px solid rgba(142,201,236,.25);border-bottom:1px solid rgba(142,201,236,.25);overflow:hidden;background:rgba(12,40,69,.5)}
+.ticker-track{display:flex;gap:0;white-space:nowrap;animation:scroll 28s linear infinite;width:max-content}
+.ticker span{display:inline-flex;align-items:center;gap:26px;padding:13px 26px 13px 0;font-family:var(--display);font-style:italic;font-size:1.05rem;color:rgba(241,245,248,.85)}
+.ticker .dot{color:var(--ciel);font-style:normal;font-size:1.2rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ===== SECTIONS ===== */
+section{padding:96px 0}
+.page-head{padding:150px 0 70px;background:radial-gradient(900px 500px at 80% -20%, #1E4F7E 0%, var(--marine) 50%, var(--marine-2) 100%);color:var(--creme);position:relative;overflow:hidden}
+.page-head .hero-badiane{top:30px;right:-120px;width:360px;height:360px}
+.page-head h1{font-size:clamp(2.6rem,7vw,4.6rem)}
+.page-head .hero-sub{margin-bottom:0}
+.eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cuivre);font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"✶";color:var(--ciel);font-size:1rem}
+h2{font-family:var(--display);font-size:clamp(2rem,4.5vw,3rem);font-weight:500;line-height:1.1;margin-bottom:20px;letter-spacing:-.01em}
+h2 em{font-style:italic;color:var(--cuivre)}
+
+/* À propos */
+.apropos-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.apropos-text p{margin-bottom:18px;color:#3B4754;font-size:1.05rem}
+.apropos-text p strong{color:var(--marine)}
+.valeurs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--marine);border-radius:18px;overflow:hidden;margin-top:34px}
+.valeur{background:var(--creme-2);padding:22px 18px;text-align:center}
+.valeur .v-ico{font-size:1.5rem;margin-bottom:8px}
+.valeur h3{font-family:var(--display);font-size:1rem;font-weight:600;color:var(--marine)}
+.valeur p{font-size:.82rem;color:#5A6772;margin-top:4px}
+.apropos-visual{position:relative}
+.cadre{background:var(--marine);border-radius:22px;padding:42px 34px;color:var(--creme);position:relative;overflow:hidden}
+.cadre svg.bad{position:absolute;right:-40px;bottom:-40px;width:200px;height:200px;opacity:.12}
+.cadre blockquote{font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.4;font-weight:400}
+.cadre cite{display:block;margin-top:18px;font-family:var(--body);font-style:normal;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ciel)}
+@media(max-width:880px){.apropos-grid{grid-template-columns:1fr}.valeurs{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:560px){.valeurs{grid-template-columns:1fr}}
+
+/* ===== CARTE ===== */
+.carte-section{background:var(--marine);color:var(--creme)}
+.carte-section .eyebrow{color:var(--ciel)}
+.carte-section h2 em{color:var(--ciel-vif)}
+.carte-intro{max-width:620px;color:rgba(241,245,248,.75);margin-bottom:54px;font-size:1.05rem}
+.carte-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px 70px}
+.carte-col h3{font-family:var(--display);font-style:italic;font-size:1.5rem;font-weight:500;color:var(--ciel-vif);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.carte-col h3::after{content:"";flex:1;height:1px;background:rgba(142,201,236,.3)}
+.plat{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px dotted rgba(241,245,248,.18)}
+.plat:last-child{border-bottom:none}
+.plat-nom{font-weight:600;font-size:1rem}
+.plat-desc{display:block;font-weight:300;font-size:.86rem;color:rgba(241,245,248,.6);margin-top:3px}
+.plat-prix{font-family:var(--display);font-size:1.05rem;color:var(--ciel);white-space:nowrap}
+.carte-note{margin-top:50px;display:flex;align-items:center;gap:16px;background:rgba(142,201,236,.1);border:1px solid rgba(142,201,236,.3);border-radius:14px;padding:18px 24px;font-size:.92rem;color:rgba(241,245,248,.85)}
+.carte-note .n-ico{font-size:1.4rem}
+@media(max-width:760px){.carte-grid{grid-template-columns:1fr}}
+
+/* ===== GALERIE (avancée) ===== */
+.gal-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px}
+.gal-filter{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;border:1px solid #CCDCE8;background:#fff;color:var(--marine);cursor:pointer;transition:all .2s}
+.gal-filter:hover{border-color:var(--ciel)}
+.gal-filter.active{background:var(--marine);color:var(--creme);border-color:var(--marine)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;border:1px solid #DCE6EE;background:var(--marine);transition:transform .3s,box-shadow .3s}
+.gal-item:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(20,56,92,.22)}
+.gal-item.tall{aspect-ratio:3/4}
+/* Placeholder élégant en attendant les vraies photos */
+.gal-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#1E4F7E,var(--marine) 60%,var(--marine-2));color:var(--ciel)}
+.gal-ph svg{width:38px;height:38px;opacity:.55}
+.gal-ph span{font-family:var(--display);font-style:italic;font-size:1.05rem;color:rgba(241,245,248,.85)}
+.gal-ph small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ciel);opacity:.8}
+.gal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal-cap{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(12,40,69,.82));color:var(--creme);font-weight:600;font-size:.92rem;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s}
+.gal-item:hover .gal-cap{opacity:1;transform:none}
+@media(max-width:820px){.gal-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gal-grid{grid-template-columns:1fr}.gal-item,.gal-item.tall{aspect-ratio:4/3}}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:200;background:rgba(12,40,69,.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px}
+.lightbox.open{display:flex;animation:pageIn .3s ease}
+.lightbox-inner{max-width:880px;width:100%;text-align:center}
+.lightbox-stage{border-radius:18px;overflow:hidden;aspect-ratio:16/10;background:linear-gradient(135deg,#1E4F7E,var(--marine));display:flex;align-items:center;justify-content:center}
+.lightbox-stage .gal-ph{position:static;height:100%;width:100%}
+.lightbox-stage img{width:100%;height:100%;object-fit:contain}
+.lightbox-cap{color:var(--creme);font-family:var(--display);font-style:italic;font-size:1.2rem;margin-top:18px}
+.lb-close{position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(241,245,248,.3);background:none;color:var(--creme);font-size:1.4rem;cursor:pointer;transition:background .2s}
+.lb-close:hover{background:rgba(241,245,248,.12)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(241,245,248,.3);background:rgba(12,40,69,.4);color:var(--creme);font-size:1.5rem;cursor:pointer;transition:background .2s}
+.lb-nav:hover{background:var(--ciel);color:var(--marine)}
+.lb-prev{left:18px}.lb-next{right:18px}
+@media(max-width:520px){.lb-nav{width:42px;height:42px}}
+
+/* ===== AVIS ===== */
+.avis-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.note-globale{text-align:right}
+.note-globale .big{font-family:var(--display);font-size:3.4rem;font-weight:500;color:var(--marine);line-height:1}
+.note-globale .sur{font-size:1.2rem;color:#7A8590}
+.note-globale .stars{color:var(--cuivre);font-size:1.1rem}
+.note-globale small{display:block;color:#7A8590;font-size:.82rem;margin-top:4px}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.avis-card{background:#fff;border-radius:18px;padding:30px 26px;border:1px solid #DCE6EE;display:flex;flex-direction:column;gap:14px;transition:transform .25s,box-shadow .25s}
+.avis-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,56,92,.1)}
+.avis-card .stars{font-size:.95rem;color:var(--cuivre)}
+.avis-card p{font-size:.96rem;color:#3B4754;font-style:italic;flex:1}
+.avis-meta{display:flex;align-items:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--marine);color:var(--ciel-vif);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600}
+.avis-meta strong{display:block;font-size:.92rem;color:var(--marine)}
+.avis-meta small{color:#8A949E;font-size:.78rem}
+.avis-cta{margin-top:42px;text-align:center}
+@media(max-width:820px){.avis-grid{grid-template-columns:1fr}}
+
+/* ===== RÉSERVATION + INFOS ===== */
+.resa-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;margin-top:44px}
+.form-card{background:#fff;border-radius:22px;padding:38px 34px;border:1px solid #DCE6EE;box-shadow:0 14px 40px rgba(20,56,92,.08)}
+.form-card h3{font-family:var(--display);font-size:1.4rem;font-weight:600;color:var(--marine);margin-bottom:6px}
+.form-card>p{color:#5A6772;font-size:.94rem;margin-bottom:26px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--marine);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border-radius:11px;border:1px solid #CCDCE8;background:var(--creme);font-family:var(--body);font-size:.98rem;color:var(--encre);transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2314385C' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--ciel);box-shadow:0 0 0 3px rgba(142,201,236,.3)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.form-card .cta{width:100%;justify-content:center;margin-top:6px;background:var(--marine);color:var(--creme)}
+.form-card .cta:hover{background:var(--marine-2);transform:translateY(-1px)}
+.form-hint{font-size:.8rem;color:#7A8590;text-align:center;margin-top:12px}
+.form-ok{display:none;margin-top:16px;padding:14px 18px;border-radius:12px;background:#E4F3EA;border:1px solid #A9D9BD;color:#1C6B43;font-size:.9rem}
+.form-ok.show{display:block;animation:pageIn .4s ease}
+.infos-bloc{display:flex;flex-direction:column;gap:24px}
+.info-item{display:flex;gap:18px;align-items:flex-start}
+.info-ico{width:46px;height:46px;border-radius:12px;background:var(--marine);color:var(--ciel-vif);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.info-item h3{font-family:var(--display);font-size:1.1rem;font-weight:600;color:var(--marine);margin-bottom:4px}
+.info-item p{color:#4A5560;font-size:.96rem}
+.info-item a{color:var(--cuivre);font-weight:700;text-decoration:none}
+.info-item a:hover{text-decoration:underline}
+.map-wrap{border-radius:18px;overflow:hidden;min-height:300px;margin-top:6px;border:1px solid #CCDCE8;box-shadow:0 12px 36px rgba(20,56,92,.1)}
+.map-wrap iframe{width:100%;height:100%;min-height:300px;border:0;filter:saturate(.9)}
+@media(max-width:880px){.resa-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.form-row,.form-row-3{grid-template-columns:1fr}}
+
+/* ===== FOOTER ===== */
+footer{background:var(--marine-2);color:rgba(241,245,248,.7);padding:64px 0 34px}
+.footer-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:44px}
+.footer-brand .logo{font-size:1.7rem}
+.footer-brand p{max-width:320px;margin-top:14px;font-size:.92rem;font-weight:300}
+.footer-col h4{color:var(--ciel);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+.footer-col a{display:block;color:rgba(241,245,248,.7);text-decoration:none;font-size:.94rem;margin-bottom:10px;transition:color .2s;cursor:pointer}
+.footer-col a:hover{color:var(--ciel-vif)}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(142,201,236,.35);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;margin:0}
+.socials a:hover{background:var(--ciel);transform:translateY(-2px)}
+.socials a:hover svg{stroke:var(--marine)}
+.socials svg{width:18px;height:18px;stroke:var(--creme);fill:none;stroke-width:1.8}
+.footer-bottom{border-top:1px solid rgba(241,245,248,.1);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem;color:rgba(241,245,248,.4)}
+.footer-bottom .credit{color:rgba(142,201,236,.6)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--ciel);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" data-go="accueil">L'Anizette <span class="star">✶</span></a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a data-go="accueil">Accueil</a></li>
+      <li><a data-go="carte">La carte</a></li>
+      <li><a data-go="galerie">Galerie</a></li>
+      <li><a data-go="avis">Avis</a></li>
+      <li><a data-go="reservation" class="btn-resa">Réserver</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ ACCUEIL ============ -->
+<div class="page" id="page-accueil">
+  <header>
+    <svg class="hero-badiane" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g>
+    </svg>
+    <div class="container">
+      <p class="hero-eyebrow">Restaurant · Bar à manger — Anizy-le-Grand</p>
+      <h1>La cuisine maison,<br><em>au fil des saisons.</em></h1>
+      <p class="hero-sub">Restaurant traditionnel au cœur de l'Aisne, L'Anizette vous accueille place Paul Doumer avec une carte qui se renouvelle régulièrement, des produits frais et de saison, et un bar à manger pour les petites gourmandises.</p>
+      <div class="hero-ctas">
+        <button class="cta cta-primary" data-go="reservation">Réserver une table</button>
+        <button class="cta cta-ghost" data-go="carte">Découvrir la carte</button>
+      </div>
+      <p class="hero-note"><span class="stars">★★★★★</span> <strong>4,9 / 5</strong> sur Google — nos clients en parlent mieux que nous.</p>
+    </div>
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Fait maison <span class="dot">✶</span> Produits frais &amp; de saison <span class="dot">✶</span> Carte renouvelée régulièrement <span class="dot">✶</span> Bar à manger <span class="dot">✶</span></span>
+        <span>Fait maison <span class="dot">✶</span> Produits frais &amp; de saison <span class="dot">✶</span> Carte renouvelée régulièrement <span class="dot">✶</span> Bar à manger <span class="dot">✶</span></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container apropos-grid">
+      <div class="apropos-text reveal">
+        <p class="eyebrow">La maison</p>
+        <h2>Un bistrot de village, <em>une vraie cuisine.</em></h2>
+        <p>À L'Anizette, tout part du produit. <strong>Une carte courte qui change au fil du temps</strong>, construite autour de ce que la saison offre de meilleur, et une cuisine entièrement faite maison, de l'entrée au dessert.</p>
+        <p>Côté <strong>bar à manger</strong>, l'ambiance se fait plus décontractée : boissons soignées et petites gourmandises à partager, pour l'apéritif comme pour les soirées qui s'étirent.</p>
+        <div class="valeurs">
+          <div class="valeur"><div class="v-ico">🍳</div><h3>Fait maison</h3><p>De l'entrée au dessert</p></div>
+          <div class="valeur"><div class="v-ico">🌿</div><h3>De saison</h3><p>Produits frais au maximum</p></div>
+          <div class="valeur"><div class="v-ico">🔄</div><h3>Carte vivante</h3><p>Renouvelée régulièrement</p></div>
+        </div>
+      </div>
+      <div class="apropos-visual reveal">
+        <div class="cadre">
+          <svg class="bad" viewBox="0 0 100 100" aria-hidden="true"><g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g></svg>
+          <blockquote>« Ce restaurant est une pépite. La cuisine est faite maison et elle est excellente. »</blockquote>
+          <cite>— Maureen, avis Google ★★★★★</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ LA CARTE ============ -->
+<div class="page" id="page-carte">
+  <div class="page-head">
+    <svg class="hero-badiane" viewBox="0 0 100 100" aria-hidden="true"><g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g></svg>
+    <div class="container">
+      <p class="hero-eyebrow">La carte</p>
+      <h1>Du marché à l'assiette,<br><em>rien ne reste figé.</em></h1>
+    </div>
+  </div>
+  <section class="carte-section">
+    <div class="container">
+      <p class="carte-intro reveal">Notre carte évolue au rythme des saisons et des arrivages. Voici un aperçu de l'esprit de la maison — demandez-nous la carte du moment !</p>
+      <div class="carte-grid">
+        <div class="carte-col reveal">
+          <h3>Entrées</h3>
+          <div class="plat"><div><span class="plat-nom">Suggestion du moment</span><span class="plat-desc">Selon le marché et l'inspiration du chef</span></div><span class="plat-prix">—</span></div>
+          <div class="plat"><div><span class="plat-nom">Entrée de saison</span><span class="plat-desc">Légumes et produits frais du moment</span></div><span class="plat-prix">—</span></div>
+        </div>
+        <div class="carte-col reveal">
+          <h3>Plats</h3>
+          <div class="plat"><div><span class="plat-nom">Plat du jour</span><span class="plat-desc">Cuisine traditionnelle, entièrement faite maison</span></div><span class="plat-prix">—</span></div>
+          <div class="plat"><div><span class="plat-nom">Suggestion du chef</span><span class="plat-desc">Renouvelée très régulièrement</span></div><span class="plat-prix">—</span></div>
+        </div>
+        <div class="carte-col reveal">
+          <h3>Desserts</h3>
+          <div class="plat"><div><span class="plat-nom">Dessert maison</span><span class="plat-desc">Gourmandise de saison</span></div><span class="plat-prix">—</span></div>
+        </div>
+        <div class="carte-col reveal">
+          <h3>Bar à manger</h3>
+          <div class="plat"><div><span class="plat-nom">Petites gourmandises à partager</span><span class="plat-desc">Pour accompagner l'apéritif</span></div><span class="plat-prix">—</span></div>
+          <div class="plat"><div><span class="plat-nom">Boissons &amp; sélection du bar</span><span class="plat-desc">Avec ou sans alcool</span></div><span class="plat-prix">—</span></div>
+        </div>
+      </div>
+      <div class="carte-note reveal">
+        <span class="n-ico">💶</span>
+        <span><strong>Prix moyen : 10 – 20 € par personne.</strong> La carte changeant régulièrement, appelez-nous au <a href="tel:0323216523" style="color:var(--ciel-vif)">03 23 21 65 23</a> pour connaître les suggestions du moment.</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ GALERIE ============ -->
+<div class="page" id="page-galerie">
+  <div class="page-head">
+    <svg class="hero-badiane" viewBox="0 0 100 100" aria-hidden="true"><g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g></svg>
+    <div class="container">
+      <p class="hero-eyebrow">En images</p>
+      <h1>La maison, <em>en photos.</em></h1>
+      <p class="hero-sub">L'ambiance, la salle, les assiettes : un avant-goût de ce qui vous attend place Paul Doumer.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="gal-filters reveal" id="galFilters">
+        <button class="gal-filter active" data-cat="tout">Tout voir</button>
+        <button class="gal-filter" data-cat="salle">Salle &amp; ambiance</button>
+        <button class="gal-filter" data-cat="plats">Assiettes</button>
+        <button class="gal-filter" data-cat="bar">Bar à manger</button>
+        <button class="gal-filter" data-cat="exterieur">Extérieur</button>
+      </div>
+      <div class="gal-grid reveal" id="galGrid"><!-- généré par JS --></div>
+      <p class="form-hint" style="margin-top:26px;text-align:center">Les photos définitives seront ajoutées après le reportage sur place.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AVIS ============ -->
+<div class="page" id="page-avis">
+  <div class="page-head">
+    <svg class="hero-badiane" viewBox="0 0 100 100" aria-hidden="true"><g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g></svg>
+    <div class="container">
+      <p class="hero-eyebrow">Ils en parlent</p>
+      <h1>Vos avis, <em>notre fierté.</em></h1>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="avis-head reveal">
+        <div>
+          <p class="eyebrow">Note Google</p>
+          <h2>Une maison <em>qu'on recommande.</em></h2>
+        </div>
+        <div class="note-globale">
+          <div><span class="big">4,9</span><span class="sur"> / 5</span></div>
+          <div class="stars">★★★★★</div>
+          <small>20 avis Google</small>
+        </div>
+      </div>
+      <div class="avis-grid">
+        <article class="avis-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>« Ce restaurant est une pépite. La cuisine est faite maison et elle est excellente. »</p>
+          <div class="avis-meta"><div class="avatar">M</div><div><strong>Maureen P.</strong><small>Avis Google · visité en février</small></div></div>
+        </article>
+        <article class="avis-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>« Absolument parfait, tout y est bon, de l'entrée au dessert. Service et cuisine aux petits soins, à découvrir ou redécouvrir sans fin. »</p>
+          <div class="avis-meta"><div class="avatar">M</div><div><strong>Michel D.</strong><small>Avis Google · visité en mars</small></div></div>
+        </article>
+        <article class="avis-card reveal">
+          <span class="stars">★★★★★</span>
+          <p>« Très bon moment dans ce nouveau restaurant, plat délicieux, ambiance agréable et équipe souriante et professionnelle. Je recommande ! »</p>
+          <div class="avis-meta"><div class="avatar">X</div><div><strong>Xavier D.</strong><small>Avis Google · visité en février</small></div></div>
+        </article>
+      </div>
+      <div class="avis-cta reveal">
+        <a class="cta cta-primary" href="https://www.google.com/maps/place/?q=L'Anizette+Restaurant+Anizy-le-Grand" target="_blank" rel="noopener" style="color:var(--marine)">Laisser un avis sur Google</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ RÉSERVATION ============ -->
+<div class="page" id="page-reservation">
+  <div class="page-head">
+    <svg class="hero-badiane" viewBox="0 0 100 100" aria-hidden="true"><g fill="#8EC9EC"><path d="M50 50 L50 5 L58 38 Z"/><path d="M50 50 L82 14 L64 44 Z"/><path d="M50 50 L95 50 L62 58 Z"/><path d="M50 50 L86 86 L56 64 Z"/><path d="M50 50 L50 95 L42 62 Z"/><path d="M50 50 L18 86 L36 56 Z"/><path d="M50 50 L5 50 L38 42 Z"/><path d="M50 50 L14 14 L44 36 Z"/><circle cx="50" cy="50" r="6"/></g></svg>
+    <div class="container">
+      <p class="hero-eyebrow">Réserver &amp; nous trouver</p>
+      <h1>Votre table <em>vous attend.</em></h1>
+      <p class="hero-sub">Le plus rapide reste l'appel — mais vous pouvez aussi nous envoyer votre demande, nous vous confirmons dans la foulée.</p>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="resa-grid">
+        <div class="form-card reveal">
+          <h3>Demande de réservation</h3>
+          <p>Indiquez vos préférences, nous revenons vers vous pour confirmer.</p>
+          <form id="resaForm" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="r-nom">Nom *</label><input id="r-nom" type="text" placeholder="Votre nom" required></div>
+              <div class="field"><label for="r-tel">Téléphone *</label><input id="r-tel" type="tel" placeholder="06 12 34 56 78" required></div>
+            </div>
+            <div class="form-row-3">
+              <div class="field"><label for="r-date">Date *</label><input id="r-date" type="date" required></div>
+              <div class="field"><label for="r-heure">Heure</label><input id="r-heure" type="time" value="19:30"></div>
+              <div class="field"><label for="r-couv">Couverts</label>
+                <select id="r-couv">
+                  <option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8 et +</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="r-msg">Un mot pour nous (allergies, occasion…)</label><textarea id="r-msg" placeholder="Anniversaire, régime particulier, table en terrasse…"></textarea></div>
+            <button type="submit" class="cta">Envoyer ma demande</button>
+            <p class="form-hint">La demande s'ouvre dans votre messagerie — vous n'avez plus qu'à l'envoyer. Pour une réponse immédiate, appelez le 03 23 21 65 23.</p>
+            <div class="form-ok" id="resaOk">✓ Merci ! Votre messagerie va s'ouvrir avec la demande pré-remplie. Pensez à l'envoyer pour finaliser.</div>
+          </form>
+        </div>
+
+        <div class="infos-bloc reveal">
+          <div class="info-item">
+            <div class="info-ico">📞</div>
+            <div><h3>Réservation immédiate</h3><p><a href="tel:0323216523">03 23 21 65 23</a><br>Une question sur la carte du jour ? On répond avec le sourire.</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico">📍</div>
+            <div><h3>Adresse</h3><p>2 Place Paul Doumer<br>02320 Anizy-le-Grand</p><p><a href="https://www.google.com/maps/place/?q=L'Anizette+Restaurant+2+Pl.+Paul+Doumer+02320+Anizy-le-Grand" target="_blank" rel="noopener">Voir l'itinéraire →</a></p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico">🕕</div>
+            <div><h3>Horaires</h3><p>Service du soir dès <strong>18h00</strong>. Les horaires pouvant évoluer, le plus sûr est de nous appeler ou de consulter notre fiche Google.</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-ico">💬</div>
+            <div><h3>Suivez-nous</h3><p>Carte du moment et actualités sur <a href="https://www.facebook.com/lanizetterestaurant" target="_blank" rel="noopener">Facebook</a> et <a href="https://www.instagram.com/lanizetterestaurant" target="_blank" rel="noopener">Instagram</a>.</p></div>
+          </div>
+          <div class="map-wrap">
+            <iframe title="Plan d'accès à L'Anizette Restaurant" loading="lazy" src="https://www.google.com/maps?q=L%27Anizette%20Restaurant%2C%202%20Place%20Paul%20Doumer%2C%2002320%20Anizy-le-Grand&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- Lightbox galerie -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Fermer">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent">‹</button>
+  <div class="lightbox-inner">
+    <div class="lightbox-stage" id="lbStage"></div>
+    <p class="lightbox-cap" id="lbCap"></p>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant">›</button>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" data-go="accueil">L'Anizette <span class="star">✶</span></a>
+        <p>Restaurant traditionnel &amp; bar à manger. Cuisine maison, produits frais et de saison, au cœur d'Anizy-le-Grand.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/lanizetterestaurant" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/lanizetterestaurant" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#F1F5F8" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a data-go="accueil">Accueil</a>
+        <a data-go="carte">La carte</a>
+        <a data-go="galerie">Galerie</a>
+        <a data-go="avis">Avis</a>
+        <a data-go="reservation">Réserver</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:0323216523">03 23 21 65 23</a>
+        <a href="https://www.google.com/maps/place/?q=L'Anizette+Restaurant+Anizy-le-Grand" target="_blank" rel="noopener">2 Pl. Paul Doumer, 02320 Anizy-le-Grand</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 L'Anizette Restaurant — Tous droits réservés.</span>
+      <span class="credit">Site réalisé par Brothers Studio</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var ROUTES=["accueil","carte","galerie","avis","reservation"];
+  var navLinks=document.getElementById('navLinks');
+  var burger=document.getElementById('burger');
+
+  /* ---- Router fausses pages ---- */
+  function go(route){
+    if(ROUTES.indexOf(route)<0) route="accueil";
+    ROUTES.forEach(function(r){
+      var p=document.getElementById('page-'+r);
+      if(p) p.classList.toggle('active', r===route);
+    });
+    document.querySelectorAll('[data-go]').forEach(function(a){
+      if(a.classList.contains('logo')) return;
+      a.classList.toggle('active', a.getAttribute('data-go')===route);
+    });
+    navLinks.classList.remove('open'); burger.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+    if(location.hash.replace('#','')!==route) history.replaceState(null,'','#'+route);
+    bindReveals();
+    document.title = ({
+      accueil:"L'Anizette — Restaurant & Bar à manger · Anizy-le-Grand",
+      carte:"La carte — L'Anizette",
+      galerie:"Galerie — L'Anizette",
+      avis:"Avis clients — L'Anizette",
+      reservation:"Réserver une table — L'Anizette"
+    })[route];
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-go]');
+    if(t){ e.preventDefault(); go(t.getAttribute('data-go')); }
+  });
+  window.addEventListener('hashchange',function(){ go(location.hash.replace('#','')); });
+  burger.addEventListener('click',function(){
+    var open=!navLinks.classList.contains('open');
+    navLinks.classList.toggle('open',open); burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',String(open));
+  });
+
+  /* ---- Galerie : données + rendu ---- */
+  var PHOTOS=[
+    {cat:"exterieur", t:"La devanture", svg:"M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"},
+    {cat:"salle",     t:"La salle",     svg:"M3 10h18M3 10l2-5h14l2 5M5 10v9m14-9v9M9 19v-4h6v4", tall:true},
+    {cat:"plats",     t:"L'assiette du jour", svg:"M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"},
+    {cat:"plats",     t:"Entrée de saison", svg:"M4 11h16M6 11a6 6 0 0 1 12 0M12 4v3M9 19h6"},
+    {cat:"bar",       t:"Au bar à manger", svg:"M5 3h14l-6 8v7l3 2H8l3-2v-7L5 3z", tall:true},
+    {cat:"salle",     t:"Coin convivial", svg:"M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6M3 18h18M7 9V6h10v3"},
+    {cat:"plats",     t:"Le dessert maison", svg:"M4 20h16M6 20l1-7h10l1 7M9 13V9a3 3 0 0 1 6 0v4"},
+    {cat:"bar",       t:"Sélection de boissons", svg:"M8 2h8l-1 6a3 3 0 0 1-6 0L8 2zM12 11v9M8 20h8"},
+    {cat:"exterieur", t:"En terrasse", svg:"M12 2v3M4 9h16l-2 11H6L4 9zM9 9V6h6v3"}
+  ];
+  var grid=document.getElementById('galGrid');
+  function phSVG(d){return '<div class="gal-ph"><svg viewBox="0 0 24 24" fill="none" stroke="#8EC9EC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="'+d+'"/></svg><span>Photo à venir</span><small>Reportage sur place</small></div>';}
+  function renderGallery(filter){
+    grid.innerHTML='';
+    PHOTOS.forEach(function(p,i){
+      if(filter&&filter!=="tout"&&p.cat!==filter) return;
+      var d=document.createElement('div');
+      d.className='gal-item'+(p.tall?' tall':'');
+      d.setAttribute('data-i',i);
+      /* Pour mettre une vraie photo : remplacer la ligne ci-dessous par
+         d.innerHTML='<img src="photos/xxx.jpg" alt="'+p.t+'"><div class="gal-cap">'+p.t+'</div>'; */
+      d.innerHTML=phSVG(p.svg)+'<div class="gal-cap">'+p.t+'</div>';
+      d.addEventListener('click',function(){openLB(i);});
+      grid.appendChild(d);
+    });
+  }
+  document.getElementById('galFilters').addEventListener('click',function(e){
+    var b=e.target.closest('.gal-filter'); if(!b) return;
+    this.querySelectorAll('.gal-filter').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active'); renderGallery(b.getAttribute('data-cat'));
+  });
+  renderGallery('tout');
+
+  /* ---- Lightbox ---- */
+  var lb=document.getElementById('lightbox'), stage=document.getElementById('lbStage'),
+      cap=document.getElementById('lbCap'), cur=0;
+  function showLB(i){
+    cur=(i+PHOTOS.length)%PHOTOS.length; var p=PHOTOS[cur];
+    stage.innerHTML=phSVG(p.svg); cap.textContent=p.t;
+    /* Avec de vraies photos : stage.innerHTML='<img src="photos/xxx.jpg" alt="'+p.t+'">'; */
+  }
+  function openLB(i){ showLB(i); lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); }
+  function closeLB(){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); }
+  document.getElementById('lbClose').addEventListener('click',closeLB);
+  document.getElementById('lbPrev').addEventListener('click',function(){showLB(cur-1);});
+  document.getElementById('lbNext').addEventListener('click',function(){showLB(cur+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')closeLB();
+    if(e.key==='ArrowLeft')showLB(cur-1);
+    if(e.key==='ArrowRight')showLB(cur+1);
+  });
+
+  /* ---- Formulaire de réservation (mailto, sans backend) ---- */
+  var form=document.getElementById('resaForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nom=document.getElementById('r-nom').value.trim();
+    var tel=document.getElementById('r-tel').value.trim();
+    var date=document.getElementById('r-date').value;
+    if(!nom||!tel||!date){ form.reportValidity(); return; }
+    var heure=document.getElementById('r-heure').value;
+    var couv=document.getElementById('r-couv').value;
+    var msg=document.getElementById('r-msg').value.trim();
+    var sujet="Demande de réservation — "+nom;
+    var corps="Bonjour,\n\nJe souhaite réserver une table à L'Anizette.\n\n"
+      +"Nom : "+nom+"\nTéléphone : "+tel+"\nDate : "+date
+      +(heure?"\nHeure : "+heure:"")+"\nCouverts : "+couv
+      +(msg?"\n\nMessage : "+msg:"")+"\n\nMerci de me confirmer. Bien cordialement.";
+    /* Adresse à remplacer par l'e-mail du restaurant une fois connu */
+    window.location.href="mailto:contact@lanizette.fr?subject="+encodeURIComponent(sujet)+"&body="+encodeURIComponent(corps);
+    document.getElementById('resaOk').classList.add('show');
+  });
+
+  /* ---- Reveal au scroll (re-binding par page) ---- */
+  var io=null;
+  function bindReveals(){
+    if(io) io.disconnect();
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els=document.querySelectorAll('.page.active .reveal');
+    if(reduce||!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('visible');}); return;
+    }
+    els.forEach(function(el){el.classList.remove('visible');});
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target);} });
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }
+
+  /* ---- Démarrage ---- */
+  go(location.hash.replace('#','')||'accueil');
+})();
+</script>
+</body>
+</html>
