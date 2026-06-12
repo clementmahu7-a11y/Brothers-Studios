@@ -559,16 +559,20 @@ header.scrolled{
 }
 .work:hover{transform:translateY(-10px);box-shadow:0 36px 80px -30px rgba(0,0,0,.8);border-color:rgba(255,255,255,.2)}
 .work-cover{
-  position:relative;height:230px;display:grid;place-items:center;overflow:hidden;
+  position:relative;height:230px;display:flex; align-items:center;justify-content:center;text-align:center;;overflow:hidden;
 }
 .work-cover .cover-bg{position:absolute;inset:0;transition:transform .8s var(--ease)}
 .work:hover .cover-bg{transform:scale(1.08)}
 .work-cover .glyph{
-  position:relative;z-index:2;font-family:var(--font-d);font-weight:800;
-  font-size:2.1rem;letter-spacing:.02em;color:#fff;text-align:center;line-height:1.1;
-  text-shadow:0 8px 30px rgba(0,0,0,.45);padding:0 20px;
+  position:relative;z-index:2;width:100%;max-width:100%;box-sizing:border-box;font-family:var(--font-d);font-weight:800;font-size:2.1rem;letter-spacing:.02em;color:#fff;text-align:center;line-height:1.1;text-shadow:0 8px 30px rgba(0,0,0,.45);padding:0 20px;
 }
 .work-cover .glyph small{display:block;font-family:var(--font-b);font-weight:500;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-top:8px}
+.work:nth-child(2) .work-cover .glyph{
+  font-size:clamp(1.45rem, 2vw, 1.85rem);
+  letter-spacing:.01em;
+  padding:0 10px;
+  white-space:nowrap;
+}
 .cover-usap{background:linear-gradient(135deg,#15181F 0%,#23262E 55%,#3A2F10 100%)}
 .cover-usap::after{content:"";position:absolute;inset:0;background:radial-gradient(360px 200px at 75% 20%,rgba(255,205,60,.4),transparent 70%)}
 .cover-resto{background:linear-gradient(135deg,#1B0F14 0%,#3A1620 60%,#6E2430 100%)}
