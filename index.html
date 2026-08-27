@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brothers Studios, création de sites internet et communication dans l'Aisne</title>
-<meta name="description" content="Sites internet, réseaux sociaux, photos et identité visuelle pour les commerces, artisans et associations de l'Aisne. Prix fixes affichés, sans abonnement obligatoire.">
-<meta property="og:title" content="Brothers Studios">
-<meta property="og:description" content="Sites internet, réseaux sociaux, photos et identité visuelle pour les commerces, artisans et associations de l'Aisne.">
+<title>Brothers Studios | Sites internet, réseaux sociaux et image professionnelle dans l'Aisne</title>
+<meta name="description" content="Brothers Studios crée des sites internet professionnels, prépare vos réseaux sociaux, réalise les photos de votre établissement et construit votre identité visuelle dans l'Aisne. Offres simples, prix affichés, sans abonnement obligatoire.">
+<meta property="og:title" content="Brothers Studios | Sites internet et communication dans l'Aisne">
+<meta property="og:description" content="Sites internet professionnels, réseaux sociaux, photos d’établissement et identité visuelle pour commerces, artisans et associations de l'Aisne.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#07090F">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B8CFF'/%3E%3Cstop offset='1' stop-color='%23FF9E5E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='%230A0C14' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
@@ -15,7 +15,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Brothers Studios",
-  "description": "Création de sites internet, gestion de réseaux sociaux, photographie et identité visuelle pour les commerces, artisans et associations de l'Aisne.",
+  "description": "Création de sites internet professionnels, gestion de réseaux sociaux, photos d’établissement et identité visuelle pour les commerces, artisans et associations de l'Aisne.",
   "areaServed": [
     {"@type": "AdministrativeArea", "name": "Aisne"},
     {"@type": "City", "name": "Anizy-le-Grand"},
@@ -35,7 +35,7 @@
     {"@type": "Offer", "name": "Réseaux sociaux — Régulière", "price": "340", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Réseaux sociaux — Complète", "price": "520", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Prise de photos de votre établissement", "price": "100", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Création de logo", "price": "60", "priceCurrency": "EUR"}
+    {"@type": "Offer", "name": "Logo simple ou adaptation de logo", "price": "60", "priceCurrency": "EUR"}
   ]
 }
 </script>
@@ -1373,6 +1373,77 @@ footer{
 .pack .pack-save b{color:var(--ink)}
 @media(max-width:960px){.packs{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
 
+
+/* ============================================================
+   AMÉLIORATION — lecture claire des offres
+   ============================================================ */
+.hero2-title{max-width:760px}
+.hero2-desc{max-width:620px}
+.hero2-stats div strong{font-size:clamp(1.25rem,2.1vw,1.7rem)}
+.hero2-visual .browser{border-color:rgba(255,255,255,.15)}
+.b-title{font-size:1.85rem}
+
+.site-guide{margin-bottom:56px}
+.guide-intro{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:end;
+  padding:30px;border-radius:26px;
+  background:linear-gradient(120deg,rgba(91,140,255,.11),rgba(255,158,94,.07));
+  border:1px solid var(--glass-brd);
+}
+.guide-intro h2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.1;margin-top:8px}
+.guide-intro p{color:var(--muted);font-size:15.5px;line-height:1.7;max-width:560px}
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.guide-card{
+  position:relative;overflow:hidden;border-radius:22px;padding:28px 24px;
+  background:var(--glass);border:1px solid var(--glass-brd);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;
+}
+.guide-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad);opacity:.85}
+.guide-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.2);box-shadow:0 28px 58px -30px rgba(0,0,0,.8)}
+.guide-card.featured{background:linear-gradient(180deg,rgba(91,140,255,.11),var(--glass) 58%);border-color:rgba(91,140,255,.42)}
+.guide-card .guide-tag{display:inline-flex;margin-bottom:14px;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--glass-brd);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.guide-card h3{font-family:var(--font-d);font-weight:800;font-size:1.3rem;margin-bottom:8px}
+.guide-card .guide-price{font-family:var(--font-d);font-weight:800;font-size:2rem;line-height:1;margin-bottom:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.guide-card .guide-price small{font-family:var(--font-b);font-size:.75rem;color:var(--muted);-webkit-text-fill-color:var(--muted);font-weight:600}
+.guide-card p{color:var(--muted);font-size:14.2px;line-height:1.6;margin-bottom:18px}
+.guide-list{list-style:none;display:grid;gap:9px;margin-top:16px}
+.guide-list li{display:flex;gap:10px;align-items:flex-start;color:#C6CCDD;font-size:13.8px;line-height:1.45}
+.guide-list li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--grad);margin-top:7px}
+.guide-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.guide-foot b{color:var(--ink)}
+
+.price-card{overflow:hidden}
+.price-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,rgba(91,140,255,.7),rgba(255,158,94,.7));opacity:.55}
+.price-card.featured::before{opacity:1}
+.price-tier{display:inline-flex;align-self:flex-start;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid var(--glass-brd);margin-bottom:18px}
+.price-pitch{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);min-height:auto}
+.price-list li b{color:#fff}
+.price-ideal{border-radius:14px;background:rgba(255,255,255,.035);padding:16px;margin-top:auto;border:1px solid var(--line)}
+
+.compare-offers{margin-top:64px}
+.compare-card{margin-top:28px;border:1px solid var(--glass-brd);border-radius:22px;overflow:hidden;background:var(--surface)}
+.compare-row{display:grid;grid-template-columns:1.05fr repeat(3,1fr);border-bottom:1px solid var(--line)}
+.compare-row:last-child{border-bottom:none}
+.compare-cell{padding:18px 20px;color:#C6CCDD;font-size:14px;line-height:1.55;border-right:1px solid var(--line)}
+.compare-cell:last-child{border-right:none}
+.compare-row.head .compare-cell{background:rgba(255,255,255,.045);font-family:var(--font-d);font-weight:800;color:var(--ink)}
+.compare-cell strong{color:var(--ink)}
+.compare-label{color:var(--muted);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+
+.offer-summary{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.offer-summary .sum-item{padding:20px;border-radius:16px;background:var(--glass);border:1px solid var(--glass-brd);font-size:14px;color:var(--muted);line-height:1.55}
+.offer-summary .sum-item b{display:block;color:var(--ink);font-family:var(--font-d);font-size:1rem;margin-bottom:5px}
+
+@media(max-width:980px){
+  .guide-intro{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .compare-card{overflow-x:auto}
+  .compare-row{min-width:820px}
+  .offer-summary{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.offer-summary{grid-template-columns:1fr}.guide-intro{padding:24px}}
+
 /* Sous-titre de section */
 .section-sub{color:var(--muted);font-size:clamp(1rem,1.6vw,1.12rem);max-width:680px;margin-top:-4px}
 .sub-block{margin-top:96px}
@@ -1441,9 +1512,9 @@ footer{
       <div class="hero2-grid">
         <div class="hero2-left">
           <div class="hero-badge"><span class="pulse"></span> Anizy-le-Grand · Laon · Soissons · Chauny et alentours</div>
-          <h1 class="hero2-title">Votre activité mérite mieux<br><span class="grad-text">qu'une page Facebook.</span></h1>
-          <p class="hero2-tag">Sites internet, réseaux sociaux, photos et identité visuelle. Pour les commerces, les artisans et les associations de l'Aisne.</p>
-          <p class="hero2-desc">Nous créons des sites codés à la main, rapides et faits sur mesure, et nous faisons vivre vos réseaux sociaux toute l'année. Prix fixes affichés, sans abonnement obligatoire, et un site qui vous appartient.</p>
+          <h1 class="hero2-title">Sites internet et communication<br><span class="grad-text">pour les entreprises locales.</span></h1>
+          <p class="hero2-tag">Un site clair, des réseaux réguliers, de vraies photos et une image cohérente. Tout ce qu’il faut pour être visible et crédible en ligne.</p>
+          <p class="hero2-desc">Nous aidons les commerces, artisans et associations de l’Aisne à présenter leurs services, attirer des demandes et donner une image plus professionnelle, avec des offres simples et des prix affichés.</p>
           <div class="hero2-ctas">
             <a href="#sites" data-route="sites" class="btn btn-primary">Voir nos offres
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1451,9 +1522,9 @@ footer{
             <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
           </div>
           <div class="hero2-stats">
-            <div><strong>4</strong><span>métiers réunis</span></div>
-            <div><strong>dès 299 €</strong><span>prix fixe affiché</span></div>
-            <div><strong>0 €</strong><span>d'abonnement obligatoire</span></div>
+            <div><strong>Site</strong><span>vitrine ou complet</span></div>
+            <div><strong>Photo 100 €</strong><span>établissement mis en valeur</span></div>
+            <div><strong>Logo 60 €</strong><span>image plus propre</span></div>
           </div>
         </div>
 
@@ -1463,14 +1534,14 @@ footer{
           <div class="browser">
             <div class="browser-bar"><i></i><i></i><i></i><span class="url">votre-entreprise.fr</span></div>
             <div class="browser-body">
-              <div class="b-eyebrow">Ce que vous obtenez</div>
-              <div class="b-title">Une image <em>qui tient debout.</em></div>
-              <p class="b-sub">Un site, des réseaux vivants, de vraies photos et une identité cohérente — au même endroit.</p>
+              <div class="b-eyebrow">Concrètement</div>
+              <div class="b-title">Une présence en ligne <em>compréhensible.</em></div>
+              <p class="b-sub">On structure vos informations, on met en avant vos services et on facilite la prise de contact.</p>
               <ul class="b-checks">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Site codé à la main, pas un modèle</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Publications préparées chaque mois</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Photos qui vous appartiennent</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Prix fixes, affichés, sans surprise</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Vos services expliqués clairement</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Vos horaires, coordonnées et accès visibles</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Un formulaire ou bouton de contact</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Un rendu professionnel sur mobile</li>
               </ul>
             </div>
           </div>
@@ -1549,7 +1620,7 @@ footer{
           <h3>Je me lance en ligne</h3>
           <div class="pack-price">599<span class="euro">€</span> <small>puis 190 €/mois</small></div>
           <p class="pack-content">Site Professionnelle + ouverture de compte + formule Présence</p>
-          <p>Le site donne la crédibilité, les réseaux amènent les clients.</p>
+          <p>Le site donne la crédibilité, les réseaux entretiennent la visibilité.</p>
           <p class="pack-save">Séparément <b>689 €</b></p>
         </article>
         <article class="pack reveal d2">
@@ -1572,7 +1643,7 @@ footer{
         <article class="step reveal"><div class="step-num">1</div><h3>On échange</h3><p>Un appel ou un rendez-vous d'une vingtaine de minutes pour comprendre votre activité et ce dont vous avez besoin. Gratuit, sans engagement.</p></article>
         <article class="step reveal d1"><div class="step-num">2</div><h3>Vous recevez un devis</h3><p>Détaillé ligne par ligne, valable 30 jours. Vous savez exactement ce que vous payez avant de dire oui.</p></article>
         <article class="step reveal d2"><div class="step-num">3</div><h3>On produit</h3><p>Vous nous transmettez vos informations, on s'occupe du reste. Deux séries de modifications sont incluses.</p></article>
-        <article class="step reveal d3"><div class="step-num">4</div><h3>Vous êtes en ligne</h3><p>On met le site en ligne avec vous et on vous montre comment le faire vivre. Vous restez propriétaire de tout.</p></article>
+        <article class="step reveal d3"><div class="step-num">4</div><h3>Vous êtes en ligne</h3><p>On met le site en ligne, on vérifie tout avec vous et vous restez propriétaire de votre site, de vos contenus et de vos photos.</p></article>
       </div>
     </div>
   </div>
@@ -1581,7 +1652,7 @@ footer{
   <div class="home-sec">
     <div class="wrap">
       <span class="eyebrow reveal">Notre première réalisation</span>
-      <h2 class="section-title reveal">Le club qui nous a<br><span class="grad-text">lancés.</span></h2>
+      <h2 class="section-title reveal">Un exemple concret<br><span class="grad-text">de site livré.</span></h2>
       <div class="case-band reveal">
         <div class="case-cover"><div class="glyph2">US ANIZY<br>PINON<small>Club de football — Aisne</small></div></div>
         <div class="case-body">
@@ -1726,13 +1797,61 @@ footer{
   <div class="page-head">
     <div class="wrap">
       <span class="eyebrow">Sites internet</span>
-      <h1 class="section-title">Des tarifs clairs.<br><span class="grad-text">Zéro mauvaise surprise.</span></h1>
-      <p class="section-lead">Trois formules pensées pour les entreprises locales. Prix fixes, sans abonnement mensuel obligatoire, et un site qui vous appartient.</p>
+      <h1 class="section-title">Choisissez le site adapté<br><span class="grad-text">à votre activité.</span></h1>
+      <p class="section-lead">Une page simple, un site complet ou une version sur mesure : chaque formule explique clairement ce qui est inclus, pour qui elle est faite et ce que le client obtient.</p>
     </div>
   </div>
 
   <div class="page-body">
     <div class="wrap">
+
+      <div class="site-guide reveal">
+        <div class="guide-intro">
+          <div>
+            <span class="eyebrow">Quelle formule choisir ?</span>
+            <h2>Trois niveaux,<br><span class="grad-text">selon votre besoin.</span></h2>
+          </div>
+          <p>Le but n’est pas de vendre le plus cher : c’est de choisir le bon niveau. Essentielle pour être trouvé, Professionnelle pour convaincre, Premium pour structurer beaucoup d’informations.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <span class="guide-tag">Simple</span>
+            <h3>Essentielle</h3>
+            <div class="guide-price">299 €</div>
+            <p>Une présence propre pour rassurer et permettre aux clients de vous contacter rapidement.</p>
+            <ul class="guide-list">
+              <li>Une page claire et professionnelle</li>
+              <li>Activité, services, coordonnées</li>
+              <li>Mobile, Google Maps et bouton contact</li>
+            </ul>
+            <div class="guide-foot"><b>Pour :</b> artisan, petite activité, association qui veut aller droit au but.</div>
+          </article>
+          <article class="guide-card featured">
+            <span class="guide-tag">Recommandée</span>
+            <h3>Professionnelle</h3>
+            <div class="guide-price">499 €</div>
+            <p>Un vrai site vitrine avec plusieurs rubriques pour présenter votre activité sérieusement.</p>
+            <ul class="guide-list">
+              <li>Accueil travaillé et services détaillés</li>
+              <li>Galerie, avis clients, formulaire</li>
+              <li>Design personnalisé et Google renforcé</li>
+            </ul>
+            <div class="guide-foot"><b>Pour :</b> commerce, restaurant, salon, entreprise avec plusieurs prestations.</div>
+          </article>
+          <article class="guide-card">
+            <span class="guide-tag">Sur mesure</span>
+            <h3>Premium</h3>
+            <div class="guide-price"><small>dès</small> 799 €</div>
+            <p>Pour les projets qui ont besoin de plusieurs pages, d’actualités ou de fonctions avancées.</p>
+            <ul class="guide-list">
+              <li>Structure complète sur plusieurs pages</li>
+              <li>Actualités, partenaires, sponsors</li>
+              <li>Formulaires avancés selon besoin</li>
+            </ul>
+            <div class="guide-foot"><b>Pour :</b> club, association, PME ou projet avec beaucoup de contenu.</div>
+          </article>
+        </div>
+      </div>
 
       <div class="pricing-grid">
         <article class="price-card reveal">
@@ -1801,6 +1920,49 @@ footer{
           <p class="price-ideal"><b>Idéal pour</b>Associations, clubs sportifs, PME et structures avec beaucoup de contenu à présenter.</p>
           <a href="#contact" data-route="contact" class="btn btn-ghost" style="margin-top:22px">Demander un devis</a>
         </article>
+      </div>
+
+      <div class="compare-offers reveal">
+        <span class="eyebrow">Comparatif rapide</span>
+        <h2 class="section-title">Comprendre les formules<br><span class="grad-text">en un coup d’œil.</span></h2>
+        <div class="compare-card" role="table" aria-label="Comparatif des formules de site internet">
+          <div class="compare-row head" role="row">
+            <div class="compare-cell" role="columnheader">Besoin</div>
+            <div class="compare-cell" role="columnheader">Essentielle</div>
+            <div class="compare-cell" role="columnheader">Professionnelle</div>
+            <div class="compare-cell" role="columnheader">Premium</div>
+          </div>
+          <div class="compare-row" role="row">
+            <div class="compare-cell compare-label" role="cell">Objectif</div>
+            <div class="compare-cell" role="cell">Être visible et joignable</div>
+            <div class="compare-cell" role="cell">Présenter et convaincre</div>
+            <div class="compare-cell" role="cell">Structurer un projet complet</div>
+          </div>
+          <div class="compare-row" role="row">
+            <div class="compare-cell compare-label" role="cell">Contenu</div>
+            <div class="compare-cell" role="cell">Activité, services, coordonnées</div>
+            <div class="compare-cell" role="cell">Services détaillés, galerie, avis</div>
+            <div class="compare-cell" role="cell">Pages dédiées, actualités, partenaires</div>
+          </div>
+          <div class="compare-row" role="row">
+            <div class="compare-cell compare-label" role="cell">Contact</div>
+            <div class="compare-cell" role="cell">Bouton appel, mail ou Maps</div>
+            <div class="compare-cell" role="cell">Formulaire de contact ou réservation</div>
+            <div class="compare-cell" role="cell">Formulaires avancés si besoin</div>
+          </div>
+          <div class="compare-row" role="row">
+            <div class="compare-cell compare-label" role="cell">Idéal pour</div>
+            <div class="compare-cell" role="cell"><strong>Petit artisan</strong> ou activité locale</div>
+            <div class="compare-cell" role="cell"><strong>Commerce</strong> avec plusieurs prestations</div>
+            <div class="compare-cell" role="cell"><strong>Association, club ou PME</strong></div>
+          </div>
+        </div>
+        <div class="offer-summary">
+          <div class="sum-item"><b>Prix affichés</b>Vous savez dès le départ dans quelle formule vous entrez.</div>
+          <div class="sum-item"><b>Mobile inclus</b>Le site est pensé pour téléphone, tablette et ordinateur.</div>
+          <div class="sum-item"><b>Sans abonnement forcé</b>Le suivi est possible, mais il reste facultatif.</div>
+          <div class="sum-item"><b>Évolutif</b>Vous pouvez ajouter une page, un formulaire ou un espace membres plus tard.</div>
+        </div>
       </div>
 
       <!-- Options -->
