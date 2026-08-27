@@ -1567,6 +1567,104 @@ footer{
 @media(max-width:900px){.legal-layout{grid-template-columns:1fr}.legal-nav{position:relative;top:auto;grid-template-columns:1fr 1fr}.legal-line{grid-template-columns:1fr;gap:4px}}
 @media(max-width:560px){.legal-nav{grid-template-columns:1fr}.legal-card{padding:24px 20px}.price-amount{font-size:2.35rem}}
 
+
+
+/* ============================================================
+   V6 — ACCUEIL PROPRE, PLUS LISIBLE
+   ============================================================ */
+.clean-hero{
+  position:relative;
+  padding:calc(var(--nav-h) + 56px) 0 68px;
+  overflow:hidden;
+}
+.clean-hero::before{
+  content:"";position:absolute;inset:-10% -10% auto -10%;height:620px;pointer-events:none;
+  background:
+    radial-gradient(520px 360px at 16% 20%,rgba(91,140,255,.22),transparent 70%),
+    radial-gradient(560px 360px at 88% 10%,rgba(255,158,94,.16),transparent 72%);
+  opacity:.95;
+}
+.clean-hero-grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(380px,.78fr);
+  gap:56px;align-items:center;
+}
+.clean-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:9px 15px;border-radius:999px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);
+  color:#C8D0E3;font-size:13px;font-weight:700;letter-spacing:.03em;margin-bottom:24px;
+}
+.clean-badge span{width:8px;height:8px;border-radius:50%;background:var(--grad);box-shadow:0 0 18px rgba(91,140,255,.7)}
+.clean-title{
+  font-family:var(--font-d);font-weight:800;
+  font-size:clamp(2.35rem,5.2vw,4.9rem);
+  line-height:1.02;letter-spacing:-.035em;
+  max-width:820px;margin-bottom:22px;
+}
+.clean-lead{
+  max-width:650px;color:#C7CEDF;
+  font-size:clamp(1.03rem,1.5vw,1.18rem);
+  line-height:1.72;margin-bottom:32px;
+}
+.clean-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.clean-reassurance{display:flex;gap:10px;flex-wrap:wrap}
+.clean-reassurance span{
+  padding:9px 13px;border-radius:999px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);font-size:13.5px;font-weight:600;
+}
+.clean-hero-panel{
+  position:relative;z-index:2;border-radius:28px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(17,23,41,.92),rgba(13,18,32,.86));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 34px 90px -38px rgba(0,0,0,.9);
+}
+.clean-hero-panel::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 260px at 78% 15%,rgba(91,140,255,.18),transparent 70%),radial-gradient(380px 240px at 8% 100%,rgba(255,158,94,.13),transparent 68%);pointer-events:none}
+.panel-top,.panel-main,.panel-offers{position:relative;z-index:2}
+.panel-top{display:flex;align-items:center;gap:14px;padding:18px 20px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}
+.panel-dots{display:flex;gap:8px}.panel-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.28)}.panel-dots i:nth-child(1){background:#FF6B63}.panel-dots i:nth-child(2){background:#FFC764}.panel-dots i:nth-child(3){background:#5BD78C}
+.panel-top span{flex:1;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:13px}
+.panel-main{padding:34px 32px 26px}
+.panel-eyebrow{font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:12px!important}
+.panel-main h2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.5rem,2.55vw,2.15rem);line-height:1.12;letter-spacing:-.015em;max-width:400px;margin-bottom:12px}
+.panel-main p{color:var(--muted);font-size:15px;line-height:1.65;max-width:420px}
+.panel-offers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 20px 22px}
+.panel-offers div{padding:16px 14px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.panel-offers strong{display:block;font-family:var(--font-d);font-weight:800;font-size:1.25rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:3px}
+.panel-offers span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block}
+.clean-services{
+  position:relative;z-index:3;margin-top:48px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.clean-service{
+  display:flex;flex-direction:column;gap:8px;
+  padding:22px 20px;border-radius:20px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  transition:transform .32s var(--ease),border-color .32s,background .32s;
+}
+.clean-service:hover{transform:translateY(-5px);background:rgba(255,255,255,.065);border-color:rgba(255,255,255,.18)}
+.service-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(91,140,255,.18),rgba(255,158,94,.13));border:1px solid rgba(255,255,255,.08);color:#fff;margin-bottom:6px}
+.service-icon svg{width:22px;height:22px;stroke:url(#gradStroke)}
+.clean-service strong{font-family:var(--font-d);font-size:1.05rem;color:var(--ink)}
+.clean-service small{color:var(--muted);font-size:13.5px;line-height:1.45}
+.clean-section{padding:90px 0 0}.clean-section.compact{padding-top:70px}.cta-clean-section{padding-bottom:110px}
+.clean-section-head{max-width:760px;margin-bottom:42px}.clean-section-head .section-title{margin-bottom:14px}
+.clean-pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.clean-pack{position:relative;overflow:hidden;padding:30px 26px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);transition:transform .32s var(--ease),border-color .32s,box-shadow .32s}
+.clean-pack:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 28px 64px -34px rgba(0,0,0,.85)}
+.clean-pack.featured{background:linear-gradient(180deg,rgba(91,140,255,.12),rgba(255,255,255,.04));border-color:rgba(91,140,255,.38)}
+.clean-pack::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad);opacity:.75}.clean-pack.featured::before{opacity:1}
+.pack-label{display:inline-flex;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+.clean-pack h3{font-family:var(--font-d);font-size:1.25rem;margin-bottom:10px}.clean-price{font-family:var(--font-d);font-size:2.55rem;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:16px}.clean-price span{font-family:var(--font-b);font-size:.43em;font-weight:700;color:var(--muted);-webkit-text-fill-color:var(--muted);margin-left:3px}
+.clean-pack p{color:var(--muted);font-size:14.5px;line-height:1.65;margin-bottom:18px}.clean-pack a{font-weight:800;font-size:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.clean-two-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}.clean-info-card{padding:34px 30px;border-radius:24px;background:var(--surface);border:1px solid rgba(255,255,255,.09)}
+.clean-info-card h2{font-family:var(--font-d);font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.15;margin-bottom:14px}.clean-info-card p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:22px}.clean-info-card ul{display:grid;gap:11px;list-style:none}.clean-info-card li{position:relative;padding-left:23px;color:#C9D0E1;font-size:14.5px;line-height:1.55}.clean-info-card li::before{content:"";position:absolute;left:0;top:.58em;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.clean-steps{display:grid;gap:12px}.clean-steps div{display:flex;gap:14px;align-items:center;padding:14px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.075)}.clean-steps b{flex:0 0 34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#0A0C14;font-family:var(--font-d);font-weight:800}.clean-steps span{font-size:14.5px;color:#C9D0E1;line-height:1.4}
+.clean-case{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:34px;border-radius:26px;background:linear-gradient(120deg,rgba(91,140,255,.11),rgba(255,158,94,.07));border:1px solid rgba(255,255,255,.1)}.clean-case h2{font-family:var(--font-d);font-size:clamp(1.55rem,2.8vw,2.25rem);line-height:1.12;margin-bottom:12px}.clean-case p{color:var(--muted);font-size:15px;line-height:1.7;max-width:700px}.clean-case-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.clean-final-cta{border-radius:30px;padding:clamp(40px,6vw,68px);text-align:center;background:radial-gradient(620px 280px at 20% 0%,rgba(91,140,255,.18),transparent 65%),radial-gradient(620px 280px at 82% 100%,rgba(255,158,94,.15),transparent 65%),var(--surface);border:1px solid rgba(255,255,255,.1)}.clean-final-cta h2{font-family:var(--font-d);font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;margin-bottom:14px}.clean-final-cta p{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:15.5px;line-height:1.7}.clean-final-cta .btn{justify-content:center}
+@media(max-width:1024px){.clean-hero-grid{grid-template-columns:1fr;gap:36px}.clean-hero-panel{max-width:560px}.clean-services{grid-template-columns:repeat(2,1fr)}.clean-pack-grid,.clean-two-cols{grid-template-columns:1fr}.clean-case{grid-template-columns:1fr}.clean-case-actions{justify-content:flex-start}}
+@media(max-width:640px){.clean-hero{padding:calc(var(--nav-h) + 32px) 0 46px}.clean-title{font-size:clamp(2.05rem,10vw,3.15rem)}.clean-actions .btn{width:100%;justify-content:center}.clean-services{grid-template-columns:1fr;margin-top:34px}.panel-offers{grid-template-columns:1fr}.clean-section{padding-top:68px}.clean-section.compact{padding-top:54px}.clean-info-card,.clean-case{padding:26px 22px}.clean-final-cta{text-align:left}.clean-final-cta .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -1626,195 +1724,158 @@ footer{
 <!-- ================================================== -->
 <section class="page" id="page-accueil">
 
-  <!-- ===== HERO ===== -->
-  <div class="hero2">
+  <!-- ===== ACCUEIL PROPRE ===== -->
+  <div class="clean-hero">
     <div class="wrap">
-      <div class="hero2-grid">
-        <div class="hero2-left">
-          <div class="hero-badge"><span class="pulse"></span> Anizy-le-Grand · Laon · Soissons · Chauny et alentours</div>
-          <h1 class="hero2-title">Sites internet et communication<br><span class="grad-text">pour entreprises locales.</span></h1>
-          <p class="hero2-tag">Nous aidons les commerces, artisans et associations à être mieux présentés en ligne : site internet, réseaux sociaux, photos et logo simple.</p>
-          <p class="hero2-desc">Votre client doit comprendre en quelques secondes qui vous êtes, ce que vous proposez et comment vous contacter. Nous faisons simple, propre et adapté à votre budget.</p>
-          <div class="hero2-ctas">
-            <a href="#sites" data-route="sites" class="btn btn-primary">Voir les formules
+      <div class="clean-hero-grid">
+        <div class="clean-hero-copy reveal in">
+          <div class="clean-badge"><span></span> Création de sites internet & communication locale</div>
+          <h1 class="clean-title">Une présence en ligne claire, professionnelle et adaptée à votre budget.</h1>
+          <p class="clean-lead">Brothers Studios aide les commerces, artisans et associations de l’Aisne à être mieux présentés : site internet, réseaux sociaux, photos d’établissement et logo simple.</p>
+          <div class="clean-actions">
+            <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
             <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
           </div>
+          <div class="clean-reassurance" aria-label="Points forts">
+            <span>Prix fixes</span>
+            <span>Devis clair</span>
+            <span>Pas d’abonnement obligatoire</span>
+          </div>
         </div>
 
-        <div class="hero2-visual" aria-hidden="true">
-          <div class="h2-orb cobalt"></div>
-          <div class="h2-orb cuivre"></div>
-          <div class="browser">
-            <div class="browser-bar"><i></i><i></i><i></i><span class="url">votre-entreprise.fr</span></div>
-            <div class="browser-body">
-              <div class="b-eyebrow">Exemple de site</div>
-              <div class="b-title">Un site qui présente <em>vos services.</em></div>
-              <p class="b-sub">Vos informations essentielles sont organisées pour que le visiteur comprenne vite et passe à l’action.</p>
-              <ul class="b-checks">
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Vos prestations bien présentées</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Horaires, téléphone et adresse visibles</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Bouton appel, mail ou formulaire</li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>Design propre sur téléphone</li>
-              </ul>
-            </div>
+        <div class="clean-hero-panel reveal in" aria-label="Aperçu des prestations">
+          <div class="panel-top">
+            <div class="panel-dots"><i></i><i></i><i></i></div>
+            <span>votre-entreprise.fr</span>
+          </div>
+          <div class="panel-main">
+            <p class="panel-eyebrow">Exemple de site</p>
+            <h2>Vos services, vos horaires et vos contacts au même endroit.</h2>
+            <p>Un visiteur comprend vite ce que vous proposez et peut vous contacter facilement.</p>
+          </div>
+          <div class="panel-offers">
+            <div><strong>299 €</strong><span>Site simple</span></div>
+            <div><strong>499 €</strong><span>Site complet</span></div>
+            <div><strong>100 €</strong><span>Photos établissement</span></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Sites internet <b>✦</b> Réseaux sociaux <b>✦</b> Photo &amp; vidéo <b>✦</b> Identité visuelle <b>✦</b> Aisne · Laon · Soissons · Chauny <b>✦</b></span>
-        <span>Sites internet <b>✦</b> Réseaux sociaux <b>✦</b> Photo &amp; vidéo <b>✦</b> Identité visuelle <b>✦</b> Aisne · Laon · Soissons · Chauny <b>✦</b></span>
+      <div class="clean-services reveal in">
+        <a href="#sites" data-route="sites" class="clean-service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M9 21h6"/></svg></span>
+          <strong>Sites internet</strong>
+          <small>Vitrine simple ou site complet</small>
+        </a>
+        <a href="#reseaux" data-route="reseaux" class="clean-service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10M7 12h7M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.5-5.1A8.5 8.5 0 1 1 21 12z"/></svg></span>
+          <strong>Réseaux sociaux</strong>
+          <small>Posts, stories et contenus réguliers</small>
+        </a>
+        <a href="#image" data-route="image" class="clean-service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5h-5L8 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-1.5-2z"/><circle cx="12" cy="13" r="3"/></svg></span>
+          <strong>Photos</strong>
+          <small>Votre établissement mis en valeur</small>
+        </a>
+        <a href="#image" data-route="image" class="clean-service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15c1.5-4 6.5-4 8 0M9 9h.01M15 9h.01"/></svg></span>
+          <strong>Logo simple</strong>
+          <small>Une image plus propre et cohérente</small>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ===== LE PROBLÈME ===== -->
-  <div class="home-sec">
+  <!-- ===== PACKS MIS EN AVANT ===== -->
+  <div class="clean-section">
     <div class="wrap">
-      <div class="problem-card reveal">
-        <span class="eyebrow">Le vrai sujet</span>
-        <h2>Avant d’appeler, vos clients<br><span class="grad-text">regardent votre image en ligne.</span></h2>
-        <p>Un site peu clair, une page Facebook inactive ou des photos mal présentées peuvent donner une mauvaise première impression. Nous vous aidons à avoir une image propre, simple et crédible, même avec un budget raisonnable.</p>
+      <div class="clean-section-head reveal">
+        <span class="eyebrow">Offres simples</span>
+        <h2 class="section-title">Trois façons de commencer.</h2>
+        <p class="section-sub">Vous pouvez choisir une formule seule, ou partir sur un pack si vous voulez un résultat plus complet dès le début.</p>
       </div>
-    </div>
-  </div>
-
-  <!-- ===== CE QUE NOUS FAISONS ===== -->
-  <div class="home-sec">
-    <div class="wrap">
-      <span class="eyebrow reveal">Ce que nous faisons</span>
-      <h2 class="section-title reveal">Ce que l’on peut<br><span class="grad-text">faire pour vous.</span></h2>
-      <div class="metiers4">
-        <article class="metier4 reveal">
-          <div class="m4-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="15" rx="2"/><path d="M2 9h20M8 22h8"/></svg></div>
-          <h3>Sites internet</h3>
-          <p>Une page simple ou un site complet pour présenter votre activité, vos services, vos horaires et faciliter la prise de contact.</p>
-          <a href="#sites" data-route="sites" class="m4-link">Voir les formules →</a>
+      <div class="clean-pack-grid">
+        <article class="clean-pack reveal">
+          <span class="pack-label">Le plus accessible</span>
+          <h3>Site Essentielle</h3>
+          <div class="clean-price">299<span>€</span></div>
+          <p>Une page claire pour présenter votre activité, vos services, vos coordonnées et permettre aux clients de vous contacter.</p>
+          <a href="#sites" data-route="sites">Voir la formule →</a>
         </article>
-        <article class="metier4 reveal d1">
-          <div class="m4-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.4 8.4 0 0 1-3.8-.9L3 21l2-5.2a8.4 8.4 0 0 1-.9-3.8 8.4 8.4 0 0 1 8.4-8.4 8.4 8.4 0 0 1 8.5 8.4z"/></svg></div>
-          <h3>Réseaux sociaux</h3>
-          <p>Des publications, stories et vidéos courtes préparées à l’avance pour garder une communication régulière sans y passer vos soirées.</p>
-          <a href="#reseaux" data-route="reseaux" class="m4-link">Voir les formules →</a>
-        </article>
-        <article class="metier4 reveal d2">
-          <div class="m4-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7.7 6.3a1 1 0 0 1-.8.4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-2.9a1 1 0 0 1-.8-.4L14.5 4z"/><circle cx="12" cy="13" r="3.6"/></svg></div>
-          <h3>Photo et vidéo</h3>
-          <p>Une prise de photos de votre établissement pour avoir des visuels propres à utiliser sur votre site, vos réseaux et vos supports.</p>
-          <a href="#image" data-route="image" class="m4-link">Voir les tarifs →</a>
-        </article>
-        <article class="metier4 reveal d3">
-          <div class="m4-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="14" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="15.5" r="2.5"/><path d="M12 22a10 10 0 1 1 10-10"/></svg></div>
-          <h3>Identité visuelle</h3>
-          <p>Un logo simple ou une adaptation de votre logo actuel pour rendre votre image plus propre et cohérente.</p>
-          <a href="#image" data-route="image" class="m4-link">Voir les tarifs →</a>
-        </article>
-      </div>
-      <p class="metiers4-note reveal">Le but n’est pas de tout compliquer : on vous aide à choisir uniquement ce dont vous avez besoin, avec un devis clair avant de commencer.</p>
-    </div>
-  </div>
-
-  <!-- ===== PACKS ===== -->
-  <div class="home-sec">
-    <div class="wrap">
-      <span class="eyebrow reveal">Offres simples</span>
-      <h2 class="section-title reveal">Vous ne savez pas quoi choisir ?<br><span class="grad-text">Commencez par un pack.</span></h2>
-      <div class="packs">
-        <article class="pack reveal">
+        <article class="clean-pack featured reveal d1">
+          <span class="pack-label">Recommandé</span>
           <h3>Pack démarrage</h3>
-          <div class="pack-price">349<span class="euro">€</span></div>
-          <p class="pack-content">Un site simple + les photos de votre établissement</p>
-          <p>Idéal pour un artisan, commerce ou association qui veut une présence en ligne propre sans partir sur un gros budget.</p>
-          <p class="pack-save">Séparément <b>399 €</b></p>
+          <div class="clean-price">349<span>€</span></div>
+          <p>Un site simple + une prise de photos de votre établissement. Idéal pour partir avec une image propre dès le lancement.</p>
+          <a href="#contact" data-route="contact">Demander ce pack →</a>
         </article>
-        <article class="pack reveal d1">
-          <h3>Pack visibilité</h3>
-          <div class="pack-price">599<span class="euro">€</span> <small>puis 190 €/mois</small></div>
-          <p class="pack-content">Un site complet + une présence régulière sur les réseaux</p>
-          <p>Le site donne la crédibilité, les réseaux entretiennent la visibilité.</p>
-          <p class="pack-save">Séparément <b>689 €</b></p>
-        </article>
-        <article class="pack reveal d2">
-          <h3>Pack image</h3>
-          <div class="pack-price">290<span class="euro">€</span></div>
-          <p class="pack-content">Logo simple + base graphique + modèles de publication</p>
-          <p>Pour ceux qui gèrent leurs réseaux eux-mêmes mais dont les publications n'ont aucune cohérence.</p>
-          <p class="pack-save">Séparément <b>330 €</b></p>
+        <article class="clean-pack reveal d2">
+          <span class="pack-label">Visibilité régulière</span>
+          <h3>Réseaux sociaux</h3>
+          <div class="clean-price">190<span>€/mois</span></div>
+          <p>Des publications, stories et contenus préparés pour garder une présence active sans devoir tout gérer vous-même.</p>
+          <a href="#reseaux" data-route="reseaux">Voir les formules →</a>
         </article>
       </div>
     </div>
   </div>
 
-  <!-- ===== COMMENT ÇA SE PASSE ===== -->
-  <div class="home-sec">
+  <!-- ===== POUR QUI / COMMENT ===== -->
+  <div class="clean-section compact">
     <div class="wrap">
-      <span class="eyebrow reveal">Comment ça se passe</span>
-      <h2 class="section-title reveal">Quatre étapes,<br><span class="grad-text">et c'est en ligne.</span></h2>
-      <div class="process-grid">
-        <article class="step reveal"><div class="step-num">1</div><h3>On échange</h3><p>Un appel ou un rendez-vous d'une vingtaine de minutes pour comprendre votre activité et ce dont vous avez besoin. Gratuit, sans engagement.</p></article>
-        <article class="step reveal d1"><div class="step-num">2</div><h3>Vous recevez un devis</h3><p>Détaillé ligne par ligne, valable 30 jours. Vous savez exactement ce que vous payez avant de dire oui.</p></article>
-        <article class="step reveal d2"><div class="step-num">3</div><h3>On produit</h3><p>Vous nous transmettez vos informations, on s'occupe du reste. Deux séries de modifications sont incluses.</p></article>
-        <article class="step reveal d3"><div class="step-num">4</div><h3>Vous êtes en ligne</h3><p>On met le site en ligne, on vérifie tout avec vous et vous restez propriétaire de votre site, de vos contenus et de vos photos.</p></article>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== RÉALISATION PHARE ===== -->
-  <div class="home-sec">
-    <div class="wrap">
-      <span class="eyebrow reveal">Notre première réalisation</span>
-      <h2 class="section-title reveal">Un exemple concret<br><span class="grad-text">de site livré.</span></h2>
-      <div class="case-band reveal">
-        <div class="case-cover"><div class="glyph2">US ANIZY<br>PINON<small>Club de football — Aisne</small></div></div>
-        <div class="case-body">
-          <h3>usanizypinon.fr</h3>
-          <p>Notre première mise en ligne : le site officiel de l'US Anizy Pinon, un club de football de l'Aisne.</p>
-          <ul class="case-study">
-            <li><b>Besoin</b><span>Moderniser la présence en ligne du club et rassembler ses informations au même endroit.</span></li>
-            <li><b>Solution</b><span>Un site clair, des rubriques organisées (équipes, partenaires, licences) et des informations faciles à trouver.</span></li>
-            <li><b>Résultat</b><span>Une image plus professionnelle, une communication simplifiée — et c'est en le voyant que d'autres structures sont venues nous chercher.</span></li>
+      <div class="clean-two-cols">
+        <div class="clean-info-card reveal">
+          <span class="eyebrow">Pour qui ?</span>
+          <h2>Des solutions pour les structures locales.</h2>
+          <p>Commerces, restaurants, artisans, associations, clubs, indépendants : l’objectif est de vous donner une image sérieuse en ligne, sans partir sur un projet compliqué.</p>
+          <ul>
+            <li>Vous n’avez pas encore de site.</li>
+            <li>Votre page Facebook ne suffit plus.</li>
+            <li>Vos photos ou votre logo ne font pas assez professionnel.</li>
           </ul>
-          <div class="case-actions">
-            <a href="https://usanizypinon.fr" target="_blank" rel="noopener" class="btn btn-primary">Visiter le site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-            <a href="#realisations" data-route="realisations" class="btn btn-ghost">Voir nos réalisations</a>
+        </div>
+        <div class="clean-info-card reveal d1">
+          <span class="eyebrow">Comment ça marche ?</span>
+          <h2>Simple, clair, sans jargon.</h2>
+          <div class="clean-steps">
+            <div><b>1</b><span>On échange sur votre besoin.</span></div>
+            <div><b>2</b><span>Vous recevez un devis clair.</span></div>
+            <div><b>3</b><span>On crée le site, les visuels ou les contenus.</span></div>
+            <div><b>4</b><span>Vous validez, puis on met en ligne.</span></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== QUI NOUS SOMMES (teaser) ===== -->
-  <div class="home-sec">
+  <!-- ===== RÉALISATION ===== -->
+  <div class="clean-section compact">
     <div class="wrap">
-      <div class="duo-teaser reveal">
+      <div class="clean-case reveal">
         <div>
-          <span class="eyebrow">Qui nous sommes</span>
-          <h2>Deux frères,<br><span class="grad-text">dans l'Aisne.</span></h2>
-          <p>Brothers Studios est né d'un constat simple : dans nos communes, beaucoup de commerces et d'associations font un travail remarquable que personne ne voit passer en ligne. Les agences sont loin et chères, les solutions toutes faites ne ressemblent à rien.</p>
-          <p style="margin-top:14px">Nous codons les sites nous-mêmes, nous nous déplaçons pour les photos, et nous connaissons le secteur.</p>
-          <p style="margin-top:18px"><a href="#qui-sommes-nous" data-route="qui-sommes-nous" class="grad-text" style="font-weight:700">Faire connaissance →</a></p>
+          <span class="eyebrow">Exemple concret</span>
+          <h2>Un site déjà livré pour un club local.</h2>
+          <p>Le site de l’US Anizy Pinon montre le type de rendu possible : informations organisées, design propre, accès rapide aux rubriques importantes et image plus professionnelle.</p>
         </div>
-        <div class="duo-chips">
-          <div class="duo-chip cm"><div class="dc-av">CM</div><div><strong>Clément Mahu</strong><span>Sites, production et suivi client</span></div></div>
-          <div class="duo-chip rm"><div class="dc-av">RM</div><div><strong>Raphaël Mahu</strong><span>Photo, réseaux et rendez-vous</span></div></div>
+        <div class="clean-case-actions">
+          <a href="https://usanizypinon.fr" target="_blank" rel="noopener" class="btn btn-primary">Voir le site</a>
+          <a href="#realisations" data-route="realisations" class="btn btn-ghost">Nos réalisations</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== CTA FINALE ===== -->
-  <div class="home-sec" style="padding-bottom:110px">
+  <!-- ===== CTA ===== -->
+  <div class="clean-section cta-clean-section">
     <div class="wrap">
-      <div class="cta-card reveal">
-        <h2>Parlons-en,<br>ça n'engage à rien.</h2>
-        <p>Vingt minutes suffisent pour savoir ce qui vous conviendrait et combien ça coûterait. Vous repartez avec un devis clair, et vous décidez ensuite.</p>
+      <div class="clean-final-cta reveal">
+        <h2>Vous voulez améliorer votre image en ligne ?</h2>
+        <p>Envoyez-nous votre projet, même s’il n’est pas encore précis. On vous dira simplement ce qui est le plus adapté à votre besoin et à votre budget.</p>
         <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </div>
