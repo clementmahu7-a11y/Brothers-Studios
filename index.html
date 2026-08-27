@@ -1479,6 +1479,58 @@ footer{
 @media(max-width:920px){.hero2-grid{gap:38px}.hero2-title{font-size:clamp(2.25rem,9vw,3.25rem)}}
 @media(max-width:640px){.hero2{padding:calc(var(--nav-h) + 34px) 0 0}.hero2-visual{display:none}.home-sec{padding:76px 0 0}.section-title{font-size:clamp(1.75rem,8vw,2.45rem)}}
 
+
+
+/* ============================================================
+   CORRECTIFS V4 — offres plus lisibles et FAQ corrigée
+   ============================================================ */
+.offer-choice{
+  margin-bottom:34px;
+  padding:30px;
+  border-radius:26px;
+  background:linear-gradient(120deg,rgba(91,140,255,.10),rgba(255,158,94,.065));
+  border:1px solid var(--glass-brd);
+}
+.offer-choice .section-title{margin-bottom:12px}
+.simple-pricing{margin-top:34px}
+.simple-pricing .price-card{padding:34px 28px;border-radius:24px}
+.simple-pricing .price-card.featured{transform:none}
+.simple-pricing .price-card.featured:hover{transform:translateY(-10px)}
+.simple-pricing .price-name{font-size:1.42rem}
+.simple-pricing .price-amount{font-size:clamp(2.4rem,4vw,3rem)}
+.simple-pricing .price-pitch{font-size:14.5px;line-height:1.6;margin-top:18px}
+.simple-pricing .price-list{gap:10px;margin:22px 0 22px}
+.simple-pricing .price-list li{font-size:14.3px}
+.price-ideal b{display:block;margin-bottom:4px;color:#fff}
+.choice-note{
+  margin-top:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:22px;
+  padding:22px 24px;
+  border-radius:20px;
+  background:var(--glass);
+  border:1px solid var(--glass-brd);
+}
+.choice-note div{display:grid;gap:3px}
+.choice-note b{font-family:var(--font-d);font-size:1.05rem;color:var(--ink)}
+.choice-note span{color:var(--muted);font-size:14.5px;line-height:1.55}
+.faq{margin-top:34px;max-width:840px}
+.faq-q{min-height:auto;line-height:1.35}
+.faq-q > svg{
+  width:18px !important;
+  height:18px !important;
+  flex:0 0 18px;
+  transition:transform .35s var(--ease);
+}
+.faq-item.open .faq-q > svg{transform:rotate(180deg)}
+.faq-a p{line-height:1.65}
+@media(max-width:860px){
+  .choice-note{align-items:flex-start;flex-direction:column}
+  .choice-note .btn{width:100%;justify-content:center}
+}
+
 </style>
 </head>
 <body>
@@ -1832,164 +1884,66 @@ footer{
   <div class="page-body">
     <div class="wrap">
 
-      <div class="site-guide reveal">
-        <div class="guide-intro">
-          <div>
-            <span class="eyebrow">Quelle formule choisir ?</span>
-            <h2>Trois niveaux,<br><span class="grad-text">selon votre besoin.</span></h2>
-          </div>
-          <p>Le but n’est pas de vendre le plus cher : c’est de choisir le bon niveau. Essentielle pour être trouvé, Professionnelle pour convaincre, Premium pour structurer beaucoup d’informations.</p>
-        </div>
-        <div class="guide-grid">
-          <article class="guide-card">
-            <span class="guide-tag">Simple</span>
-            <h3>Essentielle</h3>
-            <div class="guide-price">299 €</div>
-            <p>Une présence propre pour rassurer et permettre aux clients de vous contacter rapidement.</p>
-            <ul class="guide-list">
-              <li>Une page claire et professionnelle</li>
-              <li>Activité, services, coordonnées</li>
-              <li>Mobile, Google Maps et bouton contact</li>
-            </ul>
-            <div class="guide-foot"><b>Pour :</b> artisan, petite activité, association qui veut aller droit au but.</div>
-          </article>
-          <article class="guide-card featured">
-            <span class="guide-tag">Recommandée</span>
-            <h3>Professionnelle</h3>
-            <div class="guide-price">499 €</div>
-            <p>Un vrai site vitrine avec plusieurs rubriques pour présenter votre activité sérieusement.</p>
-            <ul class="guide-list">
-              <li>Accueil travaillé et services détaillés</li>
-              <li>Galerie, avis clients, formulaire</li>
-              <li>Design personnalisé et Google renforcé</li>
-            </ul>
-            <div class="guide-foot"><b>Pour :</b> commerce, restaurant, salon, entreprise avec plusieurs prestations.</div>
-          </article>
-          <article class="guide-card">
-            <span class="guide-tag">Sur mesure</span>
-            <h3>Premium</h3>
-            <div class="guide-price"><small>dès</small> 799 €</div>
-            <p>Pour les projets qui ont besoin de plusieurs pages, d’actualités ou de fonctions avancées.</p>
-            <ul class="guide-list">
-              <li>Structure complète sur plusieurs pages</li>
-              <li>Actualités, partenaires, sponsors</li>
-              <li>Formulaires avancés selon besoin</li>
-            </ul>
-            <div class="guide-foot"><b>Pour :</b> club, association, PME ou projet avec beaucoup de contenu.</div>
-          </article>
-        </div>
+      <div class="offer-choice reveal">
+        <span class="eyebrow">Formules sites internet</span>
+        <h2 class="section-title">Trois offres simples<br><span class="grad-text">selon votre besoin.</span></h2>
+        <p class="section-lead">On évite les grands tableaux compliqués : vous choisissez une base, puis on ajoute seulement les options utiles si nécessaire.</p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid simple-pricing">
         <article class="price-card reveal">
-          <p class="price-tier">Formule 01</p>
+          <p class="price-tier">Simple</p>
           <h3 class="price-name">Essentielle</h3>
           <p class="price-amount">299<span class="euro">€</span></p>
           <p class="price-note">Paiement unique</p>
-          <p class="price-pitch">Un site vitrine simple pour être visible en ligne.</p>
+          <p class="price-pitch">Pour avoir une présence propre en ligne et permettre aux clients de vous contacter rapidement.</p>
           <ul class="price-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span><b>Page d'accueil professionnelle</b></span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Présentation de votre activité</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Présentation de vos services principaux</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Coordonnées visibles</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Bouton d'appel ou de contact</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Lien Google Maps si besoin</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Une page claire et professionnelle</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Présentation de l’activité et des services</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Coordonnées, bouton contact et Google Maps</span></li>
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Site adapté au mobile</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Mise en ligne accompagnée</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Optimisation Google de base</span></li>
           </ul>
-          <p class="price-ideal"><b>Idéal pour</b>Artisans, indépendants, garages, plombiers, électriciens et petites entreprises locales.</p>
+          <p class="price-ideal"><b>Idéal pour :</b> artisan, indépendant, petite association ou activité qui veut aller droit au but.</p>
           <a href="#contact" data-route="contact" class="btn btn-ghost" style="margin-top:22px">Demander un devis</a>
         </article>
 
         <article class="price-card featured reveal d1">
-          <span class="flag">★ La plus choisie</span>
-          <p class="price-tier">Formule 02</p>
+          <span class="flag">Recommandée</span>
+          <p class="price-tier">Complet</p>
           <h3 class="price-name grad-text">Professionnelle</h3>
           <p class="price-amount">499<span class="euro">€</span></p>
           <p class="price-note">Paiement unique</p>
-          <p class="price-pitch">Un site complet pour présenter votre entreprise en détail.</p>
+          <p class="price-pitch">Pour présenter votre entreprise sérieusement avec plusieurs rubriques et une image plus travaillée.</p>
           <ul class="price-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span><b>Accueil travaillé</b> et présentation complète</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Plusieurs rubriques claires</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Présentation détaillée de vos services et produits</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Galerie photos</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Avis clients ou éléments de réassurance</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Formulaire de contact ou de réservation</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Boutons d'appel, mail ou réseaux sociaux</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Design personnalisé à votre image</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Optimisation Google plus complète</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Site adapté au mobile et mise en ligne accompagnée</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Accueil travaillé et services détaillés</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Galerie photos et avis clients</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Formulaire de contact ou réservation</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Design personnalisé et Google renforcé</span></li>
           </ul>
-          <p class="price-ideal"><b>Idéal pour</b>Restaurants, bars, salons de coiffure, instituts de beauté, commerces locaux et artisans avec plusieurs prestations.</p>
+          <p class="price-ideal"><b>Idéal pour :</b> commerce, restaurant, salon, artisan avec plusieurs prestations ou entreprise locale.</p>
           <a href="#contact" data-route="contact" class="btn btn-primary" style="margin-top:22px">Demander un devis</a>
         </article>
 
         <article class="price-card reveal d2">
-          <p class="price-tier">Formule 03</p>
+          <p class="price-tier">Sur mesure</p>
           <h3 class="price-name">Premium</h3>
           <p class="price-amount"><span class="price-from">dès</span>799<span class="euro">€</span></p>
           <p class="price-note">Selon les besoins</p>
-          <p class="price-pitch">Un site sur mesure avec une structure avancée.</p>
+          <p class="price-pitch">Pour les projets qui demandent plusieurs pages, des actualités, des partenaires ou des fonctions avancées.</p>
           <ul class="price-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span><b>Site complet sur mesure</b>, plusieurs pages</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Accueil soigné et présentation complète</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Pages dédiées selon vos besoins</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Actualités ou événements</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Galerie photos</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Mise en avant des partenaires ou sponsors</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Formulaires avancés si besoin</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Organisation claire de toutes les informations</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Design personnalisé plus poussé</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Optimisation Google renforcée</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Accompagnement sur la structure du contenu</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Structure complète sur plusieurs pages</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Actualités, événements, partenaires ou sponsors</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Formulaires avancés selon besoin</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Organisation claire de beaucoup d’informations</span></li>
           </ul>
-          <p class="price-ideal"><b>Idéal pour</b>Associations, clubs sportifs, PME et structures avec beaucoup de contenu à présenter.</p>
+          <p class="price-ideal"><b>Idéal pour :</b> club, association, PME ou projet avec beaucoup de contenu.</p>
           <a href="#contact" data-route="contact" class="btn btn-ghost" style="margin-top:22px">Demander un devis</a>
         </article>
       </div>
 
-      <div class="compare-offers reveal">
-        <span class="eyebrow">Comparatif rapide</span>
-        <h2 class="section-title">Comprendre les formules<br><span class="grad-text">en un coup d’œil.</span></h2>
-        <div class="compare-card" role="table" aria-label="Comparatif des formules de site internet">
-          <div class="compare-row head" role="row">
-            <div class="compare-cell" role="columnheader">Besoin</div>
-            <div class="compare-cell" role="columnheader">Essentielle</div>
-            <div class="compare-cell" role="columnheader">Professionnelle</div>
-            <div class="compare-cell" role="columnheader">Premium</div>
-          </div>
-          <div class="compare-row" role="row">
-            <div class="compare-cell compare-label" role="cell">Objectif</div>
-            <div class="compare-cell" role="cell">Être visible et joignable</div>
-            <div class="compare-cell" role="cell">Présenter et convaincre</div>
-            <div class="compare-cell" role="cell">Structurer un projet complet</div>
-          </div>
-          <div class="compare-row" role="row">
-            <div class="compare-cell compare-label" role="cell">Contenu</div>
-            <div class="compare-cell" role="cell">Activité, services, coordonnées</div>
-            <div class="compare-cell" role="cell">Services détaillés, galerie, avis</div>
-            <div class="compare-cell" role="cell">Pages dédiées, actualités, partenaires</div>
-          </div>
-          <div class="compare-row" role="row">
-            <div class="compare-cell compare-label" role="cell">Contact</div>
-            <div class="compare-cell" role="cell">Bouton appel, mail ou Maps</div>
-            <div class="compare-cell" role="cell">Formulaire de contact ou réservation</div>
-            <div class="compare-cell" role="cell">Formulaires avancés si besoin</div>
-          </div>
-          <div class="compare-row" role="row">
-            <div class="compare-cell compare-label" role="cell">Idéal pour</div>
-            <div class="compare-cell" role="cell"><strong>Petit artisan</strong> ou activité locale</div>
-            <div class="compare-cell" role="cell"><strong>Commerce</strong> avec plusieurs prestations</div>
-            <div class="compare-cell" role="cell"><strong>Association, club ou PME</strong></div>
-          </div>
-        </div>
-        <div class="offer-summary">
-          <div class="sum-item"><b>Prix affichés</b>Vous savez dès le départ dans quelle formule vous entrez.</div>
-          <div class="sum-item"><b>Mobile inclus</b>Le site est pensé pour téléphone, tablette et ordinateur.</div>
-          <div class="sum-item"><b>Sans abonnement forcé</b>Le suivi est possible, mais il reste facultatif.</div>
-          <div class="sum-item"><b>Évolutif</b>Vous pouvez ajouter une page, un formulaire ou un espace membres plus tard.</div>
-        </div>
+      <div class="choice-note reveal">
+        <div><b>Vous hésitez ?</b><span>On vous oriente vers la formule la plus simple possible. Le but est d’avoir un site utile, clair et rentable pour vous.</span></div>
+        <a href="#contact" data-route="contact" class="btn btn-ghost">Être conseillé</a>
       </div>
 
       <!-- Options -->
