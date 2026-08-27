@@ -1531,6 +1531,42 @@ footer{
   .choice-note .btn{width:100%;justify-content:center}
 }
 
+
+/* ============================================================
+   CORRECTIFS V5 — lisibilité, pages légales, liens propres
+   ============================================================ */
+.hero2-title{max-width:720px}
+.hero2-tag{font-size:clamp(1rem,1.5vw,1.15rem);color:#D4D9E8;max-width:640px;margin:0 0 12px;line-height:1.6}
+.problem-card h2,.cta-card h2{letter-spacing:-.015em}
+.price-amount{font-size:clamp(2.35rem,3.4vw,2.85rem)}
+.price-name{font-size:1.42rem}
+.price-pitch{color:var(--muted);font-size:15px;line-height:1.6;margin:14px 0 4px}
+.price-ideal{color:#B9C0D0;font-size:14.5px;line-height:1.6;border-top:1px solid var(--line);padding-top:16px;margin-top:auto}
+.price-ideal b{color:var(--ink)}
+.form-privacy{font-size:12.8px;color:var(--muted);line-height:1.55;text-align:center;margin-top:10px}
+.form-privacy a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(255,255,255,.28);text-underline-offset:3px}
+.foot-small{font-size:13.5px;color:var(--muted);line-height:1.6;margin-top:14px}
+.legal-page .page-head{padding-bottom:44px}
+.legal-layout{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+.legal-nav{position:sticky;top:calc(var(--nav-h) + 24px);display:grid;gap:10px;padding:18px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-brd);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.legal-nav a{padding:11px 13px;border-radius:13px;color:var(--muted);font-weight:600;font-size:14px;transition:background .25s,color .25s}
+.legal-nav a:hover{background:rgba(255,255,255,.06);color:var(--ink)}
+.legal-card{border-radius:26px;padding:clamp(28px,4vw,46px);background:var(--glass);border:1px solid var(--glass-brd);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.legal-card + .legal-card{margin-top:18px}
+.legal-card h2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.15;margin-bottom:16px}
+.legal-card h3{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin:24px 0 8px}
+.legal-card p,.legal-card li{color:#C6CCDD;font-size:15.5px;line-height:1.72}
+.legal-card ul{padding-left:20px;margin:10px 0 0;display:grid;gap:6px}
+.legal-card strong{color:var(--ink)}
+.legal-table{display:grid;gap:10px;margin-top:12px}
+.legal-line{display:grid;grid-template-columns:210px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.legal-line:last-child{border-bottom:none}
+.legal-line span:first-child{color:var(--muted);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.legal-line span:last-child{color:#DDE2EF}
+.legal-note{margin-top:18px;padding:16px 18px;border-radius:16px;background:rgba(91,140,255,.08);border:1px solid rgba(91,140,255,.2);color:#DDE2EF!important}
+@media(max-width:900px){.legal-layout{grid-template-columns:1fr}.legal-nav{position:relative;top:auto;grid-template-columns:1fr 1fr}.legal-line{grid-template-columns:1fr;gap:4px}}
+@media(max-width:560px){.legal-nav{grid-template-columns:1fr}.legal-card{padding:24px 20px}.price-amount{font-size:2.35rem}}
+
 </style>
 </head>
 <body>
@@ -1596,9 +1632,9 @@ footer{
       <div class="hero2-grid">
         <div class="hero2-left">
           <div class="hero-badge"><span class="pulse"></span> Anizy-le-Grand · Laon · Soissons · Chauny et alentours</div>
-          <h1 class="hero2-title">Votre activité mérite<br><span class="grad-text">un site clair et professionnel.</span></h1>
-          <p class="hero2-tag">Nous créons votre présence en ligne : site internet, réseaux sociaux, photos de votre établissement et logo simple.</p>
-          <p class="hero2-desc">L’objectif est simple : que vos clients comprennent rapidement qui vous êtes, ce que vous proposez et comment vous contacter. Des offres claires, des prix affichés, sans abonnement obligatoire.</p>
+          <h1 class="hero2-title">Sites internet et communication<br><span class="grad-text">pour entreprises locales.</span></h1>
+          <p class="hero2-tag">Nous aidons les commerces, artisans et associations à être mieux présentés en ligne : site internet, réseaux sociaux, photos et logo simple.</p>
+          <p class="hero2-desc">Votre client doit comprendre en quelques secondes qui vous êtes, ce que vous proposez et comment vous contacter. Nous faisons simple, propre et adapté à votre budget.</p>
           <div class="hero2-ctas">
             <a href="#sites" data-route="sites" class="btn btn-primary">Voir les formules
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1799,7 +1835,6 @@ footer{
 
       <div class="duo-photo reveal">
         <div class="duo-photo-frame">
-          <!-- Remplacez ce bloc par votre photo : <img src="photo-freres.jpg" alt="Clément et Raphaël Mahu, Brothers Studios"> -->
           <div class="duo-photo-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="16" cy="10" r="2.4"/><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5M14.5 19c0-2.2 1-3.8 3-4.2"/></svg>
             <span>Votre photo ici</span>
@@ -1918,7 +1953,7 @@ footer{
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Accueil travaillé et services détaillés</span></li>
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Galerie photos et avis clients</span></li>
             <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Formulaire de contact ou réservation</span></li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Design personnalisé et Google renforcé</span></li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span><span>Design personnalisé et bases SEO</span></li>
           </ul>
           <p class="price-ideal"><b>Idéal pour :</b> commerce, restaurant, salon, artisan avec plusieurs prestations ou entreprise locale.</p>
           <a href="#contact" data-route="contact" class="btn btn-primary" style="margin-top:22px">Demander un devis</a>
@@ -1982,7 +2017,7 @@ footer{
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Hébergement gratuit possible</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Configuration du nom de domaine personnalisé incluse</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Mise en ligne du site</div>
-          <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Optimisation de base pour Google</div>
+          <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Bases SEO pour être mieux compris par Google</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Site rapide, stable et facile à faire évoluer</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Sans abonnement mensuel obligatoire</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Modifications possibles après livraison, à la demande</div>
@@ -2406,10 +2441,213 @@ footer{
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
             </button>
             <p class="form-hint">Réponse sous 24 à 48h, sans engagement.</p>
+            <p class="form-privacy">Les informations envoyées servent uniquement à répondre à votre demande de devis. Voir notre <a href="#confidentialite" data-route="confidentialite">politique de confidentialité</a>.</p>
             <div class="form-success" id="formSuccess">✓ Merci, votre demande a bien été envoyée. Nous revenons vers vous sous 24 à 48h.</div>
           </form>
         </div>
 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================== -->
+<!-- PAGE : MENTIONS LÉGALES                             -->
+<!-- ================================================== -->
+<section class="page legal-page" id="page-mentions-legales">
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Informations légales</span>
+      <h1 class="section-title">Mentions légales<br><span class="grad-text">Brothers Studios.</span></h1>
+      <p class="section-lead">Cette page présente les informations relatives à l’éditeur du site, à l’hébergement, à la propriété intellectuelle et aux responsabilités liées à l’utilisation du site.</p>
+    </div>
+  </div>
+  <div class="page-body">
+    <div class="wrap legal-layout">
+      <aside class="legal-nav" aria-label="Navigation des informations légales">
+        <a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a>
+        <a href="#confidentialite" data-route="confidentialite">Confidentialité</a>
+        <a href="#cgv" data-route="cgv">CGV</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </aside>
+      <div>
+        <article class="legal-card reveal">
+          <h2>Éditeur du site</h2>
+          <div class="legal-table">
+            <div class="legal-line"><span>Nom commercial</span><span>Brothers Studios</span></div>
+            <div class="legal-line"><span>Responsables</span><span>Clément Mahu et Raphaël Mahu</span></div>
+            <div class="legal-line"><span>Statut</span><span>Entreprise en cours d’immatriculation</span></div>
+            <div class="legal-line"><span>SIRET</span><span>En cours d’attribution</span></div>
+            <div class="legal-line"><span>Adresse</span><span>Anizy-le-Grand, 02320, France</span></div>
+            <div class="legal-line"><span>E-mail</span><span><a href="mailto:brothersstudios9@gmail.com">brothersstudios9@gmail.com</a></span></div>
+            <div class="legal-line"><span>Téléphone</span><span><a href="tel:+33788579008">07 88 57 90 08</a></span></div>
+          </div>
+          <p class="legal-note">Le numéro SIRET sera ajouté dès son attribution. Avant toute facturation, les informations administratives définitives seront indiquées sur le devis et la facture.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Directeur de la publication</h2>
+          <p>Le directeur de la publication est Brothers Studios, représenté par Clément Mahu et Raphaël Mahu.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Hébergement du site</h2>
+          <div class="legal-table">
+            <div class="legal-line"><span>Hébergeur</span><span>GitHub Pages, service proposé par GitHub, Inc.</span></div>
+            <div class="legal-line"><span>Adresse</span><span>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</span></div>
+            <div class="legal-line"><span>Site web</span><span>github.com</span></div>
+          </div>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Propriété intellectuelle</h2>
+          <p>L’ensemble des textes, éléments graphiques, mises en page, logos, icônes et contenus présents sur ce site sont protégés. Toute reproduction, modification, diffusion ou exploitation sans autorisation écrite préalable est interdite.</p>
+          <p>Les réalisations présentées le sont à titre d’exemple ou de référence. Les marques, noms et contenus appartenant à des clients ou partenaires restent la propriété de leurs titulaires respectifs.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Responsabilité</h2>
+          <p>Brothers Studios s’efforce de fournir des informations claires et à jour. Toutefois, le site peut contenir des erreurs, omissions ou informations devenues inexactes. L’utilisateur est invité à nous contacter pour toute demande de correction.</p>
+          <p>Les tarifs affichés sont donnés à titre indicatif et peuvent être adaptés selon les besoins précis du projet. Seul le devis accepté par le client engage les parties.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!-- PAGE : CONFIDENTIALITÉ                              -->
+<!-- ================================================== -->
+<section class="page legal-page" id="page-confidentialite">
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Données personnelles</span>
+      <h1 class="section-title">Politique de<br><span class="grad-text">confidentialité.</span></h1>
+      <p class="section-lead">Cette page explique quelles données sont collectées lorsque vous contactez Brothers Studios et comment elles sont utilisées.</p>
+    </div>
+  </div>
+  <div class="page-body">
+    <div class="wrap legal-layout">
+      <aside class="legal-nav" aria-label="Navigation des informations légales">
+        <a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a>
+        <a href="#confidentialite" data-route="confidentialite">Confidentialité</a>
+        <a href="#cgv" data-route="cgv">CGV</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </aside>
+      <div>
+        <article class="legal-card reveal">
+          <h2>Données collectées</h2>
+          <p>Lorsque vous utilisez le formulaire de contact ou envoyez un e-mail, Brothers Studios peut collecter les informations suivantes :</p>
+          <ul>
+            <li>nom et prénom ;</li>
+            <li>adresse e-mail ;</li>
+            <li>numéro de téléphone, si vous le renseignez ;</li>
+            <li>ville, type d’activité, existence d’un site actuel ;</li>
+            <li>message et informations nécessaires pour comprendre votre projet.</li>
+          </ul>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Finalité de l’utilisation</h2>
+          <p>Ces données servent uniquement à répondre à votre demande, préparer un devis, organiser un échange et assurer le suivi commercial lié à votre projet. Elles ne sont pas vendues à des tiers.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Base légale</h2>
+          <p>Le traitement repose sur votre demande de contact et sur l’intérêt légitime de Brothers Studios à répondre aux prospects et clients qui sollicitent une information ou un devis.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Durée de conservation</h2>
+          <p>Les données liées aux demandes de contact sont conservées pendant une durée raisonnable nécessaire au traitement de la demande et au suivi commercial. Si aucun projet n’est engagé, vous pouvez demander leur suppression à tout moment.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Formulaire de contact</h2>
+          <p>Le formulaire peut utiliser un service technique tiers pour transmettre les messages par e-mail. Les informations envoyées sont limitées à ce qui est nécessaire pour répondre à votre demande.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Vos droits</h2>
+          <p>Vous pouvez demander l’accès, la rectification ou la suppression de vos données personnelles en écrivant à <a href="mailto:brothersstudios9@gmail.com">brothersstudios9@gmail.com</a>.</p>
+          <p>En cas de difficulté, vous pouvez également introduire une réclamation auprès de la CNIL.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Cookies</h2>
+          <p>Le site n’utilise pas de cookies publicitaires. Si un outil de mesure d’audience ou un service tiers est ajouté plus tard, cette politique sera mise à jour pour expliquer les données collectées et les choix possibles.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== -->
+<!-- PAGE : CONDITIONS GÉNÉRALES DE VENTE                -->
+<!-- ================================================== -->
+<section class="page legal-page" id="page-cgv">
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Cadre commercial</span>
+      <h1 class="section-title">Conditions générales<br><span class="grad-text">de vente.</span></h1>
+      <p class="section-lead">Ces conditions résument le fonctionnement habituel des prestations Brothers Studios. Le devis accepté précise toujours le périmètre exact du projet.</p>
+    </div>
+  </div>
+  <div class="page-body">
+    <div class="wrap legal-layout">
+      <aside class="legal-nav" aria-label="Navigation des informations légales">
+        <a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a>
+        <a href="#confidentialite" data-route="confidentialite">Confidentialité</a>
+        <a href="#cgv" data-route="cgv">CGV</a>
+        <a href="#contact" data-route="contact">Contact</a>
+      </aside>
+      <div>
+        <article class="legal-card reveal">
+          <h2>Prestations proposées</h2>
+          <p>Brothers Studios propose des prestations de création de sites internet, communication sur les réseaux sociaux, prise de photos d’établissement, logo simple, identité visuelle et accompagnement digital.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Devis et commande</h2>
+          <p>Chaque prestation fait l’objet d’un devis personnalisé. La commande est validée après acceptation écrite du devis et versement de l’acompte prévu.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Prix et paiement</h2>
+          <p>Les prix affichés sur le site sont des tarifs de départ. Ils peuvent varier selon le nombre de pages, les fonctionnalités, le volume de contenus, les déplacements et les besoins spécifiques du client.</p>
+          <p>Sauf mention contraire sur le devis, un acompte de 30 % est demandé au démarrage. Le solde est payable à la livraison, dans le délai indiqué sur le devis ou la facture.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Modifications</h2>
+          <p>Deux séries de modifications raisonnables sont incluses dans les prestations de création de site, sauf mention contraire au devis. Les demandes supplémentaires ou les changements importants peuvent faire l’objet d’un devis complémentaire.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Délais</h2>
+          <p>Les délais sont indiqués à titre estimatif lors de l’échange ou dans le devis. Ils dépendent notamment de la transmission des contenus par le client, de la rapidité des validations et de la complexité du projet.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Contenus fournis par le client</h2>
+          <p>Le client garantit disposer des droits nécessaires sur les textes, photos, logos, marques et documents transmis à Brothers Studios. Le client reste responsable des contenus qu’il fournit.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Droit à l’image</h2>
+          <p>Lorsqu’une personne est reconnaissable sur une photo ou une vidéo, le client doit s’assurer que son accord est obtenu avant toute diffusion, sauf cas prévu par la loi.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Propriété du site livré</h2>
+          <p>Après paiement complet, le client devient propriétaire des contenus livrés spécifiquement pour son projet, sous réserve des éléments tiers utilisés sous licence ou des outils techniques nécessaires au fonctionnement du site.</p>
+        </article>
+
+        <article class="legal-card reveal">
+          <h2>Réclamation et contact</h2>
+          <p>Pour toute question liée à une prestation, le client peut contacter Brothers Studios à l’adresse suivante : <a href="mailto:brothersstudios9@gmail.com">brothersstudios9@gmail.com</a>.</p>
+        </article>
       </div>
     </div>
   </div>
@@ -2427,11 +2665,7 @@ footer{
           <span>BROTHERS<small>Studios</small></span>
         </a>
         <p>Sites internet, réseaux sociaux, photos et identité visuelle pour les commerces, artisans et associations de l'Aisne.</p>
-        <div class="foot-socials" aria-label="Réseaux sociaux">
-          <!-- Remplacez les # par vos liens quand vos pages seront prêtes -->
-          <a href="#" aria-label="Facebook" title="Facebook (à venir)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H17V.2C16.7.1 15.6 0 14.4 0 11.9 0 10 1.5 10 4.3V6H7v3h3v9h4V9z"/></svg></a>
-          <a href="#" aria-label="Instagram" title="Instagram (à venir)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        </div>
+        <p class="foot-small">Un projet ? Écrivez-nous directement par e-mail ou demandez un devis gratuit.</p>
       </div>
       <div class="foot-col">
         <h4>Nos services</h4>
@@ -2451,14 +2685,14 @@ footer{
         <h4>Zone d'intervention</h4>
         <p class="foot-zone">Anizy-le-Grand · Laon · Soissons · Chauny · Coucy · La Fère et alentours.</p>
         <h4 style="margin-top:18px">Informations</h4>
-        <a href="#" title="Page en cours de rédaction">Mentions légales</a>
-        <a href="#" title="Page en cours de rédaction">Politique de confidentialité</a>
-        <a href="#" title="Page en cours de rédaction">Conditions générales de vente</a>
+        <a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a>
+        <a href="#confidentialite" data-route="confidentialite">Politique de confidentialité</a>
+        <a href="#cgv" data-route="cgv">Conditions générales de vente</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year"></span> Brothers Studios, entreprise individuelle. SIRET : <b>[à compléter dès réception]</b> — TVA non applicable, article 293 B du code général des impôts.</span>
-      <span>Anizy-le-Grand, Aisne</span>
+      <span>© <span id="year"></span> Brothers Studios — Sites internet et communication dans l’Aisne.</span>
+      <span><a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a></span>
     </div>
   </div>
 </footer>
@@ -2470,7 +2704,7 @@ footer{
 (function(){
   "use strict";
 
-  var ROUTES = ["accueil","sites","reseaux","image","realisations","qui-sommes-nous","contact"];
+  var ROUTES = ["accueil","sites","reseaux","image","realisations","qui-sommes-nous","contact","mentions-legales","confidentialite","cgv"];
   var DEFAULT_ROUTE = "accueil";
 
   var header = document.getElementById("header");
@@ -2504,7 +2738,10 @@ footer{
       "image":"Photo et identité visuelle — Brothers Studios",
       "realisations":"Réalisations — Brothers Studios",
       "qui-sommes-nous":"Qui sommes-nous — Brothers Studios",
-      "contact":"Contact & devis — Brothers Studios"
+      "contact":"Contact & devis — Brothers Studios",
+      "mentions-legales":"Mentions légales — Brothers Studios",
+      "confidentialite":"Politique de confidentialité — Brothers Studios",
+      "cgv":"Conditions générales de vente — Brothers Studios"
     };
     document.title = titles[route] || titles["accueil"];
   }
