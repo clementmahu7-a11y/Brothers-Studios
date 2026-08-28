@@ -1670,17 +1670,17 @@ footer{
 
 
 /* ============================================================
-   V8 — ACCUEIL + MOBILE + OFFRES ALIGNÉES FICHE TARIFAIRE
+   V9 — ACCUEIL ALLÉGÉ + MOBILE + OFFRES ALIGNÉES FICHE TARIFAIRE
    ============================================================ */
 html,body{max-width:100%;overflow-x:hidden}
 .v8-home{position:relative;overflow:hidden;padding:calc(var(--nav-h) + 58px) 0 0}
 .v8-home::before{content:"";position:absolute;inset:0 0 auto 0;height:700px;pointer-events:none;background:radial-gradient(520px 340px at 13% 12%,rgba(91,140,255,.20),transparent 68%),radial-gradient(520px 340px at 88% 8%,rgba(255,158,94,.14),transparent 70%)}
-.v8-hero{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.78fr);gap:44px;align-items:center;padding-bottom:54px}
+.v8-hero{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:28px;align-items:start;padding-bottom:46px;max-width:980px}
 .v8-kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);color:#C7CEDF;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
 .v8-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(91,140,255,.75)}
-.v8-title{font-family:var(--font-d);font-weight:800;font-size:clamp(2.45rem,5.35vw,4.75rem);line-height:1.02;letter-spacing:-.045em;max-width:850px;margin-bottom:24px}
+.v8-title{font-family:var(--font-d);font-weight:800;font-size:clamp(2.25rem,4.9vw,4.25rem);line-height:1.05;letter-spacing:-.04em;max-width:920px;margin-bottom:22px}
 .v8-title .grad-text{display:inline}
-.v8-lead{max-width:670px;color:#C6CDDE;font-size:clamp(1.02rem,1.45vw,1.17rem);line-height:1.72;margin-bottom:30px}
+.v8-lead{max-width:780px;color:#C6CDDE;font-size:clamp(1rem,1.35vw,1.14rem);line-height:1.72;margin-bottom:28px}
 .v8-lead b{color:var(--ink)}
 .v8-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
 .v8-pills{display:flex;gap:10px;flex-wrap:wrap}
@@ -1727,8 +1727,8 @@ html,body{max-width:100%;overflow-x:hidden}
 .v8-cta{margin:88px 0 108px;border-radius:30px;padding:clamp(38px,5.5vw,66px);text-align:center;background:radial-gradient(620px 280px at 20% 0%,rgba(91,140,255,.18),transparent 65%),radial-gradient(620px 280px at 82% 100%,rgba(255,158,94,.15),transparent 65%),var(--surface);border:1px solid rgba(255,255,255,.1)}
 .v8-cta h2{font-family:var(--font-d);font-size:clamp(1.75rem,3.6vw,2.8rem);line-height:1.12;margin-bottom:14px}
 .v8-cta p{max-width:650px;margin:0 auto 28px;color:var(--muted);font-size:15.5px;line-height:1.7}
-@media(max-width:1100px){.v8-hero{grid-template-columns:1fr}.v8-side{max-width:680px}.v8-services{grid-template-columns:repeat(2,1fr)}.v8-pack-grid{grid-template-columns:repeat(2,1fr)}.v8-process{grid-template-columns:1fr}}
-@media(max-width:760px){.v8-home{padding-top:calc(var(--nav-h) + 34px)}.v8-hero{gap:28px;padding-bottom:38px}.v8-title{font-size:clamp(2rem,10vw,3.05rem);line-height:1.04}.v8-lead{font-size:1rem;line-height:1.65}.v8-actions .btn{width:100%;justify-content:center}.v8-side{padding:22px;border-radius:22px}.v8-mini-price{grid-template-columns:1fr}.v8-services{grid-template-columns:1fr;margin-bottom:54px}.v8-section{padding-top:64px}.v8-pack-grid{grid-template-columns:1fr}.v8-pack{min-height:0;padding:24px 22px}.v8-process-card{padding:26px 22px}.v8-cta{text-align:left;margin:68px 0 86px}.v8-cta .btn{width:100%;justify-content:center}.section-title{word-break:normal}.price-card{padding:30px 24px}.pricing-grid{gap:18px}.plan{padding:28px 24px}.plans{max-width:none}.btn{padding:14px 22px}.page-head{padding:calc(var(--nav-h) + 46px) 0 42px}.page-body{padding-bottom:88px}}
+@media(max-width:1100px){.v8-hero{grid-template-columns:1fr}.v8-services{grid-template-columns:repeat(2,1fr)}.v8-pack-grid{grid-template-columns:repeat(2,1fr)}.v8-process{grid-template-columns:1fr}}
+@media(max-width:760px){.v8-home{padding-top:calc(var(--nav-h) + 34px)}.v8-hero{gap:28px;padding-bottom:38px}.v8-title{font-size:clamp(2rem,9vw,3.05rem);line-height:1.05}.v8-lead{font-size:1rem;line-height:1.65}.v8-actions .btn{width:100%;justify-content:center}.v8-side{padding:22px;border-radius:22px}.v8-mini-price{grid-template-columns:1fr}.v8-services{grid-template-columns:1fr;margin-bottom:54px}.v8-section{padding-top:64px}.v8-pack-grid{grid-template-columns:1fr}.v8-pack{min-height:0;padding:24px 22px}.v8-process-card{padding:26px 22px}.v8-cta{text-align:left;margin:68px 0 86px}.v8-cta .btn{width:100%;justify-content:center}.section-title{word-break:normal}.price-card{padding:30px 24px}.pricing-grid{gap:18px}.plan{padding:28px 24px}.plans{max-width:none}.btn{padding:14px 22px}.page-head{padding:calc(var(--nav-h) + 46px) 0 42px}.page-body{padding-bottom:88px}}
 @media(max-width:430px){.wrap{width:min(100% - 28px,1180px)}.v8-kicker{font-size:11px;letter-spacing:.06em}.v8-title{font-size:2.05rem}.v8-pills span{font-size:12.5px}.v8-pack .price{font-size:1.8rem}.price-amount{font-size:2.2rem}.section-title{font-size:1.8rem}.tarif-row{padding:15px 16px}.clean-final-cta,.cta-card{border-radius:24px}.nav{height:70px}.logo-mark{width:38px;height:38px}.logo{font-size:16px}.logo small{font-size:9.5px}}
 
 </style>
@@ -1809,21 +1809,6 @@ html,body{max-width:100%;overflow-x:hidden}
             <span>Sans abonnement obligatoire</span>
           </div>
         </div>
-
-        <aside class="v8-side reveal in" aria-label="Ce que nous pouvons faire">
-          <h2>Ce que vous obtenez</h2>
-          <p>Une présence en ligne simple à comprendre, cohérente et prête à être utilisée par vos clients.</p>
-          <ul class="v8-side-list">
-            <li>Un site adapté au téléphone</li>
-            <li>Vos services, horaires et contacts bien visibles</li>
-            <li>Des photos et visuels qui vous appartiennent</li>
-            <li>Un accompagnement simple, sans jargon</li>
-          </ul>
-          <div class="v8-mini-price">
-            <div><strong>dès 299 €</strong><span>site internet</span></div>
-            <div><strong>100 €</strong><span>photos établissement</span></div>
-          </div>
-        </aside>
       </div>
 
       <div class="v8-services reveal in">
