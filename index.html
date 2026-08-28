@@ -23,10 +23,11 @@
     {"@type": "City", "name": "Soissons"},
     {"@type": "City", "name": "Chauny"}
   ],
-  "address": {"@type": "PostalAddress", "addressLocality": "Anizy-le-Grand", "postalCode": "02320", "addressRegion": "Aisne", "addressCountry": "FR"},
+  "address": {"@type": "PostalAddress", "streetAddress": "9 rue d’Anizy", "addressLocality": "Anizy-le-Grand", "postalCode": "02320", "addressRegion": "Aisne", "addressCountry": "FR"},
+  "identifier": "SIRET 10923438500010",
   "email": "brothersstudios9@gmail.com",
   "telephone": "+33788579008",
-  "priceRange": "60€-799€",
+  "priceRange": "50€-799€",
   "makesOffer": [
     {"@type": "Offer", "name": "Site Essentielle", "price": "299", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Site Professionnelle", "price": "499", "priceCurrency": "EUR"},
@@ -35,7 +36,8 @@
     {"@type": "Offer", "name": "Réseaux sociaux — Régulière", "price": "340", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Réseaux sociaux — Complète", "price": "520", "priceCurrency": "EUR"},
     {"@type": "Offer", "name": "Prise de photos de votre établissement", "price": "100", "priceCurrency": "EUR"},
-    {"@type": "Offer", "name": "Logo simple ou adaptation de logo", "price": "60", "priceCurrency": "EUR"}
+    {"@type": "Offer", "name": "Version simplifiée d’un logo existant", "price": "50", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Création d’un logo", "price": "70", "priceCurrency": "EUR"}
   ]
 }
 </script>
@@ -1665,6 +1667,70 @@ footer{
 .clean-final-cta{border-radius:30px;padding:clamp(40px,6vw,68px);text-align:center;background:radial-gradient(620px 280px at 20% 0%,rgba(91,140,255,.18),transparent 65%),radial-gradient(620px 280px at 82% 100%,rgba(255,158,94,.15),transparent 65%),var(--surface);border:1px solid rgba(255,255,255,.1)}.clean-final-cta h2{font-family:var(--font-d);font-size:clamp(1.9rem,4vw,3rem);line-height:1.12;margin-bottom:14px}.clean-final-cta p{max-width:650px;margin:0 auto 30px;color:var(--muted);font-size:15.5px;line-height:1.7}.clean-final-cta .btn{justify-content:center}
 @media(max-width:1024px){.clean-hero-grid{grid-template-columns:1fr;gap:36px}.clean-hero-panel{max-width:560px}.clean-services{grid-template-columns:repeat(2,1fr)}.clean-pack-grid,.clean-two-cols{grid-template-columns:1fr}.clean-case{grid-template-columns:1fr}.clean-case-actions{justify-content:flex-start}}
 @media(max-width:640px){.clean-hero{padding:calc(var(--nav-h) + 32px) 0 46px}.clean-title{font-size:clamp(2.05rem,10vw,3.15rem)}.clean-actions .btn{width:100%;justify-content:center}.clean-services{grid-template-columns:1fr;margin-top:34px}.panel-offers{grid-template-columns:1fr}.clean-section{padding-top:68px}.clean-section.compact{padding-top:54px}.clean-info-card,.clean-case{padding:26px 22px}.clean-final-cta{text-align:left}.clean-final-cta .btn{width:100%}}
+
+
+/* ============================================================
+   V8 — ACCUEIL + MOBILE + OFFRES ALIGNÉES FICHE TARIFAIRE
+   ============================================================ */
+html,body{max-width:100%;overflow-x:hidden}
+.v8-home{position:relative;overflow:hidden;padding:calc(var(--nav-h) + 58px) 0 0}
+.v8-home::before{content:"";position:absolute;inset:0 0 auto 0;height:700px;pointer-events:none;background:radial-gradient(520px 340px at 13% 12%,rgba(91,140,255,.20),transparent 68%),radial-gradient(520px 340px at 88% 8%,rgba(255,158,94,.14),transparent 70%)}
+.v8-hero{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.78fr);gap:44px;align-items:center;padding-bottom:54px}
+.v8-kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.10);color:#C7CEDF;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+.v8-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad);box-shadow:0 0 16px rgba(91,140,255,.75)}
+.v8-title{font-family:var(--font-d);font-weight:800;font-size:clamp(2.45rem,5.35vw,4.75rem);line-height:1.02;letter-spacing:-.045em;max-width:850px;margin-bottom:24px}
+.v8-title .grad-text{display:inline}
+.v8-lead{max-width:670px;color:#C6CDDE;font-size:clamp(1.02rem,1.45vw,1.17rem);line-height:1.72;margin-bottom:30px}
+.v8-lead b{color:var(--ink)}
+.v8-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.v8-pills{display:flex;gap:10px;flex-wrap:wrap}
+.v8-pills span{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:13.5px;font-weight:700}
+.v8-side{border-radius:26px;background:linear-gradient(180deg,rgba(17,23,41,.88),rgba(13,18,32,.82));border:1px solid rgba(255,255,255,.12);padding:26px;box-shadow:0 34px 90px -40px rgba(0,0,0,.9)}
+.v8-side h2{font-family:var(--font-d);font-size:1.35rem;line-height:1.18;margin-bottom:8px}
+.v8-side p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:20px}
+.v8-side-list{display:grid;gap:12px;list-style:none;margin:0 0 22px}
+.v8-side-list li{display:flex;gap:10px;align-items:flex-start;color:#D8DDEC;font-size:14.5px;line-height:1.45}
+.v8-side-list li::before{content:"✓";display:grid;place-items:center;flex:0 0 22px;height:22px;border-radius:7px;background:linear-gradient(135deg,rgba(91,140,255,.22),rgba(255,158,94,.20));color:#fff;font-weight:800;font-size:12px}
+.v8-mini-price{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.v8-mini-price div{padding:14px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.v8-mini-price strong{display:block;font-family:var(--font-d);font-weight:800;font-size:1.15rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:2px}
+.v8-mini-price span{display:block;color:var(--muted);font-size:12.5px;line-height:1.35}
+.v8-services{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:76px}
+.v8-service{display:flex;flex-direction:column;gap:10px;padding:24px 22px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);transition:transform .28s var(--ease),border-color .28s,background .28s}
+.v8-service:hover{transform:translateY(-5px);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}
+.v8-service small{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+.v8-service strong{font-family:var(--font-d);font-size:1.08rem;color:var(--ink);line-height:1.22}
+.v8-service p{color:var(--muted);font-size:13.5px;line-height:1.5}
+.v8-section{padding:88px 0 0}
+.v8-section-head{max-width:760px;margin-bottom:38px}
+.v8-section-head .section-title{margin-bottom:14px}
+.v8-pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.v8-pack{position:relative;overflow:hidden;border-radius:24px;padding:28px 26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);display:flex;flex-direction:column;min-height:246px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.v8-pack:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 30px 70px -38px rgba(0,0,0,.9)}
+.v8-pack.featured{background:linear-gradient(180deg,rgba(91,140,255,.13),rgba(255,255,255,.04));border-color:rgba(91,140,255,.40)}
+.v8-pack::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad);opacity:.85}
+.v8-pack .label{display:inline-flex;align-self:flex-start;margin-bottom:16px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
+.v8-pack h3{font-family:var(--font-d);font-size:1.18rem;line-height:1.18;margin-bottom:10px}
+.v8-pack .price{font-family:var(--font-d);font-weight:800;font-size:2rem;line-height:1;margin-bottom:12px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v8-pack .price small{font-family:var(--font-b);font-size:.48em;color:var(--muted);-webkit-text-fill-color:var(--muted);font-weight:700}
+.v8-pack p{color:var(--muted);font-size:14px;line-height:1.58;margin-bottom:16px;flex:1}
+.v8-pack ul{list-style:none;display:grid;gap:8px;margin-top:4px;color:#D6DCEB;font-size:13.5px}
+.v8-pack li{display:flex;gap:8px;align-items:flex-start}.v8-pack li::before{content:"•";color:#FFB087;font-weight:800}
+.v8-process{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}
+.v8-process-card{border-radius:24px;padding:32px 30px;background:var(--surface);border:1px solid rgba(255,255,255,.09)}
+.v8-process-card h2{font-family:var(--font-d);font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.14;margin-bottom:14px}
+.v8-process-card p{color:var(--muted);font-size:15px;line-height:1.68;margin-bottom:0}
+.v8-steps{display:grid;gap:12px}
+.v8-step{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.075)}
+.v8-step b{flex:0 0 34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--grad);color:#0A0C14;font-family:var(--font-d);font-weight:800}
+.v8-step span{color:#D4DAEA;font-size:14.5px;line-height:1.45;padding-top:5px}
+.v8-cta{margin:88px 0 108px;border-radius:30px;padding:clamp(38px,5.5vw,66px);text-align:center;background:radial-gradient(620px 280px at 20% 0%,rgba(91,140,255,.18),transparent 65%),radial-gradient(620px 280px at 82% 100%,rgba(255,158,94,.15),transparent 65%),var(--surface);border:1px solid rgba(255,255,255,.1)}
+.v8-cta h2{font-family:var(--font-d);font-size:clamp(1.75rem,3.6vw,2.8rem);line-height:1.12;margin-bottom:14px}
+.v8-cta p{max-width:650px;margin:0 auto 28px;color:var(--muted);font-size:15.5px;line-height:1.7}
+@media(max-width:1100px){.v8-hero{grid-template-columns:1fr}.v8-side{max-width:680px}.v8-services{grid-template-columns:repeat(2,1fr)}.v8-pack-grid{grid-template-columns:repeat(2,1fr)}.v8-process{grid-template-columns:1fr}}
+@media(max-width:760px){.v8-home{padding-top:calc(var(--nav-h) + 34px)}.v8-hero{gap:28px;padding-bottom:38px}.v8-title{font-size:clamp(2rem,10vw,3.05rem);line-height:1.04}.v8-lead{font-size:1rem;line-height:1.65}.v8-actions .btn{width:100%;justify-content:center}.v8-side{padding:22px;border-radius:22px}.v8-mini-price{grid-template-columns:1fr}.v8-services{grid-template-columns:1fr;margin-bottom:54px}.v8-section{padding-top:64px}.v8-pack-grid{grid-template-columns:1fr}.v8-pack{min-height:0;padding:24px 22px}.v8-process-card{padding:26px 22px}.v8-cta{text-align:left;margin:68px 0 86px}.v8-cta .btn{width:100%;justify-content:center}.section-title{word-break:normal}.price-card{padding:30px 24px}.pricing-grid{gap:18px}.plan{padding:28px 24px}.plans{max-width:none}.btn{padding:14px 22px}.page-head{padding:calc(var(--nav-h) + 46px) 0 42px}.page-body{padding-bottom:88px}}
+@media(max-width:430px){.wrap{width:min(100% - 28px,1180px)}.v8-kicker{font-size:11px;letter-spacing:.06em}.v8-title{font-size:2.05rem}.v8-pills span{font-size:12.5px}.v8-pack .price{font-size:1.8rem}.price-amount{font-size:2.2rem}.section-title{font-size:1.8rem}.tarif-row{padding:15px 16px}.clean-final-cta,.cta-card{border-radius:24px}.nav{height:70px}.logo-mark{width:38px;height:38px}.logo{font-size:16px}.logo small{font-size:9.5px}}
+
 </style>
 </head>
 <body>
@@ -1722,166 +1788,152 @@ footer{
 <!-- ================================================== -->
 <!-- PAGE : ACCUEIL                                      -->
 <!-- ================================================== -->
-<section class="page" id="page-accueil">
 
-  <!-- ===== ACCUEIL PROPRE ===== -->
-  <div class="clean-hero">
+<section class="page" id="page-accueil">
+  <div class="v8-home">
     <div class="wrap">
-      <div class="clean-hero-grid">
-        <div class="clean-hero-copy reveal in">
-          <div class="clean-badge"><span></span> Création de sites internet & communication locale</div>
-          <h1 class="clean-title">Une présence en ligne claire, professionnelle et adaptée à votre budget.</h1>
-          <p class="clean-lead">Brothers Studios aide les commerces, artisans et associations de l’Aisne à être mieux présentés : site internet, réseaux sociaux, photos d’établissement et logo simple.</p>
-          <div class="clean-actions">
+      <div class="v8-hero">
+        <div class="reveal in">
+          <div class="v8-kicker">Brothers Studios · Aisne</div>
+          <h1 class="v8-title">Des sites internet et une communication <span class="grad-text">clairs, propres et accessibles.</span></h1>
+          <p class="v8-lead"><b>Nous aidons les commerces, artisans et associations locales</b> à être mieux présentés en ligne : site internet, réseaux sociaux, photos de votre établissement et identité visuelle.</p>
+          <div class="v8-actions">
             <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
             <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
           </div>
-          <div class="clean-reassurance" aria-label="Points forts">
-            <span>Prix fixes</span>
+          <div class="v8-pills" aria-label="Points forts">
+            <span>Prix affichés</span>
             <span>Devis clair</span>
-            <span>Pas d’abonnement obligatoire</span>
+            <span>Sans abonnement obligatoire</span>
           </div>
         </div>
 
-        <div class="clean-hero-panel reveal in" aria-label="Aperçu des prestations">
-          <div class="panel-top">
-            <div class="panel-dots"><i></i><i></i><i></i></div>
-            <span>votre-entreprise.fr</span>
-          </div>
-          <div class="panel-main">
-            <p class="panel-eyebrow">Exemple de site</p>
-            <h2>Vos services, vos horaires et vos contacts au même endroit.</h2>
-            <p>Un visiteur comprend vite ce que vous proposez et peut vous contacter facilement.</p>
-          </div>
-          <div class="panel-offers">
-            <div><strong>299 €</strong><span>Site simple</span></div>
-            <div><strong>499 €</strong><span>Site complet</span></div>
-            <div><strong>100 €</strong><span>Photos établissement</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="clean-services reveal in">
-        <a href="#sites" data-route="sites" class="clean-service">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M9 21h6"/></svg></span>
-          <strong>Sites internet</strong>
-          <small>Vitrine simple ou site complet</small>
-        </a>
-        <a href="#reseaux" data-route="reseaux" class="clean-service">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8h10M7 12h7M21 12a8.5 8.5 0 0 1-12.4 7.5L3 21l1.5-5.1A8.5 8.5 0 1 1 21 12z"/></svg></span>
-          <strong>Réseaux sociaux</strong>
-          <small>Posts, stories et contenus réguliers</small>
-        </a>
-        <a href="#image" data-route="image" class="clean-service">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5h-5L8 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-1.5-2z"/><circle cx="12" cy="13" r="3"/></svg></span>
-          <strong>Photos</strong>
-          <small>Votre établissement mis en valeur</small>
-        </a>
-        <a href="#image" data-route="image" class="clean-service">
-          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 15c1.5-4 6.5-4 8 0M9 9h.01M15 9h.01"/></svg></span>
-          <strong>Logo simple</strong>
-          <small>Une image plus propre et cohérente</small>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== PACKS MIS EN AVANT ===== -->
-  <div class="clean-section">
-    <div class="wrap">
-      <div class="clean-section-head reveal">
-        <span class="eyebrow">Offres simples</span>
-        <h2 class="section-title">Trois façons de commencer.</h2>
-        <p class="section-sub">Vous pouvez choisir une formule seule, ou partir sur un pack si vous voulez un résultat plus complet dès le début.</p>
-      </div>
-      <div class="clean-pack-grid">
-        <article class="clean-pack reveal">
-          <span class="pack-label">Le plus accessible</span>
-          <h3>Site Essentielle</h3>
-          <div class="clean-price">299<span>€</span></div>
-          <p>Une page claire pour présenter votre activité, vos services, vos coordonnées et permettre aux clients de vous contacter.</p>
-          <a href="#sites" data-route="sites">Voir la formule →</a>
-        </article>
-        <article class="clean-pack featured reveal d1">
-          <span class="pack-label">Recommandé</span>
-          <h3>Pack démarrage</h3>
-          <div class="clean-price">349<span>€</span></div>
-          <p>Un site simple + une prise de photos de votre établissement. Idéal pour partir avec une image propre dès le lancement.</p>
-          <a href="#contact" data-route="contact">Demander ce pack →</a>
-        </article>
-        <article class="clean-pack reveal d2">
-          <span class="pack-label">Visibilité régulière</span>
-          <h3>Réseaux sociaux</h3>
-          <div class="clean-price">190<span>€/mois</span></div>
-          <p>Des publications, stories et contenus préparés pour garder une présence active sans devoir tout gérer vous-même.</p>
-          <a href="#reseaux" data-route="reseaux">Voir les formules →</a>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== POUR QUI / COMMENT ===== -->
-  <div class="clean-section compact">
-    <div class="wrap">
-      <div class="clean-two-cols">
-        <div class="clean-info-card reveal">
-          <span class="eyebrow">Pour qui ?</span>
-          <h2>Des solutions pour les structures locales.</h2>
-          <p>Commerces, restaurants, artisans, associations, clubs, indépendants : l’objectif est de vous donner une image sérieuse en ligne, sans partir sur un projet compliqué.</p>
-          <ul>
-            <li>Vous n’avez pas encore de site.</li>
-            <li>Votre page Facebook ne suffit plus.</li>
-            <li>Vos photos ou votre logo ne font pas assez professionnel.</li>
+        <aside class="v8-side reveal in" aria-label="Ce que nous pouvons faire">
+          <h2>Ce que vous obtenez</h2>
+          <p>Une présence en ligne simple à comprendre, cohérente et prête à être utilisée par vos clients.</p>
+          <ul class="v8-side-list">
+            <li>Un site adapté au téléphone</li>
+            <li>Vos services, horaires et contacts bien visibles</li>
+            <li>Des photos et visuels qui vous appartiennent</li>
+            <li>Un accompagnement simple, sans jargon</li>
           </ul>
+          <div class="v8-mini-price">
+            <div><strong>dès 299 €</strong><span>site internet</span></div>
+            <div><strong>100 €</strong><span>photos établissement</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="v8-services reveal in">
+        <a href="#sites" data-route="sites" class="v8-service">
+          <small>Sites internet</small>
+          <strong>De 299 € à une solution sur mesure</strong>
+          <p>Une page simple, un site complet ou un projet plus avancé selon vos besoins.</p>
+        </a>
+        <a href="#reseaux" data-route="reseaux" class="v8-service">
+          <small>Réseaux sociaux</small>
+          <strong>À partir de 190 €/mois</strong>
+          <p>Publications, stories, vidéos courtes et contenus préparés chaque mois.</p>
+        </a>
+        <a href="#image" data-route="image" class="v8-service">
+          <small>Photos</small>
+          <strong>Votre établissement à 100 €</strong>
+          <p>Une séance sur place pour obtenir des images propres de votre activité.</p>
+        </a>
+        <a href="#image" data-route="image" class="v8-service">
+          <small>Identité visuelle</small>
+          <strong>Logo simple dès 50 €</strong>
+          <p>Logo, charte graphique et modèles pour avoir une image plus cohérente.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="v8-section">
+    <div class="wrap">
+      <div class="v8-section-head reveal">
+        <span class="eyebrow">Packs les plus demandés</span>
+        <h2 class="section-title">Des offres simples<br><span class="grad-text">pour commencer vite.</span></h2>
+        <p class="section-lead">Les packs sont des points de départ : on peut retirer ce qui ne sert pas ou ajouter ce qui manque avant le devis final.</p>
+      </div>
+
+      <div class="v8-pack-grid">
+        <article class="v8-pack featured reveal">
+          <span class="label">Départ simple</span>
+          <h3>Je démarre</h3>
+          <div class="price">359 €</div>
+          <p>Pour un artisan ou un commerce qui part de zéro : un site simple et des photos propres.</p>
+          <ul><li>Site Essentielle</li><li>Photos de votre établissement</li></ul>
+        </article>
+        <article class="v8-pack reveal d1">
+          <span class="label">Image propre</span>
+          <h3>Mon image</h3>
+          <div class="price">270 €</div>
+          <p>Pour garder vos réseaux vous-même, mais avec une identité visuelle cohérente.</p>
+          <ul><li>Logo simplifié</li><li>Charte graphique</li><li>4 modèles de publication</li></ul>
+        </article>
+        <article class="v8-pack reveal d2">
+          <span class="label">Site + réseaux</span>
+          <h3>Je me lance en ligne</h3>
+          <div class="price">599 € <small>puis 190 €/mois</small></div>
+          <p>Le site donne la crédibilité, les réseaux amènent les clients.</p>
+          <ul><li>Site Professionnelle</li><li>Ouverture d’un compte</li><li>Formule Présence</li></ul>
+        </article>
+        <article class="v8-pack reveal">
+          <span class="label">Saison</span>
+          <h3>Ouverture de saison</h3>
+          <div class="price">240 €</div>
+          <p>Pour repartir du bon pied avant une période importante, sans engagement mensuel.</p>
+          <ul><li>Photos de votre établissement</li><li>Remise à plat d’un compte</li><li>Modèle de publication</li></ul>
+        </article>
+        <article class="v8-pack reveal d1">
+          <span class="label">Complet</span>
+          <h3>Tout en un</h3>
+          <div class="price">1090 € <small>puis 340 €/mois</small></div>
+          <p>Site, image et réseaux d’un seul coup, avec une identité cohérente partout.</p>
+          <ul><li>Site Professionnelle</li><li>Logo, charte et modèles</li><li>Photos + Formule Régulière</li></ul>
+        </article>
+        <article class="v8-pack reveal d2">
+          <span class="label">Événement</span>
+          <h3>Événement</h3>
+          <div class="price">190 €</div>
+          <p>Gala, portes ouvertes, concours ou anniversaire : annoncé, couvert, puis raconté.</p>
+          <ul><li>Couverture sur place</li><li>Visuel d’annonce</li><li>Vidéo courte</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="v8-section">
+    <div class="wrap">
+      <div class="v8-process">
+        <div class="v8-process-card reveal">
+          <span class="eyebrow">Méthode</span>
+          <h2>On garde les choses simples.</h2>
+          <p>Vous n’avez pas besoin de connaître le web ou les réseaux sociaux. Vous nous expliquez votre activité, nous vous proposons la solution la plus adaptée et un prix clair.</p>
         </div>
-        <div class="clean-info-card reveal d1">
-          <span class="eyebrow">Comment ça marche ?</span>
-          <h2>Simple, clair, sans jargon.</h2>
-          <div class="clean-steps">
-            <div><b>1</b><span>On échange sur votre besoin.</span></div>
-            <div><b>2</b><span>Vous recevez un devis clair.</span></div>
-            <div><b>3</b><span>On crée le site, les visuels ou les contenus.</span></div>
-            <div><b>4</b><span>Vous validez, puis on met en ligne.</span></div>
+        <div class="v8-process-card reveal d1">
+          <div class="v8-steps">
+            <div class="v8-step"><b>1</b><span>On échange sur votre besoin et votre budget.</span></div>
+            <div class="v8-step"><b>2</b><span>Vous recevez un devis précis, sans engagement.</span></div>
+            <div class="v8-step"><b>3</b><span>Nous créons le site, les visuels ou les contenus.</span></div>
+            <div class="v8-step"><b>4</b><span>Vous validez, puis on met en ligne ou on publie.</span></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- ===== RÉALISATION ===== -->
-  <div class="clean-section compact">
-    <div class="wrap">
-      <div class="clean-case reveal">
-        <div>
-          <span class="eyebrow">Exemple concret</span>
-          <h2>Un site déjà livré pour un club local.</h2>
-          <p>Le site de l’US Anizy Pinon montre le type de rendu possible : informations organisées, design propre, accès rapide aux rubriques importantes et image plus professionnelle.</p>
-        </div>
-        <div class="clean-case-actions">
-          <a href="https://usanizypinon.fr" target="_blank" rel="noopener" class="btn btn-primary">Voir le site</a>
-          <a href="#realisations" data-route="realisations" class="btn btn-ghost">Nos réalisations</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== CTA ===== -->
-  <div class="clean-section cta-clean-section">
-    <div class="wrap">
-      <div class="clean-final-cta reveal">
-        <h2>Vous voulez améliorer votre image en ligne ?</h2>
-        <p>Envoyez-nous votre projet, même s’il n’est pas encore précis. On vous dira simplement ce qui est le plus adapté à votre besoin et à votre budget.</p>
+      <div class="v8-cta reveal">
+        <h2>Vous voulez savoir quelle offre vous correspond ?</h2>
+        <p>Envoyez-nous simplement votre activité, votre ville et ce que vous voulez améliorer. Nous vous orientons vers la formule la plus simple possible.</p>
         <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
   </div>
-
 </section>
-
 <section class="page" id="page-qui-sommes-nous">
   <div class="page-head">
     <div class="orb orb-cobalt" aria-hidden="true"></div>
@@ -2051,18 +2103,25 @@ footer{
         </div>
         <div class="tarifs reveal">
           <div class="tarif-row head"><span>Option</span><span>Prix</span></div>
-          <div class="tarif-row"><span class="t-label">Espace membres ou adhérents, avec comptes et contenus réservés</span><span class="t-price">250 €</span></div>
-          <div class="tarif-row"><span class="t-label">Sondage ou formulaire récurrent, réponses consultables</span><span class="t-price">90 €</span></div>
-          <div class="tarif-row"><span class="t-label">Page supplémentaire</span><span class="t-price">60 €</span></div>
-          <div class="tarif-row"><span class="t-label">Reprise d'un site existant</span><span class="t-price soft">+ 25 %</span></div>
-          <div class="tarif-row"><span class="t-label">Paiement en ligne, inscriptions ou billetterie</span><span class="t-price soft">sur devis</span></div>
+          <div class="tarif-row"><span class="t-label">Espace membres ou adhérents : comptes, connexion et contenus réservés</span><span class="t-price">100 €</span></div>
+          <div class="tarif-row"><span class="t-label">Paiement en ligne : inscriptions, billetterie ou règlement sur le site</span><span class="t-price soft">sur devis</span></div>
+          <div class="tarif-row"><span class="t-label">Reprise d'un site existant : contenus repris et structure remise à plat</span><span class="t-price soft">+ 25 %</span></div>
+          <div class="tarif-row"><span class="t-label">Grosse modification : nouvelle page ou nouvelle fonctionnalité</span><span class="t-price soft">sur devis</span></div>
+        </div>
+
+        <div class="tarifs reveal" style="margin-top:22px">
+          <div class="tarif-row head"><span>Hébergement et suivi</span><span>Prix</span></div>
+          <div class="tarif-row"><span class="t-label">Site vitrine : hébergement gratuit possible, domaine à votre charge</span><span class="t-price">0 €</span></div>
+          <div class="tarif-row"><span class="t-label">Site avec espace membres : hébergement avec base de données</span><span class="t-price">60 €/an</span></div>
+          <div class="tarif-row"><span class="t-label">Suivi et mises à jour : sauvegardes et corrections mineures</span><span class="t-price">90 €/an</span></div>
+          <div class="tarif-row"><span class="t-label">Petite modification : texte, photo, horaire ou tarif</span><span class="t-price">50 €</span></div>
         </div>
 
         <div class="callout reveal">
           <span class="co-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
           <div>
             <h3>Vous gérez une association ou un club ?</h3>
-            <p>L'espace adhérents permet à vos membres de se connecter avec leur propre compte, d'accéder à des informations réservées et de répondre à un sondage chaque semaine. Vous consultez les réponses directement, sans tableur ni relances.</p>
+            <p>L'espace adhérents permet à vos membres de se connecter avec leur propre compte et d'accéder à des informations réservées. Le besoin exact est cadré avant devis pour éviter toute mauvaise surprise.</p>
           </div>
         </div>
       </div>
@@ -2083,7 +2142,7 @@ footer{
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Sans abonnement mensuel obligatoire</div>
           <div class="inc-item reveal"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg></span>Modifications possibles après livraison, à la demande</div>
         </div>
-        <p class="pricing-note reveal" style="text-align:left">Le nom de domaine reste à la charge du client, environ <b>10 à 15 € par an</b>. Pour un site avec espace adhérents, l'hébergement est de <b>60 € par an</b>.</p>
+        <p class="pricing-note reveal" style="text-align:left">Le nom de domaine reste à la charge du client, environ <b>10 à 15 € par an</b>. Le suivi annuel reste facultatif.</p>
       </div>
 
       <!-- FAQ -->
@@ -2170,28 +2229,29 @@ footer{
           <div class="plan-price">190<span class="euro">€</span></div>
           <p class="plan-per">par mois</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>4 publications</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>1 vidéo courte</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Stories 2 à 3 fois par semaine</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Visuels et textes inclus</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Programmation du mois</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Votre page ne tombe jamais dans l’oubli</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>3 à 5 publications par mois, visuels et textes compris</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Une vidéo courte de temps en temps</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des stories dans la semaine</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Le mois préparé et programmé à l’avance</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Photos non comprises</span></li>
           </ul>
           <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
         </article>
 
         <article class="plan featured reveal d1">
-          <span class="flag">★ Le meilleur rapport</span>
+          <span class="flag">Recommandée</span>
           <h3>Régulière</h3>
           <div class="plan-price">340<span class="euro">€</span></div>
           <p class="plan-per">par mois</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>8 publications</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>2 vidéos courtes</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Stories 4 à 5 fois par semaine</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Visuels et textes inclus</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Programmation du mois</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>15 photos tous les deux mois</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Point de suivi mensuel</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Une page qui vit toute la semaine</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>7 à 10 publications par mois, visuels et textes compris</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des vidéos courtes chaque mois</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des stories plusieurs fois par semaine</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Une séance de photos régulière</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Aide aux réponses simples aux messages et commentaires</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Un point de suivi chaque mois</span></li>
           </ul>
           <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis</a>
         </article>
@@ -2201,13 +2261,13 @@ footer{
           <div class="plan-price">520<span class="euro">€</span></div>
           <p class="plan-per">par mois</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>12 publications</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>4 vidéos courtes</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Stories quotidiennes</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Visuels et textes inclus</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>25 photos par mois</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Couverture d'un événement par trimestre</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Reporting mensuel</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Une présence tous les jours</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>11 à 15 publications par mois, visuels et textes compris</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des vidéos courtes chaque semaine</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des stories quotidiennes</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Des photos neuves tous les mois</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Vos événements couverts sur place</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="url(#gradStroke)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg><span>Un bilan détaillé chaque mois</span></li>
           </ul>
           <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
         </article>
@@ -2289,8 +2349,11 @@ footer{
 
       <div class="tarifs reveal">
         <div class="tarif-row head"><span>Prestation photo</span><span>Prix</span></div>
-          <div class="tarif-row"><span class="t-label">Prise de photos de votre établissement</span><span class="t-price">100 €</span></div>
-          <div class="tarif-row"><span class="t-label">Vidéo de présentation</span><span class="t-price soft">sur devis</span></div>
+          <div class="tarif-row"><span class="t-label">Photos de votre établissement : locaux, produits, réalisations, équipe et ambiance</span><span class="t-price">100 €</span></div>
+          <div class="tarif-row"><span class="t-label">Séance complémentaire : lieu étendu, plusieurs espaces ou seconde saison</span><span class="t-price">50 €</span></div>
+          <div class="tarif-row"><span class="t-label">Couverture d'un événement : présence sur place et photos retouchées</span><span class="t-price">120 €</span></div>
+          <div class="tarif-row"><span class="t-label">Retouche seule : vous fournissez vos images</span><span class="t-price">50 €</span></div>
+          <div class="tarif-row"><span class="t-label">Vidéo de présentation : tournage et montage</span><span class="t-price soft">sur devis</span></div>
       </div>
 
       <div class="callout soft reveal">
@@ -2309,8 +2372,9 @@ footer{
         </div>
         <div class="tarifs reveal">
           <div class="tarif-row head"><span>Prestation</span><span>Prix</span></div>
-          <div class="tarif-row"><span class="t-label">Création ou adaptation simple d'un logo</span><span class="t-price">60 €</span></div>
-          <div class="tarif-row"><span class="t-label">Charte graphique</span><span class="t-price">120 €</span></div>
+          <div class="tarif-row"><span class="t-label">Version simplifiée d'un logo existant, lisible sur les réseaux</span><span class="t-price">50 €</span></div>
+          <div class="tarif-row"><span class="t-label">Création d'un logo : trois pistes, une retenue, ajustements inclus</span><span class="t-price">70 €</span></div>
+          <div class="tarif-row"><span class="t-label">Charte graphique : couleurs, typographies et règles d'usage</span><span class="t-price">120 €</span></div>
           <div class="tarif-row"><span class="t-label">Jeu de quatre modèles de publication</span><span class="t-price">150 €</span></div>
         </div>
 
@@ -2325,7 +2389,7 @@ footer{
 
       <div class="cta-card reveal" style="margin-top:96px">
         <h2>Besoin de photos,<br>d'un logo, ou des deux ?</h2>
-        <p>Le pack « Mon image » réunit logo, charte graphique et modèles de publication à 290 €.</p>
+        <p>Le pack « Mon image » réunit logo simplifié, charte graphique et modèles de publication à 270 €.</p>
         <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
@@ -2495,7 +2559,7 @@ footer{
             </div>
             <div class="field">
               <label for="f-msg">Votre projet *</label>
-              <textarea id="f-msg" name="message" placeholder="Décrivez votre activité et ce que vous attendez de votre site..." required></textarea>
+              <textarea id="f-msg" name="message" placeholder="Décrivez votre activité et ce que vous voulez améliorer : site, réseaux, photos, logo..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">
               Envoyer le message
@@ -2537,19 +2601,21 @@ footer{
           <h2>Éditeur du site</h2>
           <div class="legal-table">
             <div class="legal-line"><span>Nom commercial</span><span>Brothers Studios</span></div>
-            <div class="legal-line"><span>Responsables</span><span>Clément Mahu et Raphaël Mahu</span></div>
-            <div class="legal-line"><span>Statut</span><span>Entreprise en cours d’immatriculation</span></div>
-            <div class="legal-line"><span>SIRET</span><span>En cours d’attribution</span></div>
-            <div class="legal-line"><span>Adresse</span><span>Anizy-le-Grand, 02320, France</span></div>
+            <div class="legal-line"><span>Éditeur</span><span>Mahu Clément Armand Jean-Louis</span></div>
+            <div class="legal-line"><span>Forme juridique</span><span>Entrepreneur individuel</span></div>
+            <div class="legal-line"><span>SIREN</span><span>109 234 385</span></div>
+            <div class="legal-line"><span>SIRET</span><span>109 234 385 00010</span></div>
+            <div class="legal-line"><span>Code APE</span><span>7021Z — Conseil en relations publiques et communication</span></div>
+            <div class="legal-line"><span>Adresse</span><span>9 rue d’Anizy, 02320 Anizy-le-Grand, France</span></div>
             <div class="legal-line"><span>E-mail</span><span><a href="mailto:brothersstudios9@gmail.com">brothersstudios9@gmail.com</a></span></div>
             <div class="legal-line"><span>Téléphone</span><span><a href="tel:+33788579008">07 88 57 90 08</a></span></div>
           </div>
-          <p class="legal-note">Le numéro SIRET sera ajouté dès son attribution. Avant toute facturation, les informations administratives définitives seront indiquées sur le devis et la facture.</p>
+          <p class="legal-note">Brothers Studios est le nom commercial de l’entreprise individuelle immatriculée au Registre national des entreprises. Les informations administratives sont à reprendre sur les devis et factures.</p>
         </article>
 
         <article class="legal-card reveal">
           <h2>Directeur de la publication</h2>
-          <p>Le directeur de la publication est Brothers Studios, représenté par Clément Mahu et Raphaël Mahu.</p>
+          <p>Le directeur de la publication est Clément Mahu, entrepreneur individuel exerçant sous le nom commercial Brothers Studios.</p>
         </article>
 
         <article class="legal-card reveal">
@@ -2752,7 +2818,7 @@ footer{
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year"></span> Brothers Studios — Sites internet et communication dans l’Aisne.</span>
+      <span>© <span id="year"></span> Brothers Studios — SIRET 109 234 385 00010 — Sites internet et communication dans l’Aisne.</span>
       <span><a href="#mentions-legales" data-route="mentions-legales">Mentions légales</a></span>
     </div>
   </div>
