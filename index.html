@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    BROTHERS STUDIO — Design System
@@ -68,8 +68,8 @@
   --radius:    22px;
   --nav-h:     76px;
   --ease:      cubic-bezier(.22,.9,.3,1);
-  --font-d:    'Syne',sans-serif;
-  --font-b:    'DM Sans',sans-serif;
+  --font-d:    'Plus Jakarta Sans', sans-serif;
+  --font-b:    'Inter', sans-serif;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -1862,6 +1862,179 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
   .section-title{font-size:1.72rem}
 }
 
+
+
+/* ============================================================
+   V11 — TYPOGRAPHIE MODERNE ET PLUS LISIBLE
+   Objectif : remplacer l'effet écrasé par une lecture plus simple.
+   ============================================================ */
+:root{
+  --font-d:'Plus Jakarta Sans', sans-serif;
+  --font-b:'Inter', sans-serif;
+}
+
+html{font-size:16px;text-rendering:optimizeLegibility}
+body{
+  font-family:var(--font-b);
+  font-size:16.5px;
+  line-height:1.72;
+  letter-spacing:0;
+  font-weight:400;
+}
+
+h1,h2,h3,h4,h5,h6,
+.logo,
+.section-title,
+.price-name,
+.price-amount,
+.v8-title,
+.v8-pack h3,
+.v8-pack .price,
+.v8-service strong,
+.clean-title,
+.hero2-title,
+.browser-body .b-title,
+.legal-card h2,
+.legal-card h3{
+  font-family:var(--font-d) !important;
+  font-stretch:normal;
+  letter-spacing:-.025em;
+  line-height:1.12;
+}
+
+p,li,a,button,input,textarea,select,
+.price-pitch,
+.price-ideal,
+.v8-lead,
+.v8-service p,
+.v8-pack p,
+.v8-step span,
+.section-lead,
+.legal-card p,
+.legal-card li{
+  font-family:var(--font-b) !important;
+  letter-spacing:0;
+}
+
+.logo{font-weight:800;letter-spacing:-.01em}
+.logo small{letter-spacing:.14em;font-weight:600}
+.nav-links a{font-weight:600;letter-spacing:0}
+.mobile-menu a{font-family:var(--font-d) !important;letter-spacing:-.015em}
+
+.eyebrow,
+.v8-kicker,
+.price-tier,
+.label,
+.work-cat{
+  font-family:var(--font-b) !important;
+  letter-spacing:.12em;
+  font-weight:700;
+}
+
+.v8-title{
+  font-size:clamp(2.6rem,6vw,5rem) !important;
+  line-height:1.08 !important;
+  letter-spacing:-.04em;
+  max-width:980px;
+}
+.v8-lead{
+  font-size:clamp(1.02rem,1.55vw,1.22rem);
+  line-height:1.72;
+  max-width:760px;
+}
+.section-title{
+  font-size:clamp(2rem,4.2vw,3.15rem) !important;
+  line-height:1.14 !important;
+  letter-spacing:-.035em;
+}
+.section-lead{line-height:1.7}
+
+.v8-service strong{
+  font-size:1.08rem;
+  line-height:1.35;
+  letter-spacing:-.02em;
+}
+.v8-service small{letter-spacing:.1em;font-weight:800}
+.v8-service p{font-size:14.8px;line-height:1.65}
+
+.price-amount,
+.v8-pack .price,
+.om-price{
+  letter-spacing:-.035em;
+  line-height:1.05;
+}
+.price-name{font-size:1.38rem;letter-spacing:-.025em}
+.price-list li{line-height:1.55}
+
+.btn{
+  font-family:var(--font-b) !important;
+  font-weight:700;
+  letter-spacing:0;
+}
+
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.68}
+  .v8-title{
+    font-size:clamp(2.05rem,10.8vw,3.35rem) !important;
+    line-height:1.12 !important;
+    letter-spacing:-.035em;
+  }
+  .section-title{
+    font-size:clamp(1.8rem,8.2vw,2.45rem) !important;
+    line-height:1.16 !important;
+  }
+  .v8-lead{font-size:1rem;line-height:1.68}
+  .v8-kicker,.eyebrow{letter-spacing:.1em;font-size:11.5px}
+  .btn{font-size:15px;padding:14px 22px}
+  .price-amount{font-size:2.35rem !important}
+}
+
+@media(max-width:420px){
+  .v8-title{font-size:2.05rem !important}
+  .section-title{font-size:1.85rem !important}
+  .logo{font-size:16px}
+}
+
+
+/* ============================================================
+   V12 — ACCUEIL ALLÉGÉ
+   Objectif : moins de cartes, moins d'effets, meilleure lecture.
+   ============================================================ */
+.simple-home{position:relative;padding:calc(var(--nav-h) + 62px) 0 94px;overflow:hidden}
+.simple-home::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:520px;pointer-events:none;background:radial-gradient(700px 320px at 20% 0%,rgba(91,140,255,.16),transparent 68%),radial-gradient(650px 300px at 80% 15%,rgba(255,158,94,.12),transparent 70%);opacity:.9}
+.simple-hero{position:relative;z-index:1;max-width:850px;padding:42px 0 34px}
+.simple-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;color:var(--muted);font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}
+.simple-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.simple-title{font-family:var(--font-d);font-size:clamp(2.35rem,6vw,5rem);line-height:1.04;letter-spacing:-.045em;font-weight:780;max-width:820px;margin-bottom:22px;color:var(--ink)}
+.simple-lead{max-width:720px;color:#C8CEDD;font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.75;margin-bottom:30px}
+.simple-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.simple-points{display:flex;gap:10px;flex-wrap:wrap}
+.simple-points span{padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);color:var(--muted);font-size:13.5px;font-weight:650}
+.simple-section{position:relative;z-index:1;padding-top:70px}
+.simple-head{max-width:720px;margin-bottom:28px}
+.simple-head h2,.simple-guide-text h2,.simple-cta h2{font-family:var(--font-d);font-weight:760;letter-spacing:-.03em;line-height:1.12;color:var(--ink)}
+.simple-head h2{font-size:clamp(1.85rem,3.6vw,3rem)}
+.simple-services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.simple-card{display:flex;flex-direction:column;min-height:245px;padding:24px 22px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.085);transition:transform .25s var(--ease),border-color .25s,background .25s}
+.simple-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16)}
+.simple-card span{font-size:12px;font-weight:800;color:var(--muted);margin-bottom:24px}
+.simple-card h3{font-family:var(--font-d);font-size:1.16rem;font-weight:760;letter-spacing:-.015em;margin-bottom:10px}
+.simple-card p{color:var(--muted);font-size:14.3px;line-height:1.58;margin-bottom:18px;flex:1}
+.simple-card strong{font-family:var(--font-d);font-size:1rem;font-weight:780;color:transparent;background:var(--grad);-webkit-background-clip:text;background-clip:text}
+.simple-guide{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px;align-items:stretch}
+.simple-guide-text,.simple-guide-list{border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.085);padding:30px 28px}
+.simple-guide-text h2{font-size:clamp(1.65rem,3vw,2.35rem);margin-bottom:14px}
+.simple-guide-text p{color:var(--muted);font-size:15.5px;line-height:1.7}
+.simple-guide-list{display:grid;gap:12px}
+.simple-guide-list div{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.065)}
+.simple-guide-list b{display:block;color:var(--ink);font-family:var(--font-d);font-size:1rem;margin-bottom:4px}
+.simple-guide-list span{display:block;color:var(--muted);font-size:14.5px;line-height:1.55}
+.simple-cta{position:relative;z-index:1;margin:76px 0 0;padding:42px clamp(24px,5vw,54px);border-radius:28px;text-align:center;background:radial-gradient(520px 230px at 20% 0%,rgba(91,140,255,.16),transparent 70%),var(--surface);border:1px solid rgba(255,255,255,.095)}
+.simple-cta h2{max-width:760px;margin:0 auto 12px;font-size:clamp(1.7rem,3.3vw,2.6rem)}
+.simple-cta p{max-width:570px;margin:0 auto 26px;color:var(--muted);font-size:15.5px;line-height:1.7}
+@media(max-width:1024px){.simple-services{grid-template-columns:repeat(2,1fr)}.simple-guide{grid-template-columns:1fr}}
+@media(max-width:640px){.simple-home{padding:calc(var(--nav-h) + 34px) 0 72px}.simple-hero{padding:26px 0 20px}.simple-title{font-size:clamp(2.05rem,10vw,3.1rem);letter-spacing:-.035em}.simple-lead{font-size:1rem;line-height:1.7}.simple-actions .btn{width:100%;justify-content:center}.simple-points span{font-size:12.8px}.simple-section{padding-top:54px}.simple-services{grid-template-columns:1fr;gap:12px}.simple-card{min-height:0;padding:22px 20px}.simple-card span{margin-bottom:18px}.simple-guide-text,.simple-guide-list{padding:24px 20px}.simple-cta{text-align:left;margin-top:60px;padding:30px 22px}.simple-cta .btn{width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -1921,132 +2094,81 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 <!-- ================================================== -->
 
 <section class="page" id="page-accueil">
-  <div class="v8-home">
+  <div class="simple-home">
     <div class="wrap">
-      <div class="v8-hero">
-        <div class="reveal in">
-          <div class="v8-kicker">Brothers Studios · Aisne</div>
-          <h1 class="v8-title">Des sites internet et une communication <span class="grad-text">clairs, propres et accessibles.</span></h1>
-          <p class="v8-lead"><b>Nous aidons les commerces, artisans et associations locales</b> à être mieux présentés en ligne : site internet, réseaux sociaux, photos de votre établissement et identité visuelle.</p>
-          <div class="v8-actions">
-            <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
-          </div>
-          <div class="v8-pills" aria-label="Points forts">
-            <span>Prix affichés</span>
-            <span>Devis clair</span>
-            <span>Sans abonnement obligatoire</span>
-          </div>
+
+      <section class="simple-hero reveal in" aria-labelledby="home-title">
+        <div class="simple-kicker">Brothers Studios · Sites internet & communication</div>
+        <h1 id="home-title" class="simple-title">Un site clair et une image propre pour votre activité.</h1>
+        <p class="simple-lead">Nous aidons les commerces, artisans et associations de l’Aisne à être mieux présentés en ligne : site internet, réseaux sociaux, photos et identité visuelle.</p>
+        <div class="simple-actions">
+          <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
         </div>
-      </div>
-
-      <div class="v8-services reveal in">
-        <a href="#sites" data-route="sites" class="v8-service">
-          <small>Sites internet</small>
-          <strong>De 299 € à une solution sur mesure</strong>
-          <p>Une page simple, un site complet ou un projet plus avancé selon vos besoins.</p>
-        </a>
-        <a href="#reseaux" data-route="reseaux" class="v8-service">
-          <small>Réseaux sociaux</small>
-          <strong>À partir de 190 €/mois</strong>
-          <p>Publications, stories, vidéos courtes et contenus préparés chaque mois.</p>
-        </a>
-        <a href="#image" data-route="image" class="v8-service">
-          <small>Photos</small>
-          <strong>Votre établissement à 100 €</strong>
-          <p>Une séance sur place pour obtenir des images propres de votre activité.</p>
-        </a>
-        <a href="#image" data-route="image" class="v8-service">
-          <small>Identité visuelle</small>
-          <strong>Logo simple dès 50 €</strong>
-          <p>Logo, charte graphique et modèles pour avoir une image plus cohérente.</p>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="v8-section">
-    <div class="wrap">
-      <div class="v8-section-head reveal">
-        <span class="eyebrow">Packs les plus demandés</span>
-        <h2 class="section-title">Des offres simples<br><span class="grad-text">pour commencer vite.</span></h2>
-        <p class="section-lead">Les packs sont des points de départ : on peut retirer ce qui ne sert pas ou ajouter ce qui manque avant le devis final.</p>
-      </div>
-
-      <div class="v8-pack-grid">
-        <article class="v8-pack featured reveal">
-          <span class="label">Départ simple</span>
-          <h3>Je démarre</h3>
-          <div class="price">359 €</div>
-          <p>Pour un artisan ou un commerce qui part de zéro : un site simple et des photos propres.</p>
-          <ul><li>Site Essentielle</li><li>Photos de votre établissement</li></ul>
-        </article>
-        <article class="v8-pack reveal d1">
-          <span class="label">Image propre</span>
-          <h3>Mon image</h3>
-          <div class="price">270 €</div>
-          <p>Pour garder vos réseaux vous-même, mais avec une identité visuelle cohérente.</p>
-          <ul><li>Logo simplifié</li><li>Charte graphique</li><li>4 modèles de publication</li></ul>
-        </article>
-        <article class="v8-pack reveal d2">
-          <span class="label">Site + réseaux</span>
-          <h3>Je me lance en ligne</h3>
-          <div class="price">599 € <small>puis 190 €/mois</small></div>
-          <p>Le site donne la crédibilité, les réseaux amènent les clients.</p>
-          <ul><li>Site Professionnelle</li><li>Ouverture d’un compte</li><li>Formule Présence</li></ul>
-        </article>
-        <article class="v8-pack reveal">
-          <span class="label">Saison</span>
-          <h3>Ouverture de saison</h3>
-          <div class="price">240 €</div>
-          <p>Pour repartir du bon pied avant une période importante, sans engagement mensuel.</p>
-          <ul><li>Photos de votre établissement</li><li>Remise à plat d’un compte</li><li>Modèle de publication</li></ul>
-        </article>
-        <article class="v8-pack reveal d1">
-          <span class="label">Complet</span>
-          <h3>Tout en un</h3>
-          <div class="price">1090 € <small>puis 340 €/mois</small></div>
-          <p>Site, image et réseaux d’un seul coup, avec une identité cohérente partout.</p>
-          <ul><li>Site Professionnelle</li><li>Logo, charte et modèles</li><li>Photos + Formule Régulière</li></ul>
-        </article>
-        <article class="v8-pack reveal d2">
-          <span class="label">Événement</span>
-          <h3>Événement</h3>
-          <div class="price">190 €</div>
-          <p>Gala, portes ouvertes, concours ou anniversaire : annoncé, couvert, puis raconté.</p>
-          <ul><li>Couverture sur place</li><li>Visuel d’annonce</li><li>Vidéo courte</li></ul>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <div class="v8-section">
-    <div class="wrap">
-      <div class="v8-process">
-        <div class="v8-process-card reveal">
-          <span class="eyebrow">Méthode</span>
-          <h2>On garde les choses simples.</h2>
-          <p>Vous n’avez pas besoin de connaître le web ou les réseaux sociaux. Vous nous expliquez votre activité, nous vous proposons la solution la plus adaptée et un prix clair.</p>
+        <div class="simple-points" aria-label="Points forts">
+          <span>Prix affichés</span>
+          <span>Sans abonnement obligatoire</span>
+          <span>Basés dans l’Aisne</span>
         </div>
-        <div class="v8-process-card reveal d1">
-          <div class="v8-steps">
-            <div class="v8-step"><b>1</b><span>On échange sur votre besoin et votre budget.</span></div>
-            <div class="v8-step"><b>2</b><span>Vous recevez un devis précis, sans engagement.</span></div>
-            <div class="v8-step"><b>3</b><span>Nous créons le site, les visuels ou les contenus.</span></div>
-            <div class="v8-step"><b>4</b><span>Vous validez, puis on met en ligne ou on publie.</span></div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-      <div class="v8-cta reveal">
-        <h2>Vous voulez savoir quelle offre vous correspond ?</h2>
-        <p>Envoyez-nous simplement votre activité, votre ville et ce que vous voulez améliorer. Nous vous orientons vers la formule la plus simple possible.</p>
+      <section class="simple-section reveal in" aria-labelledby="services-title">
+        <div class="simple-head">
+          <span class="eyebrow">Ce que nous faisons</span>
+          <h2 id="services-title">Quatre services simples pour améliorer votre image.</h2>
+        </div>
+
+        <div class="simple-services">
+          <a href="#sites" data-route="sites" class="simple-card">
+            <span>01</span>
+            <h3>Sites internet</h3>
+            <p>Un site vitrine simple ou complet pour présenter votre activité, vos services et vos contacts.</p>
+            <strong>À partir de 299 €</strong>
+          </a>
+          <a href="#reseaux" data-route="reseaux" class="simple-card">
+            <span>02</span>
+            <h3>Réseaux sociaux</h3>
+            <p>Des publications, stories et contenus préparés pour garder votre page active chaque mois.</p>
+            <strong>À partir de 190 €/mois</strong>
+          </a>
+          <a href="#image" data-route="image" class="simple-card">
+            <span>03</span>
+            <h3>Photos</h3>
+            <p>Une prise de photos de votre établissement pour alimenter votre site, vos réseaux et vos supports.</p>
+            <strong>100 €</strong>
+          </a>
+          <a href="#image" data-route="image" class="simple-card">
+            <span>04</span>
+            <h3>Logo & image</h3>
+            <p>Un logo simple, une charte graphique et des modèles pour avoir une image plus cohérente.</p>
+            <strong>Dès 50 €</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="simple-section simple-guide reveal" aria-labelledby="guide-title">
+        <div class="simple-guide-text">
+          <span class="eyebrow">Comment choisir ?</span>
+          <h2 id="guide-title">Vous ne savez pas quelle formule prendre ?</h2>
+          <p>On part toujours de votre besoin réel et de votre budget. Le but n’est pas de vendre le plus gros pack, mais la solution la plus utile pour votre activité.</p>
+        </div>
+        <div class="simple-guide-list">
+          <div><b>Vous n’avez pas de site</b><span>Commencez par une formule Essentielle ou Professionnelle.</span></div>
+          <div><b>Votre image n’est pas cohérente</b><span>Ajoutez des photos, un logo simple ou des modèles de publication.</span></div>
+          <div><b>Vous voulez être visible toute l’année</b><span>Ajoutez une formule réseaux sociaux mensuelle.</span></div>
+        </div>
+      </section>
+
+      <section class="simple-cta reveal">
+        <h2>Expliquez-nous votre projet, on vous répond avec une proposition claire.</h2>
+        <p>Un devis simple, sans engagement, adapté à votre activité et à votre budget.</p>
         <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-      </div>
+      </section>
+
     </div>
   </div>
 </section>
