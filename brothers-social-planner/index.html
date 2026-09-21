@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brothers Social Planner — calendrier éditorial multi-clients connecté à Supabase.">
+  <title>Brothers Social Planner</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="authScreen" class="auth-screen">
+    <div class="auth-card">
+      <div class="auth-brand">
+        <div class="brand-mark">BS</div>
+        <div><strong>Brothers Studios</strong><span>Social Planner</span></div>
+      </div>
+      <h1>Connexion</h1>
+      <p class="auth-subtitle">Connecte-toi pour retrouver tes clients et ton calendrier sur tous tes appareils.</p>
+      <form id="authForm" class="auth-form">
+        <label class="field">
+          <span>Email</span>
+          <input id="authEmail" type="email" autocomplete="email" required placeholder="ton@email.fr">
+        </label>
+        <label class="field">
+          <span>Mot de passe</span>
+          <input id="authPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="••••••••">
+        </label>
+        <div class="auth-actions">
+          <button type="submit" class="primary-btn">Se connecter</button>
+          <button type="button" id="signUpBtn" class="secondary-btn">Créer un compte</button>
+        </div>
+      </form>
+      <div id="authMessage" class="auth-message hidden"></div>
+      <div id="localNote" class="auth-local-note hidden">Pour l’authentification Supabase, lance cette app via <strong>start.bat</strong> ou un serveur local au lieu d’ouvrir directement le fichier HTML.</div>
+    </div>
+  </div>
+
+  <div id="appShell" class="app-shell hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">BS</div>
+        <div class="brand-copy"><strong>Brothers Studios</strong><span>Social Planner</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="calendar">Calendrier</button>
+        <button class="nav-item" data-view="list">Publications</button>
+      </nav>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Clients</div>
+        <div id="clientList" class="client-list"></div>
+        <button id="openClientManager" class="sidebar-add-btn">+ Ajouter un client</button>
+      </div>
+      <div class="sidebar-footer account-footer">
+        <div class="account-meta"><strong>Compte</strong><span id="userEmail">—</span></div>
+        <button id="logoutBtn" class="icon-btn logout-btn" title="Se déconnecter" aria-label="Se déconnecter">↪</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="mobileMenu" class="icon-btn mobile-menu" aria-label="Ouvrir le menu">☰</button>
+          <div><h1>Calendrier éditorial</h1><p>Planifie et suis toutes tes publications.</p></div>
+        </div>
+        <div class="topbar-actions">
+          <button id="todayBtn" class="secondary-btn">Aujourd’hui</button>
+          <button id="newPostBtn" class="primary-btn">+ Nouvelle publication</button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card"><span>Total du mois</span><strong id="statTotal">0</strong></article>
+        <article class="stat-card"><span>À valider</span><strong id="statReview">0</strong></article>
+        <article class="stat-card"><span>Validées</span><strong id="statApproved">0</strong></article>
+        <article class="stat-card"><span>Publiées</span><strong id="statPublished">0</strong></article>
+      </section>
+
+      <section class="filters-row">
+        <select id="filterClient"><option value="all">Tous les clients</option></select>
+        <select id="filterPlatform"><option value="all">Tous les réseaux</option><option>Instagram</option><option>Facebook</option><option>TikTok</option><option>LinkedIn</option></select>
+        <select id="filterStatus"><option value="all">Tous les statuts</option><option value="idea">Idée</option><option value="draft">Brouillon</option><option value="review">À valider</option><option value="approved">Validée</option><option value="published">Publiée</option></select>
+        <select id="filterCategory"><option value="all">Toutes les catégories</option></select>
+        <div class="search-field"><input id="searchInput" type="search" placeholder="Rechercher une publication…"></div>
+        <button id="resetFilters" class="ghost-btn">Réinitialiser</button>
+      </section>
+
+      <section id="calendarView" class="calendar-card">
+        <div class="calendar-toolbar">
+          <div class="month-nav"><button id="prevMonth" class="icon-btn" aria-label="Mois précédent">‹</button><h2 id="monthLabel">—</h2><button id="nextMonth" class="icon-btn" aria-label="Mois suivant">›</button></div>
+          <div class="calendar-hint">Glisse une publication vers une autre date pour la déplacer.</div>
+          <div class="legend"><span><i class="legend-dot idea"></i>Idée</span><span><i class="legend-dot review"></i>À valider</span><span><i class="legend-dot approved"></i>Validée</span><span><i class="legend-dot published"></i>Publiée</span></div>
+        </div>
+        <div class="weekday-row"><div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div></div>
+        <div id="calendarGrid" class="calendar-grid"></div>
+      </section>
+
+      <section id="listView" class="list-card hidden">
+        <div class="list-head"><div><h2>Publications</h2><p id="listCount">0 publication</p></div></div>
+        <div class="posts-table">
+          <div class="post-row head"><div>Date</div><div>Publication</div><div class="col-client">Client</div><div class="col-platform">Réseaux</div><div class="col-format">Format</div><div>Statut</div></div>
+          <div id="postsList"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="postModalBackdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <div class="modal-header"><div><h2 id="modalTitle">Nouvelle publication</h2><p id="modalSubtitle">Ajoute les informations de ta publication.</p></div><button id="closeModal" class="icon-btn" aria-label="Fermer">×</button></div>
+      <form id="postForm">
+        <input id="postId" type="hidden">
+        <div class="form-grid">
+          <label class="field span-2"><span>Titre *</span><input id="postTitle" type="text" required placeholder="Ex. Présentation d’un nouveau service"></label>
+          <label class="field"><span>Client *</span><select id="postClient" required></select></label>
+          <label class="field"><span>Catégorie</span><input id="postCategory" type="text" maxlength="80" placeholder="Ex. Promotion, coulisses, conseil…"></label>
+          <fieldset class="platform-fieldset span-2"><legend>Réseaux *</legend><div class="platform-options"><label class="check-option"><input type="checkbox" name="postPlatform" value="Instagram">Instagram</label><label class="check-option"><input type="checkbox" name="postPlatform" value="Facebook">Facebook</label><label class="check-option"><input type="checkbox" name="postPlatform" value="TikTok">TikTok</label><label class="check-option"><input type="checkbox" name="postPlatform" value="LinkedIn">LinkedIn</label></div></fieldset>
+          <label class="field"><span>Date *</span><input id="postDate" type="date" required></label>
+          <label class="field"><span>Heure</span><input id="postTime" type="time"></label>
+          <label class="field"><span>Format *</span><select id="postType" required><option>Post</option><option>Story</option><option>Reel</option><option>Carrousel</option><option>Vidéo</option></select></label>
+          <label class="field"><span>Statut *</span><select id="postStatus" required><option value="idea">Idée</option><option value="draft">Brouillon</option><option value="review">À valider</option><option value="approved">Validée</option><option value="published">Publiée</option></select></label>
+          <label class="field span-2"><span>Légende / texte</span><textarea id="postCaption" rows="4" placeholder="Texte de la publication…"></textarea></label>
+          <label class="field span-2"><span>Notes internes</span><textarea id="postNotes" rows="3" placeholder="Informations utiles, idée de visuel, validation à obtenir…"></textarea></label>
+          <label class="field span-2 visual-upload"><span>Visuel</span><input id="postVisual" type="file" accept="image/*"><small class="field-help">Le visuel est compressé avant envoi et stocké dans Supabase Storage.</small><div id="visualPreviewWrap" class="visual-preview-wrap hidden"><img id="visualPreview" alt="Aperçu du visuel"><button id="removeVisualBtn" type="button" class="secondary-btn small-btn">Retirer le visuel</button></div></label>
+        </div>
+        <div class="modal-footer"><button id="deletePostBtn" type="button" class="danger-btn hidden">Supprimer</button><div class="modal-footer-right"><button id="cancelPost" type="button" class="secondary-btn">Annuler</button><button type="submit" class="primary-btn">Enregistrer</button></div></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="clientModalBackdrop" class="modal-backdrop hidden">
+    <div class="modal client-modal">
+      <div class="modal-header"><div><h2>Clients</h2><p>Ajoute et gère toi-même tes clients.</p></div><button id="closeClientModal" class="icon-btn" aria-label="Fermer">×</button></div>
+      <form id="clientForm" class="client-form"><input id="clientId" type="hidden"><label class="field"><span>Nom du client *</span><input id="clientName" type="text" required maxlength="80" placeholder="Nom du client"></label><label class="field color-field"><span>Couleur</span><input id="clientColor" type="color" value="#6d4aff"></label><div class="client-form-actions"><button id="saveClientBtn" type="submit" class="primary-btn">Ajouter</button><button id="cancelClientEdit" type="button" class="secondary-btn hidden">Annuler</button></div></form>
+      <div id="clientManagerList" class="client-manager-list"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
