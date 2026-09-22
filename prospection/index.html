@@ -15,7 +15,7 @@
         const source='https://raw.githubusercontent.com/clementmahu7-a11y/Brothers-Studios/6fe3a8233f16da2dba80453135afaed38c09be18/prospection/index.html';
         let html=await fetch(source,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('source');return r.text()});
         html=html.replace('</head>','<link rel="stylesheet" href="./light.css"></head>');
-        html=html.replace('</body>','<script type="module" src="./team.js"><\/script><script type="module">import {createClient} from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";const c=createClient("https://hjmbajbhhglqzqetptys.supabase.co","sb_publishable_ePthilRsYOzeHYbqrpZ7cg_iDoke9jk");c.auth.onAuthStateChange((event,s)=>{if(event==="SIGNED_IN"&&s)setTimeout(()=>location.reload(),180)});<\/script></body>');
+        html=html.replace('</body>','<script type="module" src="./team.js"><\/script><script type="module">import {createClient} from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";const c=createClient("https://hjmbajbhhglqzqetptys.supabase.co","sb_publishable_ePthilRsYOzeHYbqrpZ7cg_iDoke9jk");const k="crm_team_login_refresh";c.auth.onAuthStateChange((event,s)=>{if(event==="SIGNED_OUT")sessionStorage.removeItem(k);if(event==="SIGNED_IN"&&s&&!sessionStorage.getItem(k)){sessionStorage.setItem(k,"1");setTimeout(()=>location.reload(),180)}});<\/script></body>');
         document.open();document.write(html);document.close();
       }catch(e){document.body.innerHTML='<div class="loading"><div class="box"><strong>Impossible de charger Brothers Prospection</strong><span>Actualise la page dans quelques instants.</span></div></div>'}
     })();
