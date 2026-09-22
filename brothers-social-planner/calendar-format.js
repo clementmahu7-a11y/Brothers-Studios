@@ -15,6 +15,16 @@
     const formatSlug = slug(post?.type || 'Post');
 
     html = html.replace('class="calendar-post ', `class="calendar-post format-${formatSlug} `);
+
+    if (formatSlug === 'evenement') {
+      const eventTime = post?.time ? `<span class="event-time">${escapeHtml(post.time)}</span>` : '';
+      html = html.replace(
+        /<div class="post-time">.*?<\/div>/,
+        `<div class="post-time"><span class="post-format-badge format-evenement">Événement</span>${eventTime}</div>`
+      );
+      return html;
+    }
+
     html = html.replace(
       '<div class="post-time">',
       `<div class="post-time"><span class="post-format-badge format-${formatSlug}">${format}</span><span class="post-format-sep">·</span>`
