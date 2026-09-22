@@ -168,6 +168,35 @@
   transform:scale(1.04);
 }
 
+/* Publication format badge inside calendar cards */
+.calendar-post .post-time{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  min-width:0;
+}
+
+.calendar-post .post-format-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  padding:2px 5px;
+  border-radius:6px;
+  background:#ece8ff;
+  color:#5f45d6;
+  font-size:8px;
+  font-weight:900;
+  line-height:1.1;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+}
+
+.calendar-post .post-format-sep{
+  color:#aab1bd;
+  flex:0 0 auto;
+}
+
 @media(max-width:780px){
   .client-access-row,.social-connection-row,.admin-row{align-items:flex-start!important}
   .calendar-grid .day-head{min-height:24px;margin-bottom:5px}
@@ -183,5 +212,9 @@
     height:24px;
     flex-basis:24px;
     border-radius:8px;
+  }
+  .calendar-post .post-format-badge{
+    font-size:7px;
+    padding:1px 4px;
   }
 }
