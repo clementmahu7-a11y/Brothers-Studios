@@ -49,4 +49,21 @@
       logout(clientDb, './client.html', clientButton);
     };
   }
+
+  // L'interface administrateur dispose désormais de deux vues d'authentification distinctes.
+  if (document.getElementById('authScreen')) {
+    if (!document.querySelector('link[href="./auth-ui.css"]')) {
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = './auth-ui.css';
+      document.head.appendChild(stylesheet);
+    }
+
+    if (!document.querySelector('script[src="./auth-ui.js"]')) {
+      const script = document.createElement('script');
+      script.src = './auth-ui.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }
 })();
