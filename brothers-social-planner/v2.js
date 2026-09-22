@@ -18,6 +18,19 @@
     });
   }
 
+  function simplifyFilterLabels() {
+    const labels = {
+      filterClient: 'Clients',
+      filterPlatform: 'Réseaux',
+      filterStatus: 'Statuts',
+      filterCategory: 'Catégories',
+    };
+    Object.entries(labels).forEach(([id, label]) => {
+      const option = document.getElementById(id)?.querySelector('option[value="all"]');
+      setText(option, label);
+    });
+  }
+
   function clientModal() {
     return document.querySelector('#clientModalBackdrop .client-modal');
   }
@@ -194,6 +207,7 @@
     requestAnimationFrame(() => {
       queued = false;
       brandApp();
+      simplifyFilterLabels();
       ensureClientTabs();
       updateTabCounts();
       decorateAdminNav();
