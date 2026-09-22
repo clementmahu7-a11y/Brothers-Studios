@@ -181,15 +181,46 @@
   align-items:center;
   justify-content:center;
   flex:0 0 auto;
-  padding:2px 5px;
-  border-radius:6px;
-  background:#ece8ff;
-  color:#5f45d6;
+  padding:3px 7px;
+  border:1px solid transparent;
+  border-radius:7px;
   font-size:8px;
-  font-weight:900;
-  line-height:1.1;
-  letter-spacing:.025em;
+  font-weight:950;
+  line-height:1;
+  letter-spacing:.045em;
   text-transform:uppercase;
+  box-shadow:0 2px 5px rgba(31,37,55,.06);
+}
+
+/* Format colors: easy to distinguish at a glance */
+.calendar-post .post-format-badge.format-story{
+  background:#e8f2ff;
+  border-color:#bfdbfe;
+  color:#1762c5;
+}
+
+.calendar-post .post-format-badge.format-post{
+  background:#fff0df;
+  border-color:#fed7aa;
+  color:#c45a00;
+}
+
+.calendar-post .post-format-badge.format-reel{
+  background:#ffe8f0;
+  border-color:#f9bfd2;
+  color:#b42362;
+}
+
+.calendar-post .post-format-badge.format-carrousel{
+  background:#fff7d9;
+  border-color:#f6df8b;
+  color:#8b6500;
+}
+
+.calendar-post .post-format-badge.format-video{
+  background:#ffe8e7;
+  border-color:#f7c4c0;
+  color:#b42318;
 }
 
 .calendar-post .post-format-sep{
@@ -215,6 +246,6 @@
   }
   .calendar-post .post-format-badge{
     font-size:7px;
-    padding:1px 4px;
+    padding:2px 5px;
   }
 }
