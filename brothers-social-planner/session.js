@@ -115,6 +115,13 @@
     db.auth.onAuthStateChange((event, session) => {
       if (session?.user && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) setTimeout(guardAdminArea, 0);
     });
+
+    if (!document.querySelector('script[src="./admin-admins.js"]')) {
+      const script = document.createElement('script');
+      script.src = './admin-admins.js';
+      script.defer = true;
+      document.body.appendChild(script);
+    }
   }
 
   const clientButton = document.getElementById('clientLogout');
