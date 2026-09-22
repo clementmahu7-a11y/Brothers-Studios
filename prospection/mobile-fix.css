@@ -1,0 +1,6 @@
+@media(max-width:650px){
+  .top-actions{gap:6px}
+  .top-actions .icon-btn{display:inline-flex!important;align-items:center;justify-content:center;padding:11px 12px}
+  .top-actions #addProspectBtn{font-size:0;padding:11px 13px;white-space:nowrap}
+  .top-actions #addProspectBtn::after{content:"+ Prospect";font-size:14px}
+}
