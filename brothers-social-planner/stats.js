@@ -132,7 +132,6 @@ async function renderPublishedStats() {
   });
 }
 
-// La fiche de publication est ouverte par app.js. On complète ensuite la fiche avec les statistiques.
 document.addEventListener('click', (event) => {
   if (event.target.closest('[data-post]')) {
     setTimeout(renderPublishedStats, 80);
@@ -149,5 +148,17 @@ document.querySelectorAll('[name="postPlatform"]').forEach((input) => {
   });
 });
 
-// Permet de recharger les stats depuis Supabase après une future synchronisation API.
 document.getElementById('refreshPublishedStats')?.addEventListener('click', renderPublishedStats);
+
+// Charge l'interface de gestion des connexions sociales sans modifier le cœur du calendrier.
+(() => {
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = './social.css';
+  document.head.appendChild(css);
+
+  const script = document.createElement('script');
+  script.src = './social.js';
+  script.defer = true;
+  document.body.appendChild(script);
+})();
