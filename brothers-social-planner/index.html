@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Brothers Social Planner — calendrier éditorial multi-clients connecté à Supabase.">
+  <meta name="theme-color" content="#171a28">
   <title>Brothers Social Planner</title>
+  <link rel="icon" href="./brand-logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./social.css">
+  <link rel="stylesheet" href="./admin-client-access.css">
+  <link rel="stylesheet" href="./admin-admins.css">
+  <link rel="stylesheet" href="./v2.css">
 </head>
 <body>
   <div id="authScreen" class="auth-screen">
@@ -49,10 +55,10 @@
       <div class="sidebar-section">
         <div class="sidebar-title">Clients</div>
         <div id="clientList" class="client-list"></div>
-        <button id="openClientManager" class="sidebar-add-btn">+ Ajouter un client</button>
+        <button id="openClientManager" class="sidebar-add-btn">+ Ajouter / gérer</button>
       </div>
       <div class="sidebar-footer account-footer">
-        <div class="account-meta"><strong>Compte</strong><span id="userEmail">—</span></div>
+        <div class="account-meta"><strong>Brothers Studios</strong><span id="userEmail">—</span></div>
         <button id="logoutBtn" class="icon-btn logout-btn" title="Se déconnecter" aria-label="Se déconnecter">↪</button>
       </div>
     </aside>
@@ -61,7 +67,7 @@
       <header class="topbar">
         <div class="topbar-left">
           <button id="mobileMenu" class="icon-btn mobile-menu" aria-label="Ouvrir le menu">☰</button>
-          <div><h1>Calendrier éditorial</h1><p>Planifie et suis toutes tes publications.</p></div>
+          <div><h1>Calendrier éditorial</h1><p>Planifie, fais valider et suis toutes tes publications.</p></div>
         </div>
         <div class="topbar-actions">
           <button id="todayBtn" class="secondary-btn">Aujourd’hui</button>
@@ -130,7 +136,7 @@
 
   <div id="clientModalBackdrop" class="modal-backdrop hidden">
     <div class="modal client-modal">
-      <div class="modal-header"><div><h2>Clients</h2><p>Ajoute et gère toi-même tes clients.</p></div><button id="closeClientModal" class="icon-btn" aria-label="Fermer">×</button></div>
+      <div class="modal-header"><div><h2>Gestion des clients</h2><p>Gère tes clients, leurs comptes sociaux et leurs accès depuis un seul endroit.</p></div><button id="closeClientModal" class="icon-btn" aria-label="Fermer">×</button></div>
       <form id="clientForm" class="client-form"><input id="clientId" type="hidden"><label class="field"><span>Nom du client *</span><input id="clientName" type="text" required maxlength="80" placeholder="Nom du client"></label><label class="field color-field"><span>Couleur</span><input id="clientColor" type="color" value="#6d4aff"></label><div class="client-form-actions"><button id="saveClientBtn" type="submit" class="primary-btn">Ajouter</button><button id="cancelClientEdit" type="button" class="secondary-btn hidden">Annuler</button></div></form>
       <div id="clientManagerList" class="client-manager-list"></div>
     </div>
@@ -141,7 +147,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
   <script src="./app.js"></script>
   <script src="./stats.js"></script>
+  <script src="./social.js"></script>
   <script src="./admin-client-access.js"></script>
   <script src="./session.js"></script>
+  <script src="./v2.js"></script>
 </body>
 </html>
