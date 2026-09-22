@@ -6,11 +6,15 @@
   ];
   let activeClientTab = 'clients';
 
+  function setText(el, value) {
+    if (el && el.textContent !== value) el.textContent = value;
+  }
+
   function brandApp() {
     document.querySelectorAll('.brand-mark').forEach((mark) => {
       if (mark.textContent) mark.textContent = '';
-      mark.setAttribute('aria-label', 'Brothers Studios');
-      mark.setAttribute('role', 'img');
+      if (mark.getAttribute('aria-label') !== 'Brothers Studios') mark.setAttribute('aria-label', 'Brothers Studios');
+      if (mark.getAttribute('role') !== 'img') mark.setAttribute('role', 'img');
     });
   }
 
@@ -25,10 +29,8 @@
     const list = document.getElementById('clientManagerList');
     if (!modal || !header || !form || !list) return false;
 
-    const title = header.querySelector('h2');
-    const subtitle = header.querySelector('p');
-    if (title) title.textContent = 'Gestion des clients';
-    if (subtitle) subtitle.textContent = 'Gère tes clients, leurs comptes sociaux et leurs accès depuis un seul endroit.';
+    setText(header.querySelector('h2'), 'Gestion des clients');
+    setText(header.querySelector('p'), 'Gère tes clients, leurs comptes sociaux et leurs accès depuis un seul endroit.');
 
     let tabs = modal.querySelector('.client-tabs');
     if (!tabs) {
@@ -50,12 +52,12 @@
       });
     }
 
-    form.dataset.v2TabPanel = 'clients';
-    list.dataset.v2TabPanel = 'clients';
+    if (form.dataset.v2TabPanel !== 'clients') form.dataset.v2TabPanel = 'clients';
+    if (list.dataset.v2TabPanel !== 'clients') list.dataset.v2TabPanel = 'clients';
     const social = document.getElementById('socialConnectionsSection');
     const access = document.getElementById('clientAccessSection');
-    if (social) social.dataset.v2TabPanel = 'social';
-    if (access) access.dataset.v2TabPanel = 'access';
+    if (social && social.dataset.v2TabPanel !== 'social') social.dataset.v2TabPanel = 'social';
+    if (access && access.dataset.v2TabPanel !== 'access') access.dataset.v2TabPanel = 'access';
 
     applyClientTabState();
     updateTabCounts();
@@ -67,11 +69,12 @@
     if (!modal) return;
     modal.querySelectorAll('[data-client-tab]').forEach((button) => {
       const isActive = button.dataset.clientTab === activeClientTab;
-      button.classList.toggle('active', isActive);
-      button.setAttribute('aria-selected', String(isActive));
+      if (button.classList.contains('active') !== isActive) button.classList.toggle('active', isActive);
+      if (button.getAttribute('aria-selected') !== String(isActive)) button.setAttribute('aria-selected', String(isActive));
     });
     modal.querySelectorAll('[data-v2-tab-panel]').forEach((panel) => {
-      panel.style.display = panel.dataset.v2TabPanel === activeClientTab ? '' : 'none';
+      const next = panel.dataset.v2TabPanel === activeClientTab ? '' : 'none';
+      if (panel.style.display !== next) panel.style.display = next;
     });
   }
 
@@ -86,24 +89,24 @@
     Object.entries(counts).forEach(([key, value]) => {
       const badge = modal.querySelector(`[data-tab-count="${key}"]`);
       if (!badge) return;
-      badge.textContent = value ? String(value) : '';
-      badge.classList.toggle('hidden', !value);
+      const next = value ? String(value) : '';
+      if (badge.textContent !== next) badge.textContent = next;
+      const shouldHide = !value;
+      if (badge.classList.contains('hidden') !== shouldHide) badge.classList.toggle('hidden', shouldHide);
     });
   }
 
   function decorateAdminNav() {
     const button = document.getElementById('openAdminManager');
-    if (button) button.title = 'Gérer les administrateurs';
+    if (button && button.title !== 'Gérer les administrateurs') button.title = 'Gérer les administrateurs';
   }
 
   function decorateAdminModal() {
     const modal = document.querySelector('#adminManagerBackdrop .admin-manager-modal');
     if (!modal) return;
     const header = modal.querySelector('.modal-header');
-    const h2 = header?.querySelector('h2');
-    const p = header?.querySelector('p');
-    if (h2) h2.textContent = 'Administrateurs';
-    if (p) p.textContent = 'Invite et gère les personnes qui ont accès à l’ensemble de Brothers Social Planner.';
+    setText(header?.querySelector('h2'), 'Administrateurs');
+    setText(header?.querySelector('p'), 'Invite et gère les personnes qui ont accès à l’ensemble de Brothers Social Planner.');
   }
 
   function enhanceAccessCards() {
@@ -130,9 +133,10 @@
       const rows = [...card.querySelectorAll('.client-access-row')];
       const active = rows.filter((row) => row.textContent.includes('Accès actif')).length;
       const pending = rows.filter((row) => row.textContent.includes('Invitation en attente')).length;
-      badges.innerHTML = active || pending
+      const next = active || pending
         ? `${active ? `<span class="access-badge active">● ${active} accès actif${active > 1 ? 's' : ''}</span>` : ''}${pending ? `<span class="access-badge pending">● ${pending} invitation${pending > 1 ? 's' : ''}</span>` : ''}`
         : '<span class="access-badge empty">Aucun accès</span>';
+      if (badges.innerHTML !== next) badges.innerHTML = next;
     });
   }
 
@@ -147,8 +151,10 @@
         button.insertAdjacentElement('beforebegin', badge);
       }
       const connected = card.querySelectorAll('.social-connection-row').length;
-      badge.className = `social-status-badge ${connected ? 'connected' : 'empty'}`;
-      badge.textContent = connected ? `${connected} connecté${connected > 1 ? 's' : ''}` : 'Aucun compte connecté';
+      const nextClass = `social-status-badge ${connected ? 'connected' : 'empty'}`;
+      const nextText = connected ? `${connected} connecté${connected > 1 ? 's' : ''}` : 'Aucun compte connecté';
+      if (badge.className !== nextClass) badge.className = nextClass;
+      setText(badge, nextText);
     });
   }
 
@@ -162,9 +168,8 @@
       info.appendChild(badge);
     });
     document.querySelectorAll('#adminsPendingList .admin-row').forEach((row) => {
-      if (row.querySelector('.admin-status-badge')) return;
       const info = row.querySelector('.admin-row-info');
-      if (!info) return;
+      if (!info || info.querySelector('.admin-status-badge')) return;
       const badge = document.createElement('span');
       badge.className = 'admin-status-badge pending';
       badge.textContent = '● Invitation envoyée';
@@ -182,15 +187,21 @@
     }, 0);
   }
 
+  let queued = false;
   function polish() {
-    brandApp();
-    ensureClientTabs();
-    updateTabCounts();
-    decorateAdminNav();
-    decorateAdminModal();
-    enhanceAccessCards();
-    enhanceSocialCards();
-    enhanceAdminRows();
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => {
+      queued = false;
+      brandApp();
+      ensureClientTabs();
+      updateTabCounts();
+      decorateAdminNav();
+      decorateAdminModal();
+      enhanceAccessCards();
+      enhanceSocialCards();
+      enhanceAdminRows();
+    });
   }
 
   function init() {
