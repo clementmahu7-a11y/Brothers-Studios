@@ -1,0 +1,95 @@
+/* V2.1 — micro-alignments & centering */
+
+/* Square icon buttons: true optical centering across browsers */
+.icon-btn{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0!important;
+  text-align:center!important;
+  line-height:1!important;
+  flex:0 0 auto;
+  vertical-align:middle;
+}
+
+/* Close buttons: replace font-dependent glyph positioning with a controlled mark */
+#closeModal,
+#closeClientModal,
+#closeAdminManager,
+#closeMetaAccountModal,
+#closeClientPost{
+  position:relative;
+  width:40px!important;
+  height:40px!important;
+  min-width:40px!important;
+  min-height:40px!important;
+  font-size:0!important;
+}
+
+#closeModal::before,
+#closeClientModal::before,
+#closeAdminManager::before,
+#closeMetaAccountModal::before,
+#closeClientPost::before{
+  content:"×";
+  display:block;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:21px;
+  font-weight:600;
+  line-height:1;
+  width:21px;
+  height:21px;
+  text-align:center;
+  transform:translateY(-.5px);
+}
+
+/* Calendar arrows and menu/logout icons */
+#prevMonth,#nextMonth,#mobileMenu,#logoutBtn,
+#clientPrevMonth,#clientNextMonth{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+}
+
+#prevMonth,#nextMonth,#clientPrevMonth,#clientNextMonth{
+  font-size:23px!important;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/* Keep modal headers perfectly aligned even with multi-line subtitles */
+.modal-header,
+.modal-head{
+  align-items:center!important;
+}
+.modal-header>div:first-child,
+.modal-head>div:first-child{
+  min-width:0;
+}
+
+/* Button label centering */
+.primary-btn,.secondary-btn,.ghost-btn,.danger-btn,
+.approve-btn,.changes-btn,.client-tab{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.2;
+}
+
+/* Consistent badge vertical alignment */
+.status-pill,.access-badge,.social-status-badge,.admin-status-badge,.admin-badge{
+  align-items:center!important;
+  justify-content:center;
+  line-height:1.15!important;
+}
+
+/* Cards: align action groups to visual center */
+.client-manager-row,.social-client-head,.client-access-title,.admin-row,
+.client-access-row,.social-connection-row{
+  align-items:center!important;
+}
+
+@media(max-width:780px){
+  .client-access-row,.social-connection-row,.admin-row{align-items:flex-start!important}
+}
