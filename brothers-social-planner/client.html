@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace client Brothers Studios — consultez et validez votre calendrier éditorial.">
+  <title>Espace client — Brothers Studios</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./client.css">
+</head>
+<body>
+  <div id="clientAuth" class="auth-screen">
+    <div class="auth-card">
+      <div class="brand"><div class="brand-mark">BS</div><div><strong>Brothers Studios</strong><span>Espace client</span></div></div>
+      <div id="inviteBadge" class="invite-badge hidden">Invitation client détectée</div>
+      <h1>Votre calendrier éditorial</h1>
+      <p>Connectez-vous pour consulter les contenus préparés pour votre entreprise et les valider directement.</p>
+      <form id="clientAuthForm" class="auth-form">
+        <label><span>Email</span><input id="clientEmail" type="email" autocomplete="email" required placeholder="votre@email.fr"></label>
+        <label><span>Mot de passe</span><input id="clientPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="6 caractères minimum"></label>
+        <div class="auth-actions">
+          <button type="submit" class="primary-btn">Se connecter</button>
+          <button type="button" id="clientSignUp" class="secondary-btn">Créer mon accès</button>
+        </div>
+      </form>
+      <div id="clientAuthMessage" class="message hidden"></div>
+      <small class="auth-help">Utilisez l’adresse email à laquelle Brothers Studios vous a invité.</small>
+    </div>
+  </div>
+
+  <div id="clientPortal" class="portal hidden">
+    <header class="portal-header">
+      <div class="brand"><div class="brand-mark">BS</div><div><strong>Brothers Studios</strong><span>Espace client</span></div></div>
+      <div class="account-area"><span id="clientAccountEmail"></span><button id="clientLogout" class="secondary-btn small-btn">Déconnexion</button></div>
+    </header>
+
+    <main class="portal-main">
+      <section class="hero-row">
+        <div><span class="eyebrow">Calendrier éditorial</span><h1 id="clientName">Votre espace</h1><p>Consultez, commentez et validez les publications préparées par Brothers Studios.</p></div>
+        <select id="clientSelector" class="client-selector hidden"></select>
+      </section>
+
+      <section id="noClientAccess" class="empty-card hidden">
+        <strong>Aucun espace client associé à ce compte</strong>
+        <p>Ouvrez le lien d’invitation envoyé par Brothers Studios avec la bonne adresse email.</p>
+      </section>
+
+      <div id="portalContent" class="hidden">
+        <section class="summary-grid">
+          <article><span>À valider</span><strong id="clientStatReview">0</strong></article>
+          <article><span>Modification demandée</span><strong id="clientStatChanges">0</strong></article>
+          <article><span>Validées</span><strong id="clientStatApproved">0</strong></article>
+          <article><span>Publiées</span><strong id="clientStatPublished">0</strong></article>
+        </section>
+
+        <section class="calendar-card">
+          <div class="calendar-toolbar">
+            <button id="clientPrevMonth" class="icon-btn" aria-label="Mois précédent">‹</button>
+            <h2 id="clientMonthLabel">—</h2>
+            <button id="clientNextMonth" class="icon-btn" aria-label="Mois suivant">›</button>
+            <button id="clientToday" class="secondary-btn today-btn">Aujourd’hui</button>
+          </div>
+          <div class="weekday-row"><div>Lun</div><div>Mar</div><div>Mer</div><div>Jeu</div><div>Ven</div><div>Sam</div><div>Dim</div></div>
+          <div id="clientCalendar" class="calendar-grid"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div id="clientPostBackdrop" class="modal-backdrop hidden">
+    <div class="post-modal">
+      <div class="modal-head"><div><span id="postNetworks" class="network-line"></span><h2 id="clientPostTitle"></h2><span id="clientPostStatus" class="status-pill"></span></div><button id="closeClientPost" class="icon-btn">×</button></div>
+      <div class="post-body">
+        <div id="clientVisualWrap" class="client-visual hidden"><img id="clientVisual" alt="Visuel de la publication"></div>
+        <div class="post-meta-grid"><div><span>Date</span><strong id="clientPostDate"></strong></div><div><span>Format</span><strong id="clientPostFormat"></strong></div><div><span>Catégorie</span><strong id="clientPostCategory"></strong></div></div>
+        <section class="caption-card"><span>Texte de la publication</span><p id="clientPostCaption"></p></section>
+        <section class="feedback-history"><div class="section-title">Historique</div><div id="clientFeedbackHistory"></div></section>
+        <section id="clientReviewActions" class="review-actions">
+          <label><span>Votre commentaire</span><textarea id="clientFeedbackMessage" rows="3" placeholder="Ex. Pouvez-vous changer la deuxième photo ?"></textarea></label>
+          <div class="review-buttons"><button id="approvePost" class="approve-btn">✓ Valider la publication</button><button id="requestChanges" class="changes-btn">Demander une modification</button><button id="addComment" class="secondary-btn">Ajouter un commentaire</button></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="clientToast" class="toast hidden"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
+  <script src="./client.js"></script>
+</body>
+</html>
