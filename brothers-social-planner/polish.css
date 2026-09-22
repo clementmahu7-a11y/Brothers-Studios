@@ -90,6 +90,98 @@
   align-items:center!important;
 }
 
+/* Calendar V2.1 — cleaner day numbers and add action */
+.calendar-grid .day-head{
+  min-height:30px;
+  margin-bottom:8px;
+  align-items:center;
+}
+
+.calendar-grid .day-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+  border-radius:9px;
+  font-size:13px;
+  font-weight:850;
+  line-height:1;
+  letter-spacing:-.025em;
+  color:#202638;
+  transition:background .16s ease,color .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+
+.calendar-grid .day-cell:not(.outside):not(.today):hover .day-number{
+  background:#f2efff;
+  color:#6047d2;
+}
+
+.calendar-grid .day-cell.outside .day-number{
+  color:#b2b9c7;
+  font-weight:760;
+}
+
+.calendar-grid .day-cell.today .day-number{
+  width:29px;
+  height:29px;
+  flex-basis:29px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#7457ff,#6546ee);
+  color:#fff;
+  box-shadow:0 6px 14px rgba(109,74,255,.24);
+  font-weight:900;
+}
+
+.calendar-grid .day-cell.today:hover .day-number{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(109,74,255,.30);
+}
+
+.calendar-grid .day-add{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:25px;
+  height:25px;
+  padding:0;
+  border-radius:8px;
+  color:#a3abb9;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  font-weight:400;
+  line-height:1;
+  opacity:.42;
+  transition:opacity .16s ease,background .16s ease,color .16s ease,transform .16s ease;
+}
+
+.calendar-grid .day-cell:hover .day-add{
+  opacity:1;
+  background:#f3f1ff;
+  color:#6d4aff;
+}
+
+.calendar-grid .day-add:hover{
+  background:#e9e4ff!important;
+  color:#583bd3!important;
+  transform:scale(1.04);
+}
+
 @media(max-width:780px){
   .client-access-row,.social-connection-row,.admin-row{align-items:flex-start!important}
+  .calendar-grid .day-head{min-height:24px;margin-bottom:5px}
+  .calendar-grid .day-number{
+    width:23px;
+    height:23px;
+    flex-basis:23px;
+    border-radius:7px;
+    font-size:11px;
+  }
+  .calendar-grid .day-cell.today .day-number{
+    width:24px;
+    height:24px;
+    flex-basis:24px;
+    border-radius:8px;
+  }
 }
