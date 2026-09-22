@@ -223,9 +223,38 @@
   color:#b42318;
 }
 
+/* Internal calendar events: distinct from publication statuses */
+.calendar-post.format-evenement{
+  background:#ecfeff!important;
+  border-left-color:#0891b2!important;
+  box-shadow:0 4px 12px rgba(8,145,178,.08)!important;
+}
+
+.calendar-post.format-evenement:hover{
+  background:#e0fafd!important;
+}
+
+.calendar-post .post-format-badge.format-evenement{
+  background:#cffafe;
+  border-color:#67e8f9;
+  color:#0e7490;
+}
+
+.calendar-post.format-evenement .post-name{
+  color:#164e63;
+}
+
 .calendar-post .post-format-sep{
   color:#aab1bd;
   flex:0 0 auto;
+}
+
+.event-field-hidden{
+  display:none!important;
+}
+
+.legend-dot.event{
+  background:#0891b2!important;
 }
 
 @media(max-width:780px){
