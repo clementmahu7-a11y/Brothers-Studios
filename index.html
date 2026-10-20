@@ -2353,6 +2353,77 @@ footer a{color:#3D5274}
 @media(max-width:640px){#page-accueil .v7-hero{padding-top:calc(var(--nav-h) + 26px)}#page-accueil .v7-heading h1{font-size:clamp(2.7rem,10vw,4.1rem)}#page-accueil .v7-heading p{font-size:15px}#page-accueil .v7-overline{font-size:8px;letter-spacing:.1em}#page-accueil .v7-actions .v7-btn{width:100%}#page-accueil .v7-scene{height:360px;max-width:430px;transform:scale(.96);transform-origin:50% 50%}#page-accueil .v7-panel-main{width:74%;left:4%}#page-accueil .v7-panel-social{width:39%;height:43%}#page-accueil .v7-panel-code{width:42%;height:29%;bottom:17%}#page-accueil .v7-panel-word{font-size:clamp(2.6rem,9vw,4.3rem)}#page-accueil .v7-panel-content{padding:17px}#page-accueil .v7-panel-social{padding:12px}#page-accueil .v7-panel-social strong{font-size:11px}#page-accueil .v7-social-art{font-size:24px}#page-accueil .v7-social-art span:nth-child(2){font-size:30px}#page-accueil .v7-hero-index{font-size:8px;gap:15px}#page-accueil .v7-expertise{padding-block:75px}#page-accueil .v7-section-top{font-size:8px}#page-accueil .v7-expertise-head{display:block;margin:42px 0 30px}#page-accueil .v7-expertise-head h2{font-size:clamp(2.2rem,9vw,3.5rem)}#page-accueil .v7-expertise-head p{margin-top:20px}#page-accueil .v7-services{grid-template-columns:1fr}#page-accueil .v7-service:nth-child(odd){border-right:0}#page-accueil .v7-service,#page-accueil .v7-service:nth-child(even){padding:30px 5px;min-height:155px}#page-accueil .v7-service h3{font-size:21px}#page-accueil .v7-end{display:block;margin-bottom:65px;padding:45px 0}#page-accueil .v7-end .v7-btn{margin-top:26px}#page-accueil .v7-end h2{font-size:clamp(2rem,8vw,3rem)}}
 @media(prefers-reduced-motion:reduce){#page-accueil .v7-panel,#page-accueil .v7-btn,#page-accueil .v7-service{transition:none!important;transform:none!important}}
 
+
+/* V8 FULL SITE SYSTEM — coherent light design, separated accent colors */
+:root{--bg:#F8FAFD;--surface:#fff;--surface-2:#F0F4FB;--ink:#182842;--muted:#687995;--line:rgba(49,79,132,.13);--glass:rgba(255,255,255,.95);--glass-brd:rgba(49,79,132,.14);--grad:linear-gradient(110deg,#426BAC,#537FC2)}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{background:#F8FAFD;color:#182842}
+body *,body *::before,body *::after{box-sizing:border-box}
+img,svg,video,iframe{max-width:100%}
+.wrap{width:min(1190px,calc(100% - 48px));max-width:1190px}
+.bg-grain{background:#F8FAFD}.bg-grid{opacity:.09}
+#header{background:rgba(248,250,253,.95);border-bottom:1px solid #E0E6F0;box-shadow:none}
+#header .nav-links>li>a:not(.btn){color:#485A76}
+#header .logo{color:#172945}
+#header .nav-cta{background:#263D64!important;border:1px solid #263D64!important;color:white!important;box-shadow:none!important}
+#header .nav-cta:hover{background:#385D98!important;border-color:#385D98!important;color:white!important}
+.mobile-menu{background:#F8FAFD;color:#1D304D}
+.page:not(#page-accueil){background:#F8FAFD;color:#20334E;overflow:clip}
+.page:not(#page-accueil) .page-head{position:relative;background:linear-gradient(145deg,#F4F7FD,#FFFFFF);border-bottom:1px solid #E2E9F3;padding-top:calc(var(--nav-h) + 85px);padding-bottom:78px;overflow:hidden}
+.page:not(#page-accueil) .page-head .wrap{position:relative;z-index:2;max-width:1190px}
+.page:not(#page-accueil) .orb{display:none!important}
+.page:not(#page-accueil) .eyebrow{font:700 11px/1.5 'DM Sans',sans-serif;letter-spacing:.15em;color:#5275AA}
+.page:not(#page-accueil) .eyebrow:before{background:#5B8CFF}
+.page:not(#page-accueil) .section-title,.page:not(#page-accueil) .page-head h1{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;font-weight:500;letter-spacing:-.047em;line-height:1.19;font-size:clamp(2.5rem,4.8vw,4.9rem);color:#1D304D;text-wrap:balance;max-width:950px;overflow-wrap:break-word}
+.page:not(#page-accueil) .grad-text{background:none!important;-webkit-text-fill-color:#6688BF!important;color:#6688BF!important}
+.page:not(#page-accueil) .section-lead{font:400 clamp(15px,1.4vw,18px)/1.75 'DM Sans',sans-serif;color:#677890;max-width:740px}
+.page:not(#page-accueil) .page-body{background:#F8FAFD;padding:75px 0 105px;min-width:0}
+.page:not(#page-accueil) .page-body .wrap,.page:not(#page-accueil) .page-body .wrap>*{min-width:0}
+.page:not(#page-accueil) p{overflow-wrap:break-word}
+.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan,.page:not(#page-accueil) .work,.page:not(#page-accueil) .bro-card,.page:not(#page-accueil) .contact-v14-card,.page:not(#page-accueil) .contact-builder,.page:not(#page-accueil) .story-card,.page:not(#page-accueil) .legal-card,.page:not(#page-accueil) .tarifs,.page:not(#page-accueil) .callout,.page:not(#page-accueil) .offer-choice,.page:not(#page-accueil) .faq-item,.page:not(#page-accueil) .sub-block,.page:not(#page-accueil) .opt-card,.page:not(#page-accueil) .duo-photo-frame{background:#FFFFFF;color:#243751;border:1px solid #E0E7F1;border-radius:16px;box-shadow:0 12px 36px rgba(38,63,110,.035);max-width:100%;min-width:0}
+.page:not(#page-accueil) .price-card.featured,.page:not(#page-accueil) .plan.featured,.page:not(#page-accueil) .plan.popular{border:1.5px solid #6489C9;background:#F3F7FF}
+.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .works-grid,.page:not(#page-accueil) .duo-grid{gap:22px;align-items:stretch}
+.page:not(#page-accueil) .pricing-grid>*,.page:not(#page-accueil) .plans>*,.page:not(#page-accueil) .works-grid>*,.page:not(#page-accueil) .duo-grid>*{min-width:0}
+.page:not(#page-accueil) h2,.page:not(#page-accueil) h3{color:#253955;overflow-wrap:break-word}
+.page:not(#page-accueil) .price-name,.page:not(#page-accueil) .plan h3,.page:not(#page-accueil) .work h3{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.035em}
+.page:not(#page-accueil) .price-amount,.page:not(#page-accueil) .plan-price{color:#2F5289;-webkit-text-fill-color:#2F5289;background:none!important;font-weight:650;overflow-wrap:anywhere}
+.page:not(#page-accueil) .price-pitch,.page:not(#page-accueil) .plan li,.page:not(#page-accueil) .work p,.page:not(#page-accueil) .bro-card p,.page:not(#page-accueil) .legal-card p{color:#65758C}
+.page:not(#page-accueil) .btn-primary{background:#263D64!important;color:#fff!important;border:1px solid #263D64!important;box-shadow:none!important;background-image:none!important;border-radius:11px}
+.page:not(#page-accueil) .btn-primary:hover{background:#3B609A!important;border-color:#3B609A!important}
+.page:not(#page-accueil) .btn-ghost{background:#fff!important;color:#284368!important;border:1px solid #CED9E9!important;border-radius:11px;box-shadow:none!important}
+.page:not(#page-accueil) .btn{max-width:100%;white-space:normal;text-align:center}
+.page:not(#page-accueil) .work-cover,.page:not(#page-accueil) .cover-bg{background-color:#EDF3FD}
+.page:not(#page-accueil) .work-badge{background:#FFF1E7;color:#A45A2E;border:1px solid #F4D5BE}
+.page:not(#page-accueil) .work-badge.real{background:#EAF2FF;color:#3B66A9;border-color:#CBDAF2}
+.page:not(#page-accueil) .chip,.page:not(#page-accueil) .flag,.page:not(#page-accueil) .price-tier,.page:not(#page-accueil) .contact-v14-label{background:#EBF2FD;color:#41659B;border-color:#D7E4F6}
+.page:not(#page-accueil) .tarif-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(85px,auto);gap:18px;align-items:start;border-color:#E5EBF4}
+.page:not(#page-accueil) .tarif-row>*{min-width:0;overflow-wrap:anywhere}
+.page:not(#page-accueil) .t-price{white-space:normal;text-align:right;color:#365D98}
+.page:not(#page-accueil) .legal-layout{display:grid;grid-template-columns:minmax(170px,245px) minmax(0,1fr);gap:26px;align-items:start}
+.page:not(#page-accueil) .legal-line{display:grid;grid-template-columns:minmax(120px,34%) minmax(0,1fr);gap:16px;align-items:start}
+.page:not(#page-accueil) .legal-line>*{min-width:0;overflow-wrap:anywhere}
+.page:not(#page-accueil) .legal-nav{background:#fff;border:1px solid #E0E7F1;border-radius:14px;overflow:hidden}
+.page:not(#page-accueil) .legal-nav a{display:block;color:#4A638A;padding:11px 15px}
+.page:not(#page-accueil) .contact-v14-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:25px}
+.page:not(#page-accueil) .contact-v14-mini{grid-template-columns:1fr}
+.page:not(#page-accueil) .contact-v14-promise{background:#EFF5FE;color:#314867;border-color:#D6E4F5}
+.page:not(#page-accueil) .contact-builder{background:#fff}
+.page:not(#page-accueil) input,.page:not(#page-accueil) select,.page:not(#page-accueil) textarea{color:#203451;background:#fff;border-color:#C9D7E9;max-width:100%}
+.page:not(#page-accueil) input:focus,.page:not(#page-accueil) textarea:focus,.page:not(#page-accueil) select:focus{border-color:#5B8CFF}
+.page:not(#page-accueil) .contact-builder-note,.page:not(#page-accueil) .form-privacy{color:#66778E}
+.page:not(#page-accueil) .contact-v14-email{color:#305B9D!important;-webkit-text-fill-color:#305B9D;background:none!important;overflow-wrap:anywhere}
+.page:not(#page-accueil) .check svg,.page:not(#page-accueil) .plan li svg{stroke:#5079B8!important}
+.page:not(#page-accueil) .co-ico svg{stroke:#5079B8}
+.page:not(#page-accueil) .tarif-row.head{background:#EAF1FB;color:#273F63}
+.page:not(#page-accueil) a:not(.btn):focus-visible{outline:2px solid #4B79C3;outline-offset:3px}
+.page:not(#page-accueil) .opt-price,.page:not(#page-accueil) .opt-price b{color:#31558D}
+.page:not(#page-accueil) .contact-services-choice{display:flex;flex-wrap:wrap;gap:10px}
+footer{background:#ECF2FA!important;color:#233B5C;border-top:1px solid #D9E3F0}
+footer a,footer p,footer small{color:#586D8C}
+@media(max-width:1050px){.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.page:not(#page-accueil) .contact-v14-grid,.page:not(#page-accueil) .legal-layout{grid-template-columns:1fr}.page:not(#page-accueil) .legal-nav{display:flex;flex-wrap:wrap}.page:not(#page-accueil) .works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.wrap{width:min(100% - 32px,1190px)}.page:not(#page-accueil) .page-head{padding-top:calc(var(--nav-h) + 46px);padding-bottom:46px}.page:not(#page-accueil) .page-body{padding:45px 0 70px}.page:not(#page-accueil) .section-title{font-size:clamp(2.1rem,9vw,3.1rem)}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .works-grid,.page:not(#page-accueil) .duo-grid{grid-template-columns:1fr}.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan,.page:not(#page-accueil) .legal-card,.page:not(#page-accueil) .contact-builder{padding:24px 20px}.page:not(#page-accueil) .tarif-row{grid-template-columns:minmax(0,1fr) minmax(64px,auto);gap:10px}.page:not(#page-accueil) .legal-line{grid-template-columns:1fr;gap:5px}.page:not(#page-accueil) .contact-v14-card{padding:20px}.page:not(#page-accueil) .contact-v14-mini{grid-template-columns:1fr}.page:not(#page-accueil) .form-row{grid-template-columns:1fr}.page:not(#page-accueil) .contact-builder-buttons{display:flex;flex-direction:column;align-items:stretch}.page:not(#page-accueil) .contact-builder-buttons .btn{width:100%}}
+
 </style>
 </head>
 <body>
