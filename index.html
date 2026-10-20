@@ -8,7 +8,7 @@
 <meta property="og:title" content="Brothers Studios | Sites internet professionnels dans l’Aisne">
 <meta property="og:description" content="Sites internet, réseaux sociaux, photos d’établissement et logo simple pour développer votre image professionnelle en ligne.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#07090F">
+<meta name="theme-color" content="#F6F8FC">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B8CFF'/%3E%3Cstop offset='1' stop-color='%23FF9E5E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='%230A0C14' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    BROTHERS STUDIO — Design System
@@ -2142,6 +2142,288 @@ p,li,a,button,input,textarea,select,
   .contact-v14-actions .btn{width:100%;justify-content:center}
 }
 
+
+/* TECH PREMIUM V3 — Layout-only experiment, original palette retained */
+:root{--font-d:'Manrope',sans-serif;--font-b:'DM Sans',sans-serif;--nav-h:82px}
+#header{background:rgba(7,9,15,.88);border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(24px)}
+#header .nav{gap:40px}
+#header .nav-links{gap:clamp(10px,1.6vw,24px)}
+#header .nav-links>li>a:not(.btn){font-size:12.5px;letter-spacing:.01em;font-weight:550;border:0;background:none}
+#header .nav-links>li>a:not(.btn):hover{color:#F4F6FB}
+#header .nav-cta{background:transparent!important;color:#E7EDFB!important;border:1px solid rgba(160,183,246,.50)!important;box-shadow:none!important;padding:12px 20px;border-radius:10px}
+#header .nav-cta:hover{background:rgba(91,140,255,.12)!important;border-color:#5B8CFF!important;transform:none}
+#header .logo-mark{border-radius:12px}
+#page-accueil .simple-home{padding-top:var(--nav-h)}
+#page-accueil .tech-hero{position:relative;max-width:none;min-height:min(790px,calc(100svh - var(--nav-h)));display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(40px,7vw,125px);align-items:center;padding:clamp(104px,11vw,155px) 0 112px}
+#page-accueil .tech-hero-main{position:relative;z-index:2}
+#page-accueil .tech-label{display:flex;align-items:center;gap:10px;font:600 10px 'DM Sans',sans-serif;letter-spacing:.22em;color:#A8B3CA;margin-bottom:34px}
+#page-accueil .tech-pulse{width:7px;height:7px;background:#5B8CFF;border-radius:50%;box-shadow:0 0 16px #5B8CFF}
+#page-accueil .tech-label-sep{color:#FF9E5E;margin:0 4px}
+#page-accueil .simple-title{font:600 clamp(3rem,5.35vw,5.5rem)/1.16 'Manrope',sans-serif;letter-spacing:-.063em;color:#F4F6FB;margin:0 0 32px;max-width:900px}
+#page-accueil .simple-title span:not(.tech-dot){color:#98A9C7}
+#page-accueil .simple-title .tech-dot{color:#FF9E5E}
+#page-accueil .simple-lead{max-width:490px;font-size:clamp(15px,1.4vw,18px);line-height:1.8;color:#AEB9CE;margin-bottom:35px}
+#page-accueil .simple-actions{gap:13px;margin-bottom:0}
+#page-accueil .simple-actions .btn{border-radius:10px;padding:15px 23px;font-size:13px;font-weight:700;gap:24px}
+#page-accueil .simple-actions .btn-primary{background:#F4F6FB;color:#0A0E17;box-shadow:none;border:1px solid #F4F6FB}
+#page-accueil .simple-actions .btn-primary:hover{background:#DEE6F8;box-shadow:none}
+#page-accueil .simple-actions .btn-ghost{border-color:rgba(210,223,250,.20);background:transparent;color:#E5EAF5}
+#page-accueil .tech-aside{min-height:435px;position:relative;border:1px solid rgba(91,140,255,.16);border-radius:2px;display:flex;flex-direction:column;justify-content:space-between;padding:23px;background:linear-gradient(135deg,rgba(91,140,255,.04),transparent 52%),radial-gradient(ellipse at 58% 46%,rgba(91,140,255,.055),transparent 55%)}
+#page-accueil .tech-aside:after{content:"";position:absolute;inset:13px;border:1px solid rgba(255,255,255,.035);pointer-events:none}
+#page-accueil .tech-aside-head,#page-accueil .tech-aside-foot{display:flex;justify-content:space-between;gap:10px;color:#8898B8;font:600 10px 'DM Sans',sans-serif;letter-spacing:.12em;position:relative;z-index:2}
+#page-accueil .tech-aside-foot span:last-child{font-size:18px;color:#FF9E5E}
+#page-accueil .tech-orbit{height:305px;display:grid;place-items:center;position:relative;isolation:isolate}
+#page-accueil .tech-orbit-ring{position:absolute;inset:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(120,153,237,.28)}
+#page-accueil .tech-ring-one{width:170px;height:170px;border-color:rgba(255,255,255,.16)}
+#page-accueil .tech-ring-two{width:242px;height:242px}
+#page-accueil .tech-ring-three{width:300px;height:300px;border-style:dashed;opacity:.40}
+#page-accueil .tech-orbit:before,#page-accueil .tech-orbit:after{content:"";position:absolute;background:rgba(91,140,255,.20)}
+#page-accueil .tech-orbit:before{height:1px;width:100%;top:50%}
+#page-accueil .tech-orbit:after{width:1px;height:100%;left:50%}
+#page-accueil .tech-orbit-core{z-index:2;display:flex;align-items:flex-start;font:500 clamp(4rem,7.5vw,7rem)/1 'Manrope',sans-serif;letter-spacing:-.1em;color:#F2F5FE}
+#page-accueil .tech-orbit-core span{font-size:12px;margin:10px 0 0 8px;color:#FF9E5E;letter-spacing:0}
+#page-accueil .tech-orbit-north,#page-accueil .tech-orbit-south{position:absolute;z-index:2;font:600 9px/1.7 'DM Sans',sans-serif;letter-spacing:.13em;color:#97A7C6}
+#page-accueil .tech-orbit-north{top:12px;right:0}
+#page-accueil .tech-orbit-south{left:0;bottom:10px}
+#page-accueil .tech-hero-bottom{position:absolute;bottom:25px;left:0;right:0;display:flex;align-items:center;gap:18px;color:#7F8EA9;font:600 10px 'DM Sans',sans-serif;letter-spacing:.15em}
+#page-accueil .tech-scroll-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(91,140,255,.4),rgba(255,255,255,.06))}
+#page-accueil .simple-section{padding-top:118px}
+#page-accueil .simple-head{max-width:780px;margin-bottom:42px}
+#page-accueil .simple-head h2{font:600 clamp(2.1rem,3.8vw,3.6rem)/1.2 'Manrope',sans-serif;letter-spacing:-.045em}
+#page-accueil .simple-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#page-accueil .simple-card{min-height:260px;border-radius:9px;padding:35px 36px;background:rgba(15,21,35,.70);border:1px solid rgba(168,189,235,.11)}
+#page-accueil .simple-card:hover{transform:translateY(-2px);border-color:rgba(91,140,255,.47);background:rgba(20,28,47,.84)}
+#page-accueil .simple-card>span{margin-bottom:33px;font-size:11px;color:#879ABA;letter-spacing:.15em}
+#page-accueil .simple-card h3{font:600 24px 'Manrope',sans-serif;letter-spacing:-.045em;margin-bottom:12px}
+#page-accueil .simple-card p{max-width:390px;font-size:14px;line-height:1.7}
+#page-accueil .simple-card strong{font-size:13px;letter-spacing:.02em}
+#page-accueil .simple-guide{gap:18px}
+#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{border-radius:9px;padding:45px 43px;background:rgba(16,22,38,.7)}
+#page-accueil .simple-cta{border-radius:9px;background:linear-gradient(110deg,rgba(91,140,255,.12),rgba(13,18,32,.94));padding:60px;margin-top:110px}
+#page-accueil .simple-cta .btn-primary{background:#F4F6FB;color:#0A0E17;border:1px solid #F4F6FB;border-radius:9px;box-shadow:none}
+@media(max-width:1050px){#page-accueil .tech-hero{grid-template-columns:minmax(0,1fr) minmax(265px,.72fr);gap:30px}#page-accueil .simple-title{font-size:clamp(2.7rem,5.4vw,4.3rem)}#page-accueil .tech-aside{min-height:360px}#page-accueil .tech-orbit{transform:scale(.82)}}
+@media(max-width:760px){#page-accueil .tech-hero{grid-template-columns:1fr;gap:55px;min-height:0;padding:90px 0 95px}#page-accueil .tech-aside{max-width:520px;width:100%;min-height:340px}#page-accueil .tech-orbit{height:230px;transform:scale(.73)}#page-accueil .simple-title{font-size:clamp(2.9rem,8.8vw,4.8rem)}#page-accueil .tech-hero-bottom{bottom:24px}#page-accueil .simple-section{padding-top:80px}}
+@media(max-width:640px){#page-accueil .simple-home{padding-top:var(--nav-h)}#page-accueil .tech-hero{padding:60px 0 80px;gap:46px}#page-accueil .simple-title{font-size:clamp(2.35rem,10vw,3.3rem);line-height:1.18;letter-spacing:-.055em}#page-accueil .tech-label{font-size:9px;letter-spacing:.1em;flex-wrap:wrap;margin-bottom:27px}#page-accueil .simple-lead{font-size:15px}#page-accueil .simple-actions .btn{width:100%;justify-content:space-between}#page-accueil .tech-aside{min-height:290px;padding:17px}#page-accueil .tech-orbit{height:195px;transform:scale(.61)}#page-accueil .tech-aside-foot{font-size:8px}#page-accueil .simple-services{grid-template-columns:1fr}#page-accueil .simple-card{padding:28px;min-height:230px}#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{padding:28px}#page-accueil .simple-cta{padding:35px 25px;margin-top:80px}}
+
+
+/* V4 LIGHT PREMIUM — fond ivoire bleuté, accents de marque conservés */
+:root{--bg:#F6F8FC;--surface:#FFFFFF;--surface-2:#EDF2FA;--ink:#19243B;--muted:#65728C;--line:rgba(39,59,100,.13);--glass:rgba(255,255,255,.85);--glass-brd:rgba(39,59,100,.13)}
+body{background:#F6F8FC;color:var(--ink)}
+.bg-grain{background:radial-gradient(950px 570px at 5% 2%,rgba(91,140,255,.11),transparent 65%),radial-gradient(850px 520px at 95% 3%,rgba(255,158,94,.10),transparent 70%),#F6F8FC}
+.bg-grid{opacity:.16;background-image:linear-gradient(rgba(38,62,110,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(38,62,110,.09) 1px,transparent 1px)}
+#header{background:rgba(250,251,254,.94);border-color:rgba(30,51,86,.10);box-shadow:0 4px 22px rgba(29,46,75,.025)}
+#header .logo{color:#18243C}
+#header .nav-links>li>a:not(.btn){color:#53627A}
+#header .nav-links>li>a:not(.btn):hover,#header .nav-links>li>a.active:not(.btn){color:#1B2A45}
+#header .nav-cta{color:#243758!important;border-color:rgba(58,93,161,.30)!important;background:#EDF3FF!important}
+#header .nav-cta:hover{background:#DCE9FF!important}
+#page-accueil .tech-label{color:#62718C}
+#page-accueil .simple-title{color:#18243A}
+#page-accueil .simple-title span:not(.tech-dot){color:#7586A5}
+#page-accueil .simple-lead{color:#5C6C85}
+#page-accueil .simple-actions .btn-primary,#page-accueil .simple-cta .btn-primary{background:#273D66;color:#fff;border-color:#273D66}
+#page-accueil .simple-actions .btn-primary:hover{background:#36558D;color:#fff}
+#page-accueil .simple-actions .btn-ghost{color:#243956;border-color:rgba(60,86,133,.26);background:rgba(255,255,255,.7)}
+#page-accueil .tech-aside{border-color:rgba(53,89,151,.18);background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(232,239,252,.73));box-shadow:0 30px 80px rgba(56,79,128,.09)}
+#page-accueil .tech-aside:after{border-color:rgba(61,88,142,.09)}
+#page-accueil .tech-aside-head,#page-accueil .tech-aside-foot,#page-accueil .tech-orbit-north,#page-accueil .tech-orbit-south{color:#687C9A}
+#page-accueil .tech-orbit-core{color:#1F3152}
+#page-accueil .tech-ring-one{border-color:rgba(43,72,122,.23)}
+#page-accueil .tech-ring-two{border-color:rgba(91,140,255,.44)}
+#page-accueil .tech-ring-three{border-color:rgba(60,94,154,.26)}
+#page-accueil .tech-orbit:before,#page-accueil .tech-orbit:after{background:rgba(64,105,179,.12)}
+#page-accueil .tech-hero-bottom{color:#8290A7}
+#page-accueil .tech-scroll-line{background:linear-gradient(90deg,rgba(91,140,255,.34),rgba(61,92,143,.08))}
+#page-accueil .simple-head h2,#page-accueil .simple-guide-text h2,#page-accueil .simple-cta h2{color:#1B2942}
+#page-accueil .simple-card{background:rgba(255,255,255,.92);border-color:rgba(54,80,126,.13);box-shadow:0 10px 35px rgba(38,60,103,.035)}
+#page-accueil .simple-card:hover{background:#fff;border-color:rgba(91,140,255,.55);box-shadow:0 16px 40px rgba(38,60,103,.09)}
+#page-accueil .simple-card>span{color:#7585A2}
+#page-accueil .simple-card h3{color:#223453}
+#page-accueil .simple-card p,#page-accueil .simple-guide-text p{color:#64738C}
+#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{background:#fff;border-color:rgba(54,80,126,.13)}
+#page-accueil .simple-guide-list div{background:#F5F8FD;border-color:rgba(54,80,126,.09)}
+#page-accueil .simple-guide-list b{color:#223453}
+#page-accueil .simple-guide-list span{color:#62718A}
+#page-accueil .simple-cta{background:linear-gradient(115deg,#EAF1FD,#FFF7F0);border-color:rgba(60,90,143,.13)}
+#page-accueil .simple-cta p{color:#65738A}
+#page-accueil .simple-cta .btn-primary{box-shadow:none}
+#page-accueil .eyebrow{color:#657690}
+#page-accueil .simple-card strong{background:linear-gradient(110deg,#426CBE,#BA754D);color:transparent;background-clip:text;-webkit-background-clip:text}
+.page-head{background:radial-gradient(700px 330px at 12% 20%,rgba(91,140,255,.08),transparent 75%)}
+.page-head .section-title,.section-title{color:#1B2942}
+.section-lead,.page-body p{color:#586881}
+.price-card,.plan,.work,.contact-v14-card,.contact-builder,.bro-card,.story-card{background:#fff;border-color:rgba(54,80,126,.15);color:#263854}
+.contact-builder,.contact-v14-card.primary{background:linear-gradient(135deg,#FFFFFF,#EEF3FB)}
+.btn-ghost{border-color:rgba(58,86,134,.22);color:#273B5C}
+.btn-primary{box-shadow:none}
+footer{background:#EDF2FA;color:#283853;border-top:1px solid rgba(54,80,126,.13)}
+footer a{color:#3D5274}
+.mobile-menu{background:#F7F9FE;color:#1B2B46}
+@media(max-width:860px){#header .nav-links{background:#F7F9FE}}
+
+
+/* V5 typographie: contrastes éditoriaux, sans géométrie massive */
+:root{--font-d:'Plus Jakarta Sans',sans-serif;--font-b:'DM Sans',sans-serif}
+#page-accueil .simple-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.052em;line-height:1.2}
+#page-accueil .simple-title span:not(.tech-dot){font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.027em;color:#6B7FA4}
+#page-accueil .tech-orbit-core{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(5.2rem,8vw,7.8rem)}
+#page-accueil .simple-head h2,#page-accueil .simple-guide-text h2,#page-accueil .simple-cta h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.036em}
+#page-accueil .simple-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.035em}
+#page-accueil .simple-lead{font-family:'DM Sans',sans-serif;font-weight:400}
+#page-accueil .simple-actions .btn{font-family:'DM Sans',sans-serif;font-weight:600}
+.logo span:not(.logo-mark){letter-spacing:-.035em}
+@media(max-width:640px){#page-accueil .simple-title{line-height:1.19;letter-spacing:-.05em}}
+
+
+/* V6 — Typographie alignée : deux lignes cohérentes, sans italique décoratif */
+#page-accueil .tech-hero{grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(46px,6vw,100px)}
+#page-accueil .simple-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:clamp(3.25rem,5.1vw,5.35rem);line-height:1.17;letter-spacing:-.058em;max-width:680px;text-wrap:balance}
+#page-accueil .simple-title span:not(.tech-dot){display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-style:normal;letter-spacing:inherit;color:#7085AB}
+#page-accueil .tech-hero-main{min-width:0}
+@media(max-width:1050px){#page-accueil .simple-title{font-size:clamp(2.7rem,5.3vw,4.3rem)}}
+@media(max-width:760px){#page-accueil .tech-hero{grid-template-columns:1fr}#page-accueil .simple-title{font-size:clamp(3rem,8vw,4.65rem)}}
+@media(max-width:640px){#page-accueil .simple-title{font-size:clamp(2.45rem,9vw,3.45rem);line-height:1.2}}
+
+
+/* V7 — interactive light premium, scoped homepage, no external libraries */
+#page-accueil{color:#15233C;background:#F8FAFD}
+#page-accueil .v7-home{background:radial-gradient(ellipse 780px 550px at 90% 9%,rgba(91,140,255,.09),transparent 78%),#F8FAFD;overflow:hidden}
+#page-accueil .v7-hero{padding:calc(var(--nav-h) + 92px) 0 0;min-height:760px}
+#page-accueil .v7-hero-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:36px 35px;align-items:center;position:relative}
+#page-accueil .v7-heading{position:relative;z-index:3;padding:0 0 10px}
+#page-accueil .v7-overline,#page-accueil .v7-section-top,#page-accueil .v7-hero-index,#page-accueil .v7-end>div>span{font:650 10px/1.5 'DM Sans',sans-serif;letter-spacing:.18em;color:#6E7E99}
+#page-accueil .v7-overline{display:flex;align-items:center;gap:11px;white-space:nowrap;margin-bottom:32px}
+#page-accueil .v7-signal{width:7px;height:7px;border-radius:100%;background:#5B8CFF;box-shadow:0 0 0 4px rgba(91,140,255,.12)}
+#page-accueil .v7-slash{color:#F0A36F}
+#page-accueil .v7-heading h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.065em;font-size:clamp(3.35rem,5.9vw,6.7rem);line-height:1.13;color:#15243E;margin:0 0 29px}
+#page-accueil .v7-heading h1 span{color:#6789C4}
+#page-accueil .v7-heading p{max-width:450px;font:400 17px/1.78 'DM Sans',sans-serif;color:#64728B;margin-bottom:33px}
+#page-accueil .v7-actions{display:flex;gap:13px;flex-wrap:wrap}
+#page-accueil .v7-btn{display:inline-flex;justify-content:space-between;align-items:center;gap:24px;border:1px solid transparent;border-radius:11px;padding:16px 19px;font:650 13px/1.1 'DM Sans',sans-serif;transition:background .22s,transform .22s,border-color .22s}
+#page-accueil .v7-btn:hover{transform:translateY(-3px)}
+#page-accueil .v7-btn-main{background:#263D64;color:white}
+#page-accueil .v7-btn-main:hover{background:#375B96}
+#page-accueil .v7-btn-outline{border-color:#CBD6E8;color:#304666;background:rgba(255,255,255,.85)}
+#page-accueil .v7-btn-outline:hover{border-color:#7195CF;background:#fff}
+#page-accueil .v7-scene{--mx:0;--my:0;--px:50%;--py:48%;height:510px;position:relative;isolation:isolate;perspective:1050px;transform-style:preserve-3d;user-select:none}
+#page-accueil .v7-glow{position:absolute;inset:-50px;pointer-events:none;z-index:-1;background:radial-gradient(330px 290px at var(--px) var(--py),rgba(91,140,255,.19),transparent 70%);opacity:.8}
+#page-accueil .v7-gridlines{position:absolute;inset:12px;opacity:.42;background-image:linear-gradient(rgba(78,110,170,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(78,110,170,.08) 1px,transparent 1px);background-size:45px 45px;mask-image:radial-gradient(ellipse,#000 32%,transparent 73%)}
+#page-accueil .v7-scene-label,#page-accueil .v7-scene-foot{position:absolute;display:flex;justify-content:space-between;left:4%;right:2%;font:650 9px 'DM Sans',sans-serif;letter-spacing:.13em;color:#8795AD}
+#page-accueil .v7-scene-label{top:6px}#page-accueil .v7-scene-foot{bottom:1px}
+#page-accueil .v7-panel{position:absolute;box-shadow:0 27px 75px rgba(29,57,105,.13),0 3px 15px rgba(30,62,115,.06);will-change:transform;transition:transform .52s cubic-bezier(.2,.75,.2,1),box-shadow .3s;transform:translate3d(calc(var(--mx)*var(--depth)*1px),calc(var(--my)*var(--depth)*1px),0) rotate(var(--rot,0deg))}
+#page-accueil .v7-scene:hover .v7-panel{box-shadow:0 35px 85px rgba(29,57,105,.16),0 3px 15px rgba(30,62,115,.05)}
+#page-accueil .v7-panel-main{--depth:.85;--rot:-5deg;left:10%;top:12%;width:69%;height:69%;background:#fff;border:1px solid #E3EAF4;border-radius:17px;overflow:hidden}
+#page-accueil .v7-panel-chrome{height:38px;border-bottom:1px solid #E7ECF3;display:flex;align-items:center;justify-content:space-between;padding:0 15px;font:600 9px 'DM Sans',sans-serif;color:#8190A7}
+#page-accueil .v7-chrome-dots{display:flex;gap:4px}#page-accueil .v7-chrome-dots i{display:block;width:6px;height:6px;border-radius:50%;background:#DCE5F1}#page-accueil .v7-chrome-dots i:first-child{background:#FF9E5E}
+#page-accueil .v7-panel-content{height:calc(100% - 38px);display:flex;flex-direction:column;padding:24px 27px 19px;background:radial-gradient(circle at 91% 12%,rgba(91,140,255,.15),transparent 58%),#FCFDFF}
+#page-accueil .v7-panel-eyebrow,.v7-micro{font:700 9px 'DM Sans',sans-serif;letter-spacing:.14em;color:#6E83A4}
+#page-accueil .v7-panel-word{font:500 clamp(3.1rem,5.7vw,5.75rem)/.99 'Plus Jakarta Sans',sans-serif;letter-spacing:-.07em;color:#1B3051;margin:auto 0}
+#page-accueil .v7-panel-word em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.055em;color:#6488C0}
+#page-accueil .v7-panel-footer{display:flex;justify-content:space-between;border-top:1px solid #DFE6F1;padding-top:14px;font:650 8px 'DM Sans',sans-serif;letter-spacing:.08em;color:#7086A7}
+#page-accueil .v7-panel-social{--depth:1.5;--rot:8deg;right:0;top:3%;width:38%;height:40%;background:#FFF8F2;border:1px solid #F5DEC9;border-radius:15px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+#page-accueil .v7-social-art{display:flex;justify-content:center;gap:4px;align-items:center;color:#E79B69;font-size:37px;letter-spacing:-.1em}
+#page-accueil .v7-social-art span:nth-child(2){color:#7596CF;font-size:46px}
+#page-accueil .v7-panel-social strong{font:600 15px 'Plus Jakarta Sans',sans-serif;letter-spacing:-.045em;color:#34435B}
+#page-accueil .v7-panel-social small{font:700 8px 'DM Sans',sans-serif;letter-spacing:.09em;color:#A18777}
+#page-accueil .v7-panel-code{--depth:1.9;--rot:5deg;right:1%;bottom:15%;width:43%;height:28%;background:#273D65;border:1px solid #4E6794;border-radius:12px;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+#page-accueil .v7-panel-code .v7-micro{color:#B2C3E4}
+#page-accueil .v7-code-lines{display:grid;gap:7px;width:75%}
+#page-accueil .v7-code-lines i{display:block;height:5px;border-radius:5px;background:#6E8EC0;width:85%}#page-accueil .v7-code-lines i:nth-child(2){width:56%;background:#FFAE79}#page-accueil .v7-code-lines i:nth-child(3){width:94%}#page-accueil .v7-code-lines i:nth-child(4){width:62%;background:#9FB8DF}
+#page-accueil .v7-panel-code strong{display:flex;justify-content:space-between;color:#fff;font:550 13px 'Plus Jakarta Sans',sans-serif}
+#page-accueil .v7-cross{position:absolute;color:#A3B6D5;font-size:25px;font-weight:200}#page-accueil .v7-cross-1{left:2%;top:6%}#page-accueil .v7-cross-2{right:8%;bottom:7%}
+#page-accueil .v7-hero-index{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #E0E7F1;padding:23px 0;margin-top:33px}
+#page-accueil .v7-expertise{padding-top:110px;padding-bottom:130px}
+#page-accueil .v7-section-top{display:flex;justify-content:space-between;border-top:1px solid #DDE5EF;padding-top:25px}
+#page-accueil .v7-expertise-head{display:flex;align-items:end;justify-content:space-between;gap:32px;margin:70px 0 54px}
+#page-accueil .v7-expertise-head h2,#page-accueil .v7-end h2{font:500 clamp(2.4rem,5vw,5rem)/1.21 'Plus Jakarta Sans',sans-serif;letter-spacing:-.055em;color:#1B2A44}
+#page-accueil .v7-expertise-head h2 em,#page-accueil .v7-end h2 em{font-style:normal;color:#6689C5}
+#page-accueil .v7-expertise-head p{max-width:300px;color:#6B7891;font:400 15px/1.7 'DM Sans',sans-serif}
+#page-accueil .v7-services{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #DDE5EF}
+#page-accueil .v7-service{min-height:220px;display:grid;grid-template-columns:35px 1fr 30px;gap:17px;border-bottom:1px solid #DDE5EF;padding:35px 30px 30px 0;align-items:start;transition:padding .3s,background .3s}
+#page-accueil .v7-service:nth-child(odd){border-right:1px solid #DDE5EF}#page-accueil .v7-service:nth-child(even){padding-left:30px}
+#page-accueil .v7-service:hover{background:rgba(91,140,255,.055);padding-left:20px}
+#page-accueil .v7-service:nth-child(even):hover{padding-left:44px}
+#page-accueil .v7-n{font:700 10px 'DM Sans',sans-serif;color:#8AA1C4}
+#page-accueil .v7-service h3{font:550 24px 'Plus Jakarta Sans',sans-serif;letter-spacing:-.04em;margin:0 0 15px;color:#263651}
+#page-accueil .v7-service p{font:400 14px/1.65 'DM Sans',sans-serif;color:#75829A;max-width:340px}
+#page-accueil .v7-service-arrow{font-size:24px;color:#7397D0;justify-self:end}
+#page-accueil .v7-end{margin-bottom:140px;padding:70px 0;display:flex;align-items:center;justify-content:space-between;border-block:1px solid #DDE5EF;gap:35px}
+#page-accueil .v7-end h2{font-size:clamp(2rem,3.5vw,3.5rem);margin-top:18px}
+@media(max-width:1000px){#page-accueil .v7-hero-inner{grid-template-columns:1fr}#page-accueil .v7-hero{padding-top:calc(var(--nav-h) + 55px)}#page-accueil .v7-heading h1{font-size:clamp(3.3rem,7vw,5.5rem)}#page-accueil .v7-scene{max-width:670px;width:100%;margin-inline:auto}#page-accueil .v7-hero-index{margin-top:0}}
+@media(max-width:640px){#page-accueil .v7-hero{padding-top:calc(var(--nav-h) + 26px)}#page-accueil .v7-heading h1{font-size:clamp(2.7rem,10vw,4.1rem)}#page-accueil .v7-heading p{font-size:15px}#page-accueil .v7-overline{font-size:8px;letter-spacing:.1em}#page-accueil .v7-actions .v7-btn{width:100%}#page-accueil .v7-scene{height:360px;max-width:430px;transform:scale(.96);transform-origin:50% 50%}#page-accueil .v7-panel-main{width:74%;left:4%}#page-accueil .v7-panel-social{width:39%;height:43%}#page-accueil .v7-panel-code{width:42%;height:29%;bottom:17%}#page-accueil .v7-panel-word{font-size:clamp(2.6rem,9vw,4.3rem)}#page-accueil .v7-panel-content{padding:17px}#page-accueil .v7-panel-social{padding:12px}#page-accueil .v7-panel-social strong{font-size:11px}#page-accueil .v7-social-art{font-size:24px}#page-accueil .v7-social-art span:nth-child(2){font-size:30px}#page-accueil .v7-hero-index{font-size:8px;gap:15px}#page-accueil .v7-expertise{padding-block:75px}#page-accueil .v7-section-top{font-size:8px}#page-accueil .v7-expertise-head{display:block;margin:42px 0 30px}#page-accueil .v7-expertise-head h2{font-size:clamp(2.2rem,9vw,3.5rem)}#page-accueil .v7-expertise-head p{margin-top:20px}#page-accueil .v7-services{grid-template-columns:1fr}#page-accueil .v7-service:nth-child(odd){border-right:0}#page-accueil .v7-service,#page-accueil .v7-service:nth-child(even){padding:30px 5px;min-height:155px}#page-accueil .v7-service h3{font-size:21px}#page-accueil .v7-end{display:block;margin-bottom:65px;padding:45px 0}#page-accueil .v7-end .v7-btn{margin-top:26px}#page-accueil .v7-end h2{font-size:clamp(2rem,8vw,3rem)}}
+@media(prefers-reduced-motion:reduce){#page-accueil .v7-panel,#page-accueil .v7-btn,#page-accueil .v7-service{transition:none!important;transform:none!important}}
+
+
+/* V8 FULL SITE SYSTEM — coherent light design, separated accent colors */
+:root{--bg:#F8FAFD;--surface:#fff;--surface-2:#F0F4FB;--ink:#182842;--muted:#687995;--line:rgba(49,79,132,.13);--glass:rgba(255,255,255,.95);--glass-brd:rgba(49,79,132,.14);--grad:linear-gradient(110deg,#426BAC,#537FC2)}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{background:#F8FAFD;color:#182842}
+body *,body *::before,body *::after{box-sizing:border-box}
+img,svg,video,iframe{max-width:100%}
+.wrap{width:min(1190px,calc(100% - 48px));max-width:1190px}
+.bg-grain{background:#F8FAFD}.bg-grid{opacity:.09}
+#header{background:rgba(248,250,253,.95);border-bottom:1px solid #E0E6F0;box-shadow:none}
+#header .nav-links>li>a:not(.btn){color:#485A76}
+#header .logo{color:#172945}
+#header .nav-cta{background:#263D64!important;border:1px solid #263D64!important;color:white!important;box-shadow:none!important}
+#header .nav-cta:hover{background:#385D98!important;border-color:#385D98!important;color:white!important}
+.mobile-menu{background:#F8FAFD;color:#1D304D}
+.page:not(#page-accueil){background:#F8FAFD;color:#20334E;overflow:clip}
+.page:not(#page-accueil) .page-head{position:relative;background:linear-gradient(145deg,#F4F7FD,#FFFFFF);border-bottom:1px solid #E2E9F3;padding-top:calc(var(--nav-h) + 85px);padding-bottom:78px;overflow:hidden}
+.page:not(#page-accueil) .page-head .wrap{position:relative;z-index:2;max-width:1190px}
+.page:not(#page-accueil) .orb{display:none!important}
+.page:not(#page-accueil) .eyebrow{font:700 11px/1.5 'DM Sans',sans-serif;letter-spacing:.15em;color:#5275AA}
+.page:not(#page-accueil) .eyebrow:before{background:#5B8CFF}
+.page:not(#page-accueil) .section-title,.page:not(#page-accueil) .page-head h1{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;font-weight:500;letter-spacing:-.047em;line-height:1.19;font-size:clamp(2.5rem,4.8vw,4.9rem);color:#1D304D;text-wrap:balance;max-width:950px;overflow-wrap:break-word}
+.page:not(#page-accueil) .grad-text{background:none!important;-webkit-text-fill-color:#6688BF!important;color:#6688BF!important}
+.page:not(#page-accueil) .section-lead{font:400 clamp(15px,1.4vw,18px)/1.75 'DM Sans',sans-serif;color:#677890;max-width:740px}
+.page:not(#page-accueil) .page-body{background:#F8FAFD;padding:75px 0 105px;min-width:0}
+.page:not(#page-accueil) .page-body .wrap,.page:not(#page-accueil) .page-body .wrap>*{min-width:0}
+.page:not(#page-accueil) p{overflow-wrap:break-word}
+.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan,.page:not(#page-accueil) .work,.page:not(#page-accueil) .bro-card,.page:not(#page-accueil) .contact-v14-card,.page:not(#page-accueil) .contact-builder,.page:not(#page-accueil) .story-card,.page:not(#page-accueil) .legal-card,.page:not(#page-accueil) .tarifs,.page:not(#page-accueil) .callout,.page:not(#page-accueil) .offer-choice,.page:not(#page-accueil) .faq-item,.page:not(#page-accueil) .sub-block,.page:not(#page-accueil) .opt-card,.page:not(#page-accueil) .duo-photo-frame{background:#FFFFFF;color:#243751;border:1px solid #E0E7F1;border-radius:16px;box-shadow:0 12px 36px rgba(38,63,110,.035);max-width:100%;min-width:0}
+.page:not(#page-accueil) .price-card.featured,.page:not(#page-accueil) .plan.featured,.page:not(#page-accueil) .plan.popular{border:1.5px solid #6489C9;background:#F3F7FF}
+.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .works-grid,.page:not(#page-accueil) .duo-grid{gap:22px;align-items:stretch}
+.page:not(#page-accueil) .pricing-grid>*,.page:not(#page-accueil) .plans>*,.page:not(#page-accueil) .works-grid>*,.page:not(#page-accueil) .duo-grid>*{min-width:0}
+.page:not(#page-accueil) h2,.page:not(#page-accueil) h3{color:#253955;overflow-wrap:break-word}
+.page:not(#page-accueil) .price-name,.page:not(#page-accueil) .plan h3,.page:not(#page-accueil) .work h3{font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.035em}
+.page:not(#page-accueil) .price-amount,.page:not(#page-accueil) .plan-price{color:#2F5289;-webkit-text-fill-color:#2F5289;background:none!important;font-weight:650;overflow-wrap:anywhere}
+.page:not(#page-accueil) .price-pitch,.page:not(#page-accueil) .plan li,.page:not(#page-accueil) .work p,.page:not(#page-accueil) .bro-card p,.page:not(#page-accueil) .legal-card p{color:#65758C}
+.page:not(#page-accueil) .btn-primary{background:#263D64!important;color:#fff!important;border:1px solid #263D64!important;box-shadow:none!important;background-image:none!important;border-radius:11px}
+.page:not(#page-accueil) .btn-primary:hover{background:#3B609A!important;border-color:#3B609A!important}
+.page:not(#page-accueil) .btn-ghost{background:#fff!important;color:#284368!important;border:1px solid #CED9E9!important;border-radius:11px;box-shadow:none!important}
+.page:not(#page-accueil) .btn{max-width:100%;white-space:normal;text-align:center}
+.page:not(#page-accueil) .work-cover,.page:not(#page-accueil) .cover-bg{background-color:#EDF3FD}
+.page:not(#page-accueil) .work-badge{background:#FFF1E7;color:#A45A2E;border:1px solid #F4D5BE}
+.page:not(#page-accueil) .work-badge.real{background:#EAF2FF;color:#3B66A9;border-color:#CBDAF2}
+.page:not(#page-accueil) .chip,.page:not(#page-accueil) .flag,.page:not(#page-accueil) .price-tier,.page:not(#page-accueil) .contact-v14-label{background:#EBF2FD;color:#41659B;border-color:#D7E4F6}
+.page:not(#page-accueil) .tarif-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(85px,auto);gap:18px;align-items:start;border-color:#E5EBF4}
+.page:not(#page-accueil) .tarif-row>*{min-width:0;overflow-wrap:anywhere}
+.page:not(#page-accueil) .t-price{white-space:normal;text-align:right;color:#365D98}
+.page:not(#page-accueil) .legal-layout{display:grid;grid-template-columns:minmax(170px,245px) minmax(0,1fr);gap:26px;align-items:start}
+.page:not(#page-accueil) .legal-line{display:grid;grid-template-columns:minmax(120px,34%) minmax(0,1fr);gap:16px;align-items:start}
+.page:not(#page-accueil) .legal-line>*{min-width:0;overflow-wrap:anywhere}
+.page:not(#page-accueil) .legal-nav{background:#fff;border:1px solid #E0E7F1;border-radius:14px;overflow:hidden}
+.page:not(#page-accueil) .legal-nav a{display:block;color:#4A638A;padding:11px 15px}
+.page:not(#page-accueil) .contact-v14-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:25px}
+.page:not(#page-accueil) .contact-v14-mini{grid-template-columns:1fr}
+.page:not(#page-accueil) .contact-v14-promise{background:#EFF5FE;color:#314867;border-color:#D6E4F5}
+.page:not(#page-accueil) .contact-builder{background:#fff}
+.page:not(#page-accueil) input,.page:not(#page-accueil) select,.page:not(#page-accueil) textarea{color:#203451;background:#fff;border-color:#C9D7E9;max-width:100%}
+.page:not(#page-accueil) input:focus,.page:not(#page-accueil) textarea:focus,.page:not(#page-accueil) select:focus{border-color:#5B8CFF}
+.page:not(#page-accueil) .contact-builder-note,.page:not(#page-accueil) .form-privacy{color:#66778E}
+.page:not(#page-accueil) .contact-v14-email{color:#305B9D!important;-webkit-text-fill-color:#305B9D;background:none!important;overflow-wrap:anywhere}
+.page:not(#page-accueil) .check svg,.page:not(#page-accueil) .plan li svg{stroke:#5079B8!important}
+.page:not(#page-accueil) .co-ico svg{stroke:#5079B8}
+.page:not(#page-accueil) .tarif-row.head{background:#EAF1FB;color:#273F63}
+.page:not(#page-accueil) a:not(.btn):focus-visible{outline:2px solid #4B79C3;outline-offset:3px}
+.page:not(#page-accueil) .opt-price,.page:not(#page-accueil) .opt-price b{color:#31558D}
+.page:not(#page-accueil) .contact-services-choice{display:flex;flex-wrap:wrap;gap:10px}
+footer{background:#ECF2FA!important;color:#233B5C;border-top:1px solid #D9E3F0}
+footer a,footer p,footer small{color:#586D8C}
+@media(max-width:1050px){.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:780px){.page:not(#page-accueil) .contact-v14-grid,.page:not(#page-accueil) .legal-layout{grid-template-columns:1fr}.page:not(#page-accueil) .legal-nav{display:flex;flex-wrap:wrap}.page:not(#page-accueil) .works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.wrap{width:min(100% - 32px,1190px)}.page:not(#page-accueil) .page-head{padding-top:calc(var(--nav-h) + 46px);padding-bottom:46px}.page:not(#page-accueil) .page-body{padding:45px 0 70px}.page:not(#page-accueil) .section-title{font-size:clamp(2.1rem,9vw,3.1rem)}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .works-grid,.page:not(#page-accueil) .duo-grid{grid-template-columns:1fr}.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan,.page:not(#page-accueil) .legal-card,.page:not(#page-accueil) .contact-builder{padding:24px 20px}.page:not(#page-accueil) .tarif-row{grid-template-columns:minmax(0,1fr) minmax(64px,auto);gap:10px}.page:not(#page-accueil) .legal-line{grid-template-columns:1fr;gap:5px}.page:not(#page-accueil) .contact-v14-card{padding:20px}.page:not(#page-accueil) .contact-v14-mini{grid-template-columns:1fr}.page:not(#page-accueil) .form-row{grid-template-columns:1fr}.page:not(#page-accueil) .contact-builder-buttons{display:flex;flex-direction:column;align-items:stretch}.page:not(#page-accueil) .contact-builder-buttons .btn{width:100%}}
+
 </style>
 </head>
 <body>
@@ -2201,83 +2483,46 @@ p,li,a,button,input,textarea,select,
 <!-- ================================================== -->
 
 <section class="page" id="page-accueil">
-  <div class="simple-home">
-    <div class="wrap">
-
-      <section class="simple-hero reveal in" aria-labelledby="home-title">
-        <div class="simple-kicker">Brothers Studios · Sites internet & communication</div>
-        <h1 id="home-title" class="simple-title">Un site clair et une image propre pour votre activité.</h1>
-        <p class="simple-lead">Nous aidons les commerces, artisans et associations de l’Aisne à être mieux présentés en ligne : site internet, réseaux sociaux, photos et identité visuelle.</p>
-        <div class="simple-actions">
-          <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
+<div class="v7-home">
+  <section class="v7-hero" id="v7Hero" aria-labelledby="home-title">
+    <div class="wrap v7-hero-inner">
+      <div class="v7-heading">
+        <div class="v7-overline"><span class="v7-signal"></span> BROTHERS STUDIOS <span class="v7-slash">/</span> STUDIO DIGITAL CRÉATIF</div>
+        <h1 id="home-title">Des idées qui<br><span>prennent vie.</span></h1>
+        <p>Nous imaginons des sites web, des identités et des expériences numériques qui ne ressemblent qu'à vous.</p>
+        <div class="v7-actions">
+          <a href="#realisations" data-route="realisations" class="v7-btn v7-btn-main">Découvrir nos projets <span aria-hidden="true">↗</span></a>
+          <a href="#contact" data-route="contact" class="v7-btn v7-btn-outline">Discuter de votre projet <span aria-hidden="true">→</span></a>
         </div>
-        <div class="simple-points" aria-label="Points forts">
-          <span>Prix affichés</span>
-          <span>Sans abonnement obligatoire</span>
-          <span>Basés dans l’Aisne</span>
+      </div>
+      <div class="v7-scene" id="v7Scene" aria-label="Présentation interactive de nos expertises">
+        <div class="v7-glow" aria-hidden="true"></div>
+        <div class="v7-gridlines" aria-hidden="true"></div>
+        <div class="v7-scene-label">DESIGN × DEVELOPMENT × STRATEGY <span>2026 / FR</span></div>
+        <div class="v7-panel v7-panel-main" data-depth="0.7">
+          <div class="v7-panel-chrome"><span class="v7-chrome-dots"><i></i><i></i><i></i></span><span>brothers / studio</span><span>↗</span></div>
+          <div class="v7-panel-content"><div class="v7-panel-eyebrow">L'EXPÉRIENCE EST NOTRE SIGNATURE</div><div class="v7-panel-word">Make it<br><em>matter.</em></div><div class="v7-panel-footer"><span>01 — STUDIO</span><span>EXPLORE THE POSSIBLE →</span></div></div>
         </div>
-      </section>
-
-      <section class="simple-section reveal in" aria-labelledby="services-title">
-        <div class="simple-head">
-          <span class="eyebrow">Ce que nous faisons</span>
-          <h2 id="services-title">Quatre services simples pour améliorer votre image.</h2>
-        </div>
-
-        <div class="simple-services">
-          <a href="#sites" data-route="sites" class="simple-card">
-            <span>01</span>
-            <h3>Sites internet</h3>
-            <p>Un site vitrine simple ou complet pour présenter votre activité, vos services et vos contacts.</p>
-            <strong>À partir de 349 €</strong>
-          </a>
-          <a href="#reseaux" data-route="reseaux" class="simple-card">
-            <span>02</span>
-            <h3>Réseaux sociaux</h3>
-            <p>Des publications, stories et contenus préparés pour garder votre page active chaque mois.</p>
-            <strong>À partir de 190 €/mois</strong>
-          </a>
-          <a href="#image" data-route="image" class="simple-card">
-            <span>03</span>
-            <h3>Photos</h3>
-            <p>Une prise de photos de votre établissement pour alimenter votre site, vos réseaux et vos supports.</p>
-            <strong>140 €</strong>
-          </a>
-          <a href="#image" data-route="image" class="simple-card">
-            <span>04</span>
-            <h3>Logo & image</h3>
-            <p>Un logo simple, une charte graphique et des modèles pour avoir une image plus cohérente.</p>
-            <strong>Dès 150 €</strong>
-          </a>
-        </div>
-      </section>
-
-      <section class="simple-section simple-guide reveal" aria-labelledby="guide-title">
-        <div class="simple-guide-text">
-          <span class="eyebrow">Comment choisir ?</span>
-          <h2 id="guide-title">Vous ne savez pas quelle formule prendre ?</h2>
-          <p>On part toujours de votre besoin réel et de votre budget. Le but n’est pas de vendre le plus gros pack, mais la solution la plus utile pour votre activité.</p>
-        </div>
-        <div class="simple-guide-list">
-          <div><b>Vous n’avez pas de site</b><span>Commencez par une formule Essentielle ou Professionnelle.</span></div>
-          <div><b>Votre image n’est pas cohérente</b><span>Ajoutez des photos, un logo simple ou des modèles de publication.</span></div>
-          <div><b>Vous voulez être visible toute l’année</b><span>Ajoutez une formule réseaux sociaux mensuelle.</span></div>
-        </div>
-      </section>
-
-      <section class="simple-cta reveal">
-        <h2>Expliquez-nous votre projet, on vous répond avec une proposition claire.</h2>
-        <p>Un devis simple, sans engagement, adapté à votre activité et à votre budget.</p>
-        <a href="#contact" data-route="contact" class="btn btn-primary">Demander un devis
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </section>
-
+        <div class="v7-panel v7-panel-social" data-depth="1.25"><span class="v7-micro">02 / CONTENT</span><div class="v7-social-art"><span>●</span><span>✳</span><span>◒</span></div><strong>Créer l'attention.</strong><small>PHOTO · SOCIAL · VIDÉO</small></div>
+        <div class="v7-panel v7-panel-code" data-depth="1.65"><span class="v7-micro">03 / BUILD</span><div class="v7-code-lines"><i></i><i></i><i></i><i></i></div><strong>Digital by design<span>↗</span></strong></div>
+        <div class="v7-cross v7-cross-1" aria-hidden="true">+</div><div class="v7-cross v7-cross-2" aria-hidden="true">+</div>
+        <div class="v7-scene-foot">BOUGEZ VOTRE SOURIS POUR EXPLORER <span>↗</span></div>
+      </div>
+      <div class="v7-hero-index"><span>INDÉPENDANT · BASÉ DANS L'AISNE</span><span>SCROLL TO EXPLORE ↓</span></div>
     </div>
-  </div>
+  </section>
+  <section class="v7-expertise wrap" aria-labelledby="services-title">
+    <div class="v7-section-top"><span>01 / NOS EXPERTISES</span><span>LE BON SAVOIR-FAIRE, AU BON ENDROIT.</span></div>
+    <div class="v7-expertise-head"><h2 id="services-title">Tout ce qu'il faut<br>pour <em>vous démarquer.</em></h2><p>Du premier concept à la mise en ligne, nous donnons forme à vos ambitions avec exigence et simplicité.</p></div>
+    <div class="v7-services">
+      <a class="v7-service" href="#sites" data-route="sites"><span class="v7-n">01</span><div><h3>Sites internet</h3><p>Des expériences digitales sur mesure, rapides et pensées pour vos visiteurs.</p></div><span class="v7-service-arrow">↗</span></a>
+      <a class="v7-service" href="#reseaux" data-route="reseaux"><span class="v7-n">02</span><div><h3>Réseaux sociaux</h3><p>Une communication régulière et des contenus qui racontent votre histoire.</p></div><span class="v7-service-arrow">↗</span></a>
+      <a class="v7-service" href="#image" data-route="image"><span class="v7-n">03</span><div><h3>Photo & vidéo</h3><p>Des images authentiques pour mettre en lumière ce qui vous rend unique.</p></div><span class="v7-service-arrow">↗</span></a>
+      <a class="v7-service" href="#image" data-route="image"><span class="v7-n">04</span><div><h3>Identité visuelle</h3><p>Un univers cohérent et mémorable, reconnaissable au premier regard.</p></div><span class="v7-service-arrow">↗</span></a>
+    </div>
+  </section>
+  <section class="v7-end wrap"><div><span>02 / PARLONS DE VOUS</span><h2>Et si la prochaine belle idée,<br>c'était <em>la vôtre ?</em></h2></div><a href="#contact" data-route="contact" class="v7-btn v7-btn-main">Parlons de votre projet <span aria-hidden="true">↗</span></a></section>
+</div>
 </section>
 <section class="page" id="page-qui-sommes-nous">
   <div class="page-head">
@@ -3513,5 +3758,26 @@ p,li,a,button,input,textarea,select,
 })();
 </script>
 
+<script>
+/* V7 interactive showcase: lightweight mouse parallax, keyboard/touch-safe */
+(function(){
+ const scene=document.getElementById('v7Scene');
+ if(!scene||!window.matchMedia||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+ if(!fine.matches)return;
+ const panels=Array.from(scene.querySelectorAll('[data-depth]'));
+ let frame=0,px=0,py=0;
+ function draw(){
+  frame=0;
+  const r=scene.getBoundingClientRect();
+  scene.style.setProperty('--px',((px-r.left)/r.width*100).toFixed(1)+'%');
+  scene.style.setProperty('--py',((py-r.top)/r.height*100).toFixed(1)+'%');
+  const x=((px-r.left)/r.width-.5)*24,y=((py-r.top)/r.height-.5)*24;
+  panels.forEach(el=>{const d=Number(el.dataset.depth)||1;el.style.setProperty('--mx',(x*d).toFixed(1));el.style.setProperty('--my',(y*d).toFixed(1));});
+ }
+ scene.addEventListener('pointermove',function(e){px=e.clientX;py=e.clientY;if(!frame)frame=requestAnimationFrame(draw);},{passive:true});
+ scene.addEventListener('pointerleave',function(){if(frame)cancelAnimationFrame(frame);frame=0;panels.forEach(el=>{el.style.setProperty('--mx',0);el.style.setProperty('--my',0)});scene.style.setProperty('--px','50%');scene.style.setProperty('--py','48%');});
+})();
+</script>
 </body>
 </html>
