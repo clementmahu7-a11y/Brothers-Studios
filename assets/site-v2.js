@@ -1,6 +1,24 @@
 /* Brothers Studios V2 — accessible interactions and a single commercial catalog. */
 (function(){
 'use strict';
+
+/* Keep links to V1 hash routes working after the V2 migration. */
+if(window.location.pathname==='/' && window.location.hash){
+  const destinations={
+    '#sites':'/services/#sites',
+    '#reseaux':'/services/#communication',
+    '#image':'/services/#creation',
+    '#realisations':'/realisations/',
+    '#qui-sommes-nous':'/a-propos/',
+    '#contact':'/contact/',
+    '#mentions-legales':'/mentions-legales/',
+    '#confidentialite':'/confidentialite/',
+    '#cgv':'/cgv/'
+  };
+  const target=destinations[window.location.hash.toLowerCase()];
+  if(target)window.location.replace(target);
+}
+
 const money = value => typeof value === 'number' ? new Intl.NumberFormat('fr-FR').format(value)+' €' : value;
 const catalog={
   web:[
