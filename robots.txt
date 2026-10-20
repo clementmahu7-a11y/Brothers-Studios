@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /prospection/
+Disallow: /brothers-social-planner/
+Sitemap: https://brothersstudios.fr/sitemap.xml
