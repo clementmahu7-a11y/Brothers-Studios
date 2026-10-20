@@ -8,7 +8,7 @@
 <meta property="og:title" content="Brothers Studios | Sites internet professionnels dans l’Aisne">
 <meta property="og:description" content="Sites internet, réseaux sociaux, photos d’établissement et logo simple pour développer votre image professionnelle en ligne.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#07090F">
+<meta name="theme-color" content="#F6F8FC">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B8CFF'/%3E%3Cstop offset='1' stop-color='%23FF9E5E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' fill='%230A0C14' text-anchor='middle'%3EBS%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    BROTHERS STUDIO — Design System
@@ -2142,6 +2142,138 @@ p,li,a,button,input,textarea,select,
   .contact-v14-actions .btn{width:100%;justify-content:center}
 }
 
+
+/* TECH PREMIUM V3 — Layout-only experiment, original palette retained */
+:root{--font-d:'Manrope',sans-serif;--font-b:'DM Sans',sans-serif;--nav-h:82px}
+#header{background:rgba(7,9,15,.88);border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(24px)}
+#header .nav{gap:40px}
+#header .nav-links{gap:clamp(10px,1.6vw,24px)}
+#header .nav-links>li>a:not(.btn){font-size:12.5px;letter-spacing:.01em;font-weight:550;border:0;background:none}
+#header .nav-links>li>a:not(.btn):hover{color:#F4F6FB}
+#header .nav-cta{background:transparent!important;color:#E7EDFB!important;border:1px solid rgba(160,183,246,.50)!important;box-shadow:none!important;padding:12px 20px;border-radius:10px}
+#header .nav-cta:hover{background:rgba(91,140,255,.12)!important;border-color:#5B8CFF!important;transform:none}
+#header .logo-mark{border-radius:12px}
+#page-accueil .simple-home{padding-top:var(--nav-h)}
+#page-accueil .tech-hero{position:relative;max-width:none;min-height:min(790px,calc(100svh - var(--nav-h)));display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(40px,7vw,125px);align-items:center;padding:clamp(104px,11vw,155px) 0 112px}
+#page-accueil .tech-hero-main{position:relative;z-index:2}
+#page-accueil .tech-label{display:flex;align-items:center;gap:10px;font:600 10px 'DM Sans',sans-serif;letter-spacing:.22em;color:#A8B3CA;margin-bottom:34px}
+#page-accueil .tech-pulse{width:7px;height:7px;background:#5B8CFF;border-radius:50%;box-shadow:0 0 16px #5B8CFF}
+#page-accueil .tech-label-sep{color:#FF9E5E;margin:0 4px}
+#page-accueil .simple-title{font:600 clamp(3rem,5.35vw,5.5rem)/1.16 'Manrope',sans-serif;letter-spacing:-.063em;color:#F4F6FB;margin:0 0 32px;max-width:900px}
+#page-accueil .simple-title span:not(.tech-dot){color:#98A9C7}
+#page-accueil .simple-title .tech-dot{color:#FF9E5E}
+#page-accueil .simple-lead{max-width:490px;font-size:clamp(15px,1.4vw,18px);line-height:1.8;color:#AEB9CE;margin-bottom:35px}
+#page-accueil .simple-actions{gap:13px;margin-bottom:0}
+#page-accueil .simple-actions .btn{border-radius:10px;padding:15px 23px;font-size:13px;font-weight:700;gap:24px}
+#page-accueil .simple-actions .btn-primary{background:#F4F6FB;color:#0A0E17;box-shadow:none;border:1px solid #F4F6FB}
+#page-accueil .simple-actions .btn-primary:hover{background:#DEE6F8;box-shadow:none}
+#page-accueil .simple-actions .btn-ghost{border-color:rgba(210,223,250,.20);background:transparent;color:#E5EAF5}
+#page-accueil .tech-aside{min-height:435px;position:relative;border:1px solid rgba(91,140,255,.16);border-radius:2px;display:flex;flex-direction:column;justify-content:space-between;padding:23px;background:linear-gradient(135deg,rgba(91,140,255,.04),transparent 52%),radial-gradient(ellipse at 58% 46%,rgba(91,140,255,.055),transparent 55%)}
+#page-accueil .tech-aside:after{content:"";position:absolute;inset:13px;border:1px solid rgba(255,255,255,.035);pointer-events:none}
+#page-accueil .tech-aside-head,#page-accueil .tech-aside-foot{display:flex;justify-content:space-between;gap:10px;color:#8898B8;font:600 10px 'DM Sans',sans-serif;letter-spacing:.12em;position:relative;z-index:2}
+#page-accueil .tech-aside-foot span:last-child{font-size:18px;color:#FF9E5E}
+#page-accueil .tech-orbit{height:305px;display:grid;place-items:center;position:relative;isolation:isolate}
+#page-accueil .tech-orbit-ring{position:absolute;inset:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(120,153,237,.28)}
+#page-accueil .tech-ring-one{width:170px;height:170px;border-color:rgba(255,255,255,.16)}
+#page-accueil .tech-ring-two{width:242px;height:242px}
+#page-accueil .tech-ring-three{width:300px;height:300px;border-style:dashed;opacity:.40}
+#page-accueil .tech-orbit:before,#page-accueil .tech-orbit:after{content:"";position:absolute;background:rgba(91,140,255,.20)}
+#page-accueil .tech-orbit:before{height:1px;width:100%;top:50%}
+#page-accueil .tech-orbit:after{width:1px;height:100%;left:50%}
+#page-accueil .tech-orbit-core{z-index:2;display:flex;align-items:flex-start;font:500 clamp(4rem,7.5vw,7rem)/1 'Manrope',sans-serif;letter-spacing:-.1em;color:#F2F5FE}
+#page-accueil .tech-orbit-core span{font-size:12px;margin:10px 0 0 8px;color:#FF9E5E;letter-spacing:0}
+#page-accueil .tech-orbit-north,#page-accueil .tech-orbit-south{position:absolute;z-index:2;font:600 9px/1.7 'DM Sans',sans-serif;letter-spacing:.13em;color:#97A7C6}
+#page-accueil .tech-orbit-north{top:12px;right:0}
+#page-accueil .tech-orbit-south{left:0;bottom:10px}
+#page-accueil .tech-hero-bottom{position:absolute;bottom:25px;left:0;right:0;display:flex;align-items:center;gap:18px;color:#7F8EA9;font:600 10px 'DM Sans',sans-serif;letter-spacing:.15em}
+#page-accueil .tech-scroll-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(91,140,255,.4),rgba(255,255,255,.06))}
+#page-accueil .simple-section{padding-top:118px}
+#page-accueil .simple-head{max-width:780px;margin-bottom:42px}
+#page-accueil .simple-head h2{font:600 clamp(2.1rem,3.8vw,3.6rem)/1.2 'Manrope',sans-serif;letter-spacing:-.045em}
+#page-accueil .simple-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#page-accueil .simple-card{min-height:260px;border-radius:9px;padding:35px 36px;background:rgba(15,21,35,.70);border:1px solid rgba(168,189,235,.11)}
+#page-accueil .simple-card:hover{transform:translateY(-2px);border-color:rgba(91,140,255,.47);background:rgba(20,28,47,.84)}
+#page-accueil .simple-card>span{margin-bottom:33px;font-size:11px;color:#879ABA;letter-spacing:.15em}
+#page-accueil .simple-card h3{font:600 24px 'Manrope',sans-serif;letter-spacing:-.045em;margin-bottom:12px}
+#page-accueil .simple-card p{max-width:390px;font-size:14px;line-height:1.7}
+#page-accueil .simple-card strong{font-size:13px;letter-spacing:.02em}
+#page-accueil .simple-guide{gap:18px}
+#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{border-radius:9px;padding:45px 43px;background:rgba(16,22,38,.7)}
+#page-accueil .simple-cta{border-radius:9px;background:linear-gradient(110deg,rgba(91,140,255,.12),rgba(13,18,32,.94));padding:60px;margin-top:110px}
+#page-accueil .simple-cta .btn-primary{background:#F4F6FB;color:#0A0E17;border:1px solid #F4F6FB;border-radius:9px;box-shadow:none}
+@media(max-width:1050px){#page-accueil .tech-hero{grid-template-columns:minmax(0,1fr) minmax(265px,.72fr);gap:30px}#page-accueil .simple-title{font-size:clamp(2.7rem,5.4vw,4.3rem)}#page-accueil .tech-aside{min-height:360px}#page-accueil .tech-orbit{transform:scale(.82)}}
+@media(max-width:760px){#page-accueil .tech-hero{grid-template-columns:1fr;gap:55px;min-height:0;padding:90px 0 95px}#page-accueil .tech-aside{max-width:520px;width:100%;min-height:340px}#page-accueil .tech-orbit{height:230px;transform:scale(.73)}#page-accueil .simple-title{font-size:clamp(2.9rem,8.8vw,4.8rem)}#page-accueil .tech-hero-bottom{bottom:24px}#page-accueil .simple-section{padding-top:80px}}
+@media(max-width:640px){#page-accueil .simple-home{padding-top:var(--nav-h)}#page-accueil .tech-hero{padding:60px 0 80px;gap:46px}#page-accueil .simple-title{font-size:clamp(2.35rem,10vw,3.3rem);line-height:1.18;letter-spacing:-.055em}#page-accueil .tech-label{font-size:9px;letter-spacing:.1em;flex-wrap:wrap;margin-bottom:27px}#page-accueil .simple-lead{font-size:15px}#page-accueil .simple-actions .btn{width:100%;justify-content:space-between}#page-accueil .tech-aside{min-height:290px;padding:17px}#page-accueil .tech-orbit{height:195px;transform:scale(.61)}#page-accueil .tech-aside-foot{font-size:8px}#page-accueil .simple-services{grid-template-columns:1fr}#page-accueil .simple-card{padding:28px;min-height:230px}#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{padding:28px}#page-accueil .simple-cta{padding:35px 25px;margin-top:80px}}
+
+
+/* V4 LIGHT PREMIUM — fond ivoire bleuté, accents de marque conservés */
+:root{--bg:#F6F8FC;--surface:#FFFFFF;--surface-2:#EDF2FA;--ink:#19243B;--muted:#65728C;--line:rgba(39,59,100,.13);--glass:rgba(255,255,255,.85);--glass-brd:rgba(39,59,100,.13)}
+body{background:#F6F8FC;color:var(--ink)}
+.bg-grain{background:radial-gradient(950px 570px at 5% 2%,rgba(91,140,255,.11),transparent 65%),radial-gradient(850px 520px at 95% 3%,rgba(255,158,94,.10),transparent 70%),#F6F8FC}
+.bg-grid{opacity:.16;background-image:linear-gradient(rgba(38,62,110,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(38,62,110,.09) 1px,transparent 1px)}
+#header{background:rgba(250,251,254,.94);border-color:rgba(30,51,86,.10);box-shadow:0 4px 22px rgba(29,46,75,.025)}
+#header .logo{color:#18243C}
+#header .nav-links>li>a:not(.btn){color:#53627A}
+#header .nav-links>li>a:not(.btn):hover,#header .nav-links>li>a.active:not(.btn){color:#1B2A45}
+#header .nav-cta{color:#243758!important;border-color:rgba(58,93,161,.30)!important;background:#EDF3FF!important}
+#header .nav-cta:hover{background:#DCE9FF!important}
+#page-accueil .tech-label{color:#62718C}
+#page-accueil .simple-title{color:#18243A}
+#page-accueil .simple-title span:not(.tech-dot){color:#7586A5}
+#page-accueil .simple-lead{color:#5C6C85}
+#page-accueil .simple-actions .btn-primary,#page-accueil .simple-cta .btn-primary{background:#273D66;color:#fff;border-color:#273D66}
+#page-accueil .simple-actions .btn-primary:hover{background:#36558D;color:#fff}
+#page-accueil .simple-actions .btn-ghost{color:#243956;border-color:rgba(60,86,133,.26);background:rgba(255,255,255,.7)}
+#page-accueil .tech-aside{border-color:rgba(53,89,151,.18);background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(232,239,252,.73));box-shadow:0 30px 80px rgba(56,79,128,.09)}
+#page-accueil .tech-aside:after{border-color:rgba(61,88,142,.09)}
+#page-accueil .tech-aside-head,#page-accueil .tech-aside-foot,#page-accueil .tech-orbit-north,#page-accueil .tech-orbit-south{color:#687C9A}
+#page-accueil .tech-orbit-core{color:#1F3152}
+#page-accueil .tech-ring-one{border-color:rgba(43,72,122,.23)}
+#page-accueil .tech-ring-two{border-color:rgba(91,140,255,.44)}
+#page-accueil .tech-ring-three{border-color:rgba(60,94,154,.26)}
+#page-accueil .tech-orbit:before,#page-accueil .tech-orbit:after{background:rgba(64,105,179,.12)}
+#page-accueil .tech-hero-bottom{color:#8290A7}
+#page-accueil .tech-scroll-line{background:linear-gradient(90deg,rgba(91,140,255,.34),rgba(61,92,143,.08))}
+#page-accueil .simple-head h2,#page-accueil .simple-guide-text h2,#page-accueil .simple-cta h2{color:#1B2942}
+#page-accueil .simple-card{background:rgba(255,255,255,.92);border-color:rgba(54,80,126,.13);box-shadow:0 10px 35px rgba(38,60,103,.035)}
+#page-accueil .simple-card:hover{background:#fff;border-color:rgba(91,140,255,.55);box-shadow:0 16px 40px rgba(38,60,103,.09)}
+#page-accueil .simple-card>span{color:#7585A2}
+#page-accueil .simple-card h3{color:#223453}
+#page-accueil .simple-card p,#page-accueil .simple-guide-text p{color:#64738C}
+#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{background:#fff;border-color:rgba(54,80,126,.13)}
+#page-accueil .simple-guide-list div{background:#F5F8FD;border-color:rgba(54,80,126,.09)}
+#page-accueil .simple-guide-list b{color:#223453}
+#page-accueil .simple-guide-list span{color:#62718A}
+#page-accueil .simple-cta{background:linear-gradient(115deg,#EAF1FD,#FFF7F0);border-color:rgba(60,90,143,.13)}
+#page-accueil .simple-cta p{color:#65738A}
+#page-accueil .simple-cta .btn-primary{box-shadow:none}
+#page-accueil .eyebrow{color:#657690}
+#page-accueil .simple-card strong{background:linear-gradient(110deg,#426CBE,#BA754D);color:transparent;background-clip:text;-webkit-background-clip:text}
+.page-head{background:radial-gradient(700px 330px at 12% 20%,rgba(91,140,255,.08),transparent 75%)}
+.page-head .section-title,.section-title{color:#1B2942}
+.section-lead,.page-body p{color:#586881}
+.price-card,.plan,.work,.contact-v14-card,.contact-builder,.bro-card,.story-card{background:#fff;border-color:rgba(54,80,126,.15);color:#263854}
+.contact-builder,.contact-v14-card.primary{background:linear-gradient(135deg,#FFFFFF,#EEF3FB)}
+.btn-ghost{border-color:rgba(58,86,134,.22);color:#273B5C}
+.btn-primary{box-shadow:none}
+footer{background:#EDF2FA;color:#283853;border-top:1px solid rgba(54,80,126,.13)}
+footer a{color:#3D5274}
+.mobile-menu{background:#F7F9FE;color:#1B2B46}
+@media(max-width:860px){#header .nav-links{background:#F7F9FE}}
+
+
+/* V5 typographie: contrastes éditoriaux, sans géométrie massive */
+:root{--font-d:'Plus Jakarta Sans',sans-serif;--font-b:'DM Sans',sans-serif}
+#page-accueil .simple-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.052em;line-height:1.2}
+#page-accueil .simple-title span:not(.tech-dot){font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.027em;color:#6B7FA4}
+#page-accueil .tech-orbit-core{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(5.2rem,8vw,7.8rem)}
+#page-accueil .simple-head h2,#page-accueil .simple-guide-text h2,#page-accueil .simple-cta h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.036em}
+#page-accueil .simple-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.035em}
+#page-accueil .simple-lead{font-family:'DM Sans',sans-serif;font-weight:400}
+#page-accueil .simple-actions .btn{font-family:'DM Sans',sans-serif;font-weight:600}
+.logo span:not(.logo-mark){letter-spacing:-.035em}
+@media(max-width:640px){#page-accueil .simple-title{line-height:1.19;letter-spacing:-.05em}}
+
 </style>
 </head>
 <body>
@@ -2204,27 +2336,28 @@ p,li,a,button,input,textarea,select,
   <div class="simple-home">
     <div class="wrap">
 
-      <section class="simple-hero reveal in" aria-labelledby="home-title">
-        <div class="simple-kicker">Brothers Studios · Sites internet & communication</div>
-        <h1 id="home-title" class="simple-title">Un site clair et une image propre pour votre activité.</h1>
-        <p class="simple-lead">Nous aidons les commerces, artisans et associations de l’Aisne à être mieux présentés en ligne : site internet, réseaux sociaux, photos et identité visuelle.</p>
-        <div class="simple-actions">
-          <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
+      <section class="simple-hero tech-hero reveal in" aria-labelledby="home-title">
+        <div class="tech-hero-main">
+          <div class="tech-label"><span class="tech-pulse"></span> STUDIO DIGITAL INDÉPENDANT <span class="tech-label-sep">/</span> AISNE, FRANCE</div>
+          <h1 id="home-title" class="simple-title">Le digital,<br><span>avec une autre</span><br>dimension<span class="tech-dot">.</span></h1>
+          <p class="simple-lead">Design, sites web, communication et solutions numériques. Nous créons des expériences digitales à la hauteur de votre ambition.</p>
+          <div class="simple-actions">
+            <a href="#realisations" data-route="realisations" class="btn btn-primary">Explorer nos projets <span aria-hidden="true">↗</span></a>
+            <a href="#contact" data-route="contact" class="btn btn-ghost">Parler de votre projet <span aria-hidden="true">→</span></a>
+          </div>
         </div>
-        <div class="simple-points" aria-label="Points forts">
-          <span>Prix affichés</span>
-          <span>Sans abonnement obligatoire</span>
-          <span>Basés dans l’Aisne</span>
+        <div class="tech-aside" aria-hidden="true">
+          <div class="tech-aside-head"><span>BS / SYSTEM</span><span>EST. 2026</span></div>
+          <div class="tech-orbit"><div class="tech-orbit-ring tech-ring-one"></div><div class="tech-orbit-ring tech-ring-two"></div><div class="tech-orbit-ring tech-ring-three"></div><div class="tech-orbit-core">BS<span>®</span></div><div class="tech-orbit-north">01 / STRATEGY</div><div class="tech-orbit-south">02 / DESIGN<br>03 / BUILD</div></div>
+          <div class="tech-aside-foot"><span>DESIGN-DRIVEN DIGITAL EXPERIENCES</span><span>↗</span></div>
         </div>
+        <div class="tech-hero-bottom"><span>01 — L'AGENCE</span><div class="tech-scroll-line"></div><span>SCROLL POUR EXPLORER ↓</span></div>
       </section>
 
       <section class="simple-section reveal in" aria-labelledby="services-title">
         <div class="simple-head">
           <span class="eyebrow">Ce que nous faisons</span>
-          <h2 id="services-title">Quatre services simples pour améliorer votre image.</h2>
+          <h2 id="services-title">Un studio. Plusieurs expertises.</h2>
         </div>
 
         <div class="simple-services">
@@ -2258,7 +2391,7 @@ p,li,a,button,input,textarea,select,
       <section class="simple-section simple-guide reveal" aria-labelledby="guide-title">
         <div class="simple-guide-text">
           <span class="eyebrow">Comment choisir ?</span>
-          <h2 id="guide-title">Vous ne savez pas quelle formule prendre ?</h2>
+          <h2 id="guide-title">Votre projet mérite une solution sur mesure.</h2>
           <p>On part toujours de votre besoin réel et de votre budget. Le but n’est pas de vendre le plus gros pack, mais la solution la plus utile pour votre activité.</p>
         </div>
         <div class="simple-guide-list">
