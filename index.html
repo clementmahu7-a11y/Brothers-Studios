@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    BROTHERS STUDIO — Design System
@@ -2260,6 +2260,19 @@ footer{background:#EDF2FA;color:#283853;border-top:1px solid rgba(54,80,126,.13)
 footer a{color:#3D5274}
 .mobile-menu{background:#F7F9FE;color:#1B2B46}
 @media(max-width:860px){#header .nav-links{background:#F7F9FE}}
+
+
+/* V5 typographie: contrastes éditoriaux, sans géométrie massive */
+:root{--font-d:'Plus Jakarta Sans',sans-serif;--font-b:'DM Sans',sans-serif}
+#page-accueil .simple-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.052em;line-height:1.2}
+#page-accueil .simple-title span:not(.tech-dot){font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.027em;color:#6B7FA4}
+#page-accueil .tech-orbit-core{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.045em;font-size:clamp(5.2rem,8vw,7.8rem)}
+#page-accueil .simple-head h2,#page-accueil .simple-guide-text h2,#page-accueil .simple-cta h2{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.036em}
+#page-accueil .simple-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;letter-spacing:-.035em}
+#page-accueil .simple-lead{font-family:'DM Sans',sans-serif;font-weight:400}
+#page-accueil .simple-actions .btn{font-family:'DM Sans',sans-serif;font-weight:600}
+.logo span:not(.logo-mark){letter-spacing:-.035em}
+@media(max-width:640px){#page-accueil .simple-title{line-height:1.19;letter-spacing:-.05em}}
 
 </style>
 </head>
