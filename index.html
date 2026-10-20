@@ -2274,6 +2274,16 @@ footer a{color:#3D5274}
 .logo span:not(.logo-mark){letter-spacing:-.035em}
 @media(max-width:640px){#page-accueil .simple-title{line-height:1.19;letter-spacing:-.05em}}
 
+
+/* V6 — Typographie alignée : deux lignes cohérentes, sans italique décoratif */
+#page-accueil .tech-hero{grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(46px,6vw,100px)}
+#page-accueil .simple-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:clamp(3.25rem,5.1vw,5.35rem);line-height:1.17;letter-spacing:-.058em;max-width:680px;text-wrap:balance}
+#page-accueil .simple-title span:not(.tech-dot){display:block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-style:normal;letter-spacing:inherit;color:#7085AB}
+#page-accueil .tech-hero-main{min-width:0}
+@media(max-width:1050px){#page-accueil .simple-title{font-size:clamp(2.7rem,5.3vw,4.3rem)}}
+@media(max-width:760px){#page-accueil .tech-hero{grid-template-columns:1fr}#page-accueil .simple-title{font-size:clamp(3rem,8vw,4.65rem)}}
+@media(max-width:640px){#page-accueil .simple-title{font-size:clamp(2.45rem,9vw,3.45rem);line-height:1.2}}
+
 </style>
 </head>
 <body>
@@ -2339,7 +2349,7 @@ footer a{color:#3D5274}
       <section class="simple-hero tech-hero reveal in" aria-labelledby="home-title">
         <div class="tech-hero-main">
           <div class="tech-label"><span class="tech-pulse"></span> STUDIO DIGITAL INDÉPENDANT <span class="tech-label-sep">/</span> AISNE, FRANCE</div>
-          <h1 id="home-title" class="simple-title">Le digital,<br><span>avec une autre</span><br>dimension<span class="tech-dot">.</span></h1>
+          <h1 id="home-title" class="simple-title">Le digital, <span>pensé autrement.</span></h1>
           <p class="simple-lead">Design, sites web, communication et solutions numériques. Nous créons des expériences digitales à la hauteur de votre ambition.</p>
           <div class="simple-actions">
             <a href="#realisations" data-route="realisations" class="btn btn-primary">Explorer nos projets <span aria-hidden="true">↗</span></a>
