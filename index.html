@@ -43,7 +43,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    BROTHERS STUDIO — Design System
@@ -2142,6 +2142,69 @@ p,li,a,button,input,textarea,select,
   .contact-v14-actions .btn{width:100%;justify-content:center}
 }
 
+
+/* TECH PREMIUM V3 — Layout-only experiment, original palette retained */
+:root{--font-d:'Manrope',sans-serif;--font-b:'DM Sans',sans-serif;--nav-h:82px}
+#header{background:rgba(7,9,15,.88);border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(24px)}
+#header .nav{gap:40px}
+#header .nav-links{gap:clamp(10px,1.6vw,24px)}
+#header .nav-links>li>a:not(.btn){font-size:12.5px;letter-spacing:.01em;font-weight:550;border:0;background:none}
+#header .nav-links>li>a:not(.btn):hover{color:#F4F6FB}
+#header .nav-cta{background:transparent!important;color:#E7EDFB!important;border:1px solid rgba(160,183,246,.50)!important;box-shadow:none!important;padding:12px 20px;border-radius:10px}
+#header .nav-cta:hover{background:rgba(91,140,255,.12)!important;border-color:#5B8CFF!important;transform:none}
+#header .logo-mark{border-radius:12px}
+#page-accueil .simple-home{padding-top:var(--nav-h)}
+#page-accueil .tech-hero{position:relative;max-width:none;min-height:min(790px,calc(100svh - var(--nav-h)));display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:clamp(40px,7vw,125px);align-items:center;padding:clamp(104px,11vw,155px) 0 112px}
+#page-accueil .tech-hero-main{position:relative;z-index:2}
+#page-accueil .tech-label{display:flex;align-items:center;gap:10px;font:600 10px 'DM Sans',sans-serif;letter-spacing:.22em;color:#A8B3CA;margin-bottom:34px}
+#page-accueil .tech-pulse{width:7px;height:7px;background:#5B8CFF;border-radius:50%;box-shadow:0 0 16px #5B8CFF}
+#page-accueil .tech-label-sep{color:#FF9E5E;margin:0 4px}
+#page-accueil .simple-title{font:600 clamp(3rem,5.35vw,5.5rem)/1.16 'Manrope',sans-serif;letter-spacing:-.063em;color:#F4F6FB;margin:0 0 32px;max-width:900px}
+#page-accueil .simple-title span:not(.tech-dot){color:#98A9C7}
+#page-accueil .simple-title .tech-dot{color:#FF9E5E}
+#page-accueil .simple-lead{max-width:490px;font-size:clamp(15px,1.4vw,18px);line-height:1.8;color:#AEB9CE;margin-bottom:35px}
+#page-accueil .simple-actions{gap:13px;margin-bottom:0}
+#page-accueil .simple-actions .btn{border-radius:10px;padding:15px 23px;font-size:13px;font-weight:700;gap:24px}
+#page-accueil .simple-actions .btn-primary{background:#F4F6FB;color:#0A0E17;box-shadow:none;border:1px solid #F4F6FB}
+#page-accueil .simple-actions .btn-primary:hover{background:#DEE6F8;box-shadow:none}
+#page-accueil .simple-actions .btn-ghost{border-color:rgba(210,223,250,.20);background:transparent;color:#E5EAF5}
+#page-accueil .tech-aside{min-height:435px;position:relative;border:1px solid rgba(91,140,255,.16);border-radius:2px;display:flex;flex-direction:column;justify-content:space-between;padding:23px;background:linear-gradient(135deg,rgba(91,140,255,.04),transparent 52%),radial-gradient(ellipse at 58% 46%,rgba(91,140,255,.055),transparent 55%)}
+#page-accueil .tech-aside:after{content:"";position:absolute;inset:13px;border:1px solid rgba(255,255,255,.035);pointer-events:none}
+#page-accueil .tech-aside-head,#page-accueil .tech-aside-foot{display:flex;justify-content:space-between;gap:10px;color:#8898B8;font:600 10px 'DM Sans',sans-serif;letter-spacing:.12em;position:relative;z-index:2}
+#page-accueil .tech-aside-foot span:last-child{font-size:18px;color:#FF9E5E}
+#page-accueil .tech-orbit{height:305px;display:grid;place-items:center;position:relative;isolation:isolate}
+#page-accueil .tech-orbit-ring{position:absolute;inset:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(120,153,237,.28)}
+#page-accueil .tech-ring-one{width:170px;height:170px;border-color:rgba(255,255,255,.16)}
+#page-accueil .tech-ring-two{width:242px;height:242px}
+#page-accueil .tech-ring-three{width:300px;height:300px;border-style:dashed;opacity:.40}
+#page-accueil .tech-orbit:before,#page-accueil .tech-orbit:after{content:"";position:absolute;background:rgba(91,140,255,.20)}
+#page-accueil .tech-orbit:before{height:1px;width:100%;top:50%}
+#page-accueil .tech-orbit:after{width:1px;height:100%;left:50%}
+#page-accueil .tech-orbit-core{z-index:2;display:flex;align-items:flex-start;font:500 clamp(4rem,7.5vw,7rem)/1 'Manrope',sans-serif;letter-spacing:-.1em;color:#F2F5FE}
+#page-accueil .tech-orbit-core span{font-size:12px;margin:10px 0 0 8px;color:#FF9E5E;letter-spacing:0}
+#page-accueil .tech-orbit-north,#page-accueil .tech-orbit-south{position:absolute;z-index:2;font:600 9px/1.7 'DM Sans',sans-serif;letter-spacing:.13em;color:#97A7C6}
+#page-accueil .tech-orbit-north{top:12px;right:0}
+#page-accueil .tech-orbit-south{left:0;bottom:10px}
+#page-accueil .tech-hero-bottom{position:absolute;bottom:25px;left:0;right:0;display:flex;align-items:center;gap:18px;color:#7F8EA9;font:600 10px 'DM Sans',sans-serif;letter-spacing:.15em}
+#page-accueil .tech-scroll-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(91,140,255,.4),rgba(255,255,255,.06))}
+#page-accueil .simple-section{padding-top:118px}
+#page-accueil .simple-head{max-width:780px;margin-bottom:42px}
+#page-accueil .simple-head h2{font:600 clamp(2.1rem,3.8vw,3.6rem)/1.2 'Manrope',sans-serif;letter-spacing:-.045em}
+#page-accueil .simple-services{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#page-accueil .simple-card{min-height:260px;border-radius:9px;padding:35px 36px;background:rgba(15,21,35,.70);border:1px solid rgba(168,189,235,.11)}
+#page-accueil .simple-card:hover{transform:translateY(-2px);border-color:rgba(91,140,255,.47);background:rgba(20,28,47,.84)}
+#page-accueil .simple-card>span{margin-bottom:33px;font-size:11px;color:#879ABA;letter-spacing:.15em}
+#page-accueil .simple-card h3{font:600 24px 'Manrope',sans-serif;letter-spacing:-.045em;margin-bottom:12px}
+#page-accueil .simple-card p{max-width:390px;font-size:14px;line-height:1.7}
+#page-accueil .simple-card strong{font-size:13px;letter-spacing:.02em}
+#page-accueil .simple-guide{gap:18px}
+#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{border-radius:9px;padding:45px 43px;background:rgba(16,22,38,.7)}
+#page-accueil .simple-cta{border-radius:9px;background:linear-gradient(110deg,rgba(91,140,255,.12),rgba(13,18,32,.94));padding:60px;margin-top:110px}
+#page-accueil .simple-cta .btn-primary{background:#F4F6FB;color:#0A0E17;border:1px solid #F4F6FB;border-radius:9px;box-shadow:none}
+@media(max-width:1050px){#page-accueil .tech-hero{grid-template-columns:minmax(0,1fr) minmax(265px,.72fr);gap:30px}#page-accueil .simple-title{font-size:clamp(2.7rem,5.4vw,4.3rem)}#page-accueil .tech-aside{min-height:360px}#page-accueil .tech-orbit{transform:scale(.82)}}
+@media(max-width:760px){#page-accueil .tech-hero{grid-template-columns:1fr;gap:55px;min-height:0;padding:90px 0 95px}#page-accueil .tech-aside{max-width:520px;width:100%;min-height:340px}#page-accueil .tech-orbit{height:230px;transform:scale(.73)}#page-accueil .simple-title{font-size:clamp(2.9rem,8.8vw,4.8rem)}#page-accueil .tech-hero-bottom{bottom:24px}#page-accueil .simple-section{padding-top:80px}}
+@media(max-width:640px){#page-accueil .simple-home{padding-top:var(--nav-h)}#page-accueil .tech-hero{padding:60px 0 80px;gap:46px}#page-accueil .simple-title{font-size:clamp(2.35rem,10vw,3.3rem);line-height:1.18;letter-spacing:-.055em}#page-accueil .tech-label{font-size:9px;letter-spacing:.1em;flex-wrap:wrap;margin-bottom:27px}#page-accueil .simple-lead{font-size:15px}#page-accueil .simple-actions .btn{width:100%;justify-content:space-between}#page-accueil .tech-aside{min-height:290px;padding:17px}#page-accueil .tech-orbit{height:195px;transform:scale(.61)}#page-accueil .tech-aside-foot{font-size:8px}#page-accueil .simple-services{grid-template-columns:1fr}#page-accueil .simple-card{padding:28px;min-height:230px}#page-accueil .simple-guide-text,#page-accueil .simple-guide-list{padding:28px}#page-accueil .simple-cta{padding:35px 25px;margin-top:80px}}
+
 </style>
 </head>
 <body>
@@ -2204,27 +2267,28 @@ p,li,a,button,input,textarea,select,
   <div class="simple-home">
     <div class="wrap">
 
-      <section class="simple-hero reveal in" aria-labelledby="home-title">
-        <div class="simple-kicker">Brothers Studios · Sites internet & communication</div>
-        <h1 id="home-title" class="simple-title">Un site clair et une image propre pour votre activité.</h1>
-        <p class="simple-lead">Nous aidons les commerces, artisans et associations de l’Aisne à être mieux présentés en ligne : site internet, réseaux sociaux, photos et identité visuelle.</p>
-        <div class="simple-actions">
-          <a href="#sites" data-route="sites" class="btn btn-primary">Voir les offres
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#contact" data-route="contact" class="btn btn-ghost">Demander un devis</a>
+      <section class="simple-hero tech-hero reveal in" aria-labelledby="home-title">
+        <div class="tech-hero-main">
+          <div class="tech-label"><span class="tech-pulse"></span> STUDIO DIGITAL INDÉPENDANT <span class="tech-label-sep">/</span> AISNE, FRANCE</div>
+          <h1 id="home-title" class="simple-title">Le digital,<br><span>avec une autre</span><br>dimension<span class="tech-dot">.</span></h1>
+          <p class="simple-lead">Design, sites web, communication et solutions numériques. Nous créons des expériences digitales à la hauteur de votre ambition.</p>
+          <div class="simple-actions">
+            <a href="#realisations" data-route="realisations" class="btn btn-primary">Explorer nos projets <span aria-hidden="true">↗</span></a>
+            <a href="#contact" data-route="contact" class="btn btn-ghost">Parler de votre projet <span aria-hidden="true">→</span></a>
+          </div>
         </div>
-        <div class="simple-points" aria-label="Points forts">
-          <span>Prix affichés</span>
-          <span>Sans abonnement obligatoire</span>
-          <span>Basés dans l’Aisne</span>
+        <div class="tech-aside" aria-hidden="true">
+          <div class="tech-aside-head"><span>BS / SYSTEM</span><span>EST. 2026</span></div>
+          <div class="tech-orbit"><div class="tech-orbit-ring tech-ring-one"></div><div class="tech-orbit-ring tech-ring-two"></div><div class="tech-orbit-ring tech-ring-three"></div><div class="tech-orbit-core">BS<span>®</span></div><div class="tech-orbit-north">01 / STRATEGY</div><div class="tech-orbit-south">02 / DESIGN<br>03 / BUILD</div></div>
+          <div class="tech-aside-foot"><span>DESIGN-DRIVEN DIGITAL EXPERIENCES</span><span>↗</span></div>
         </div>
+        <div class="tech-hero-bottom"><span>01 — L'AGENCE</span><div class="tech-scroll-line"></div><span>SCROLL POUR EXPLORER ↓</span></div>
       </section>
 
       <section class="simple-section reveal in" aria-labelledby="services-title">
         <div class="simple-head">
           <span class="eyebrow">Ce que nous faisons</span>
-          <h2 id="services-title">Quatre services simples pour améliorer votre image.</h2>
+          <h2 id="services-title">Un studio. Plusieurs expertises.</h2>
         </div>
 
         <div class="simple-services">
@@ -2258,7 +2322,7 @@ p,li,a,button,input,textarea,select,
       <section class="simple-section simple-guide reveal" aria-labelledby="guide-title">
         <div class="simple-guide-text">
           <span class="eyebrow">Comment choisir ?</span>
-          <h2 id="guide-title">Vous ne savez pas quelle formule prendre ?</h2>
+          <h2 id="guide-title">Votre projet mérite une solution sur mesure.</h2>
           <p>On part toujours de votre besoin réel et de votre budget. Le but n’est pas de vendre le plus gros pack, mais la solution la plus utile pour votre activité.</p>
         </div>
         <div class="simple-guide-list">
