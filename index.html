@@ -2424,6 +2424,52 @@ footer a,footer p,footer small{color:#586D8C}
 @media(max-width:780px){.page:not(#page-accueil) .contact-v14-grid,.page:not(#page-accueil) .legal-layout{grid-template-columns:1fr}.page:not(#page-accueil) .legal-nav{display:flex;flex-wrap:wrap}.page:not(#page-accueil) .works-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.wrap{width:min(100% - 32px,1190px)}.page:not(#page-accueil) .page-head{padding-top:calc(var(--nav-h) + 46px);padding-bottom:46px}.page:not(#page-accueil) .page-body{padding:45px 0 70px}.page:not(#page-accueil) .section-title{font-size:clamp(2.1rem,9vw,3.1rem)}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .works-grid,.page:not(#page-accueil) .duo-grid{grid-template-columns:1fr}.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan,.page:not(#page-accueil) .legal-card,.page:not(#page-accueil) .contact-builder{padding:24px 20px}.page:not(#page-accueil) .tarif-row{grid-template-columns:minmax(0,1fr) minmax(64px,auto);gap:10px}.page:not(#page-accueil) .legal-line{grid-template-columns:1fr;gap:5px}.page:not(#page-accueil) .contact-v14-card{padding:20px}.page:not(#page-accueil) .contact-v14-mini{grid-template-columns:1fr}.page:not(#page-accueil) .form-row{grid-template-columns:1fr}.page:not(#page-accueil) .contact-builder-buttons{display:flex;flex-direction:column;align-items:stretch}.page:not(#page-accueil) .contact-builder-buttons .btn{width:100%}}
 
+
+/* V9 POLISH: corrections targeted from visual QA screenshots */
+#header .logo-mark{background:linear-gradient(135deg,#5B8CFF 0%,#91A7DE 42%,#FF9E5E 100%)!important;color:#14243B!important;box-shadow:0 7px 20px rgba(91,140,255,.15)!important}
+#header .logo small{color:#D77A43!important;font-weight:750}
+.page:not(#page-accueil) .price-card,.page:not(#page-accueil) .plan{overflow:visible!important}
+.page:not(#page-accueil) .price-card.featured{margin-top:18px}
+.page:not(#page-accueil) .price-card .flag{z-index:3;top:-16px;left:50%;background:#E5EEFF!important;background-image:none!important;color:#456BA7!important;box-shadow:0 6px 15px rgba(53,89,148,.1)!important;border:1px solid #CADBF4;max-width:calc(100% - 32px);padding:7px 16px;font-size:10px}
+.page:not(#page-accueil) .price-card.featured:before{background:#5B8CFF!important}
+.page:not(#page-accueil) .price-amount{display:flex;align-items:baseline;gap:5px;font-size:clamp(2.7rem,4vw,3.8rem);line-height:1.2}
+.page:not(#page-accueil) .price-amount .euro{font-size:.45em;vertical-align:baseline}
+.page:not(#page-accueil) .offer-choice,.page:not(#page-accueil) .sub-block,.page:not(#page-accueil) .faq-section,.page:not(#page-accueil) .included-section{overflow:visible}
+.page:not(#page-accueil) .sub-block,.page:not(#page-accueil) .offer-choice{padding:clamp(24px,3vw,40px)!important}
+.page:not(#page-accueil) .sub-block .section-title,.page:not(#page-accueil) .offer-choice .section-title,.page:not(#page-accueil) .faq-head .section-title,.page:not(#page-accueil) .included-head .section-title{font-size:clamp(1.85rem,3.15vw,3.05rem)!important;letter-spacing:-.045em!important;line-height:1.23!important;max-width:100%!important;text-wrap:pretty;overflow-wrap:normal}
+.page:not(#page-accueil) .section-title{font-size:clamp(2rem,4vw,4.1rem)!important;line-height:1.19!important}
+.page:not(#page-accueil) .sub-block .section-lead,.page:not(#page-accueil) .offer-choice .section-lead{max-width:710px;font-size:15px}
+.page:not(#page-accueil) .sub-block .eyebrow,.page:not(#page-accueil) .offer-choice .eyebrow{max-width:100%}
+.page:not(#page-accueil) .opt-card{padding:clamp(20px,2.5vw,30px)!important;overflow:visible;min-width:0}
+.page:not(#page-accueil) .opt-card .opt-price{max-width:100%;display:flex;flex-wrap:wrap;align-items:baseline;gap:7px;background:#fff!important;border:1px solid #DCE5F0;border-radius:12px;padding:12px 14px;width:max-content}
+.page:not(#page-accueil) .opt-card .opt-ico{background:#E9F1FF!important;border:1px solid #D3E1F7!important}
+.page:not(#page-accueil) .opt-card .opt-ico svg{stroke:#547DBD!important}
+.page:not(#page-accueil) .check{background:#EAF1FF!important;border:1px solid #D7E4F6!important}
+.page:not(#page-accueil) .check svg{stroke:#4E77B5!important}
+.page:not(#page-accueil) .includes-grid,.page:not(#page-accueil) .included-grid,.page:not(#page-accueil) .options-grid,.page:not(#page-accueil) .opt-grid{gap:16px;max-width:100%}
+.page:not(#page-accueil) .includes-grid>*,.page:not(#page-accueil) .included-grid>*,.page:not(#page-accueil) .options-grid>*,.page:not(#page-accueil) .opt-grid>*{min-width:0}
+.page:not(#page-accueil) .tarifs{width:100%;overflow:hidden;border-radius:15px}
+.page:not(#page-accueil) .tarif-row{width:100%;padding:19px clamp(14px,2vw,24px);align-items:center}
+.page:not(#page-accueil) .tarif-row.head{background:#EAF1FB!important}
+.page:not(#page-accueil) .faq-item{overflow:hidden!important;border-radius:12px;margin-bottom:10px}
+.page:not(#page-accueil) .faq-item.open{background:#F5F8FF!important;border-color:#BFD1EA!important}
+.page:not(#page-accueil) .faq-q{color:#223653!important;min-height:70px;padding:19px 22px;font-size:clamp(14px,1.2vw,16px);gap:18px}
+.page:not(#page-accueil) .faq-a{color:#64738C}
+.page:not(#page-accueil) .contact-services-choice{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}
+.page:not(#page-accueil) .service-choice{min-width:0}
+.page:not(#page-accueil) .service-choice span{min-width:0;min-height:55px;color:#304867!important;background:#F9FBFF!important;border:1px solid #D5E0EF!important;padding:12px 14px;overflow-wrap:anywhere;font-size:13px;line-height:1.4}
+.page:not(#page-accueil) .service-choice span::before{border-color:#A4B6D2!important;background:#fff!important}
+.page:not(#page-accueil) .service-choice input:checked+span{background:#EAF2FF!important;border-color:#5982C5!important;color:#244673!important}
+.page:not(#page-accueil) .service-choice input:checked+span::before{background:#507CBE!important;border-color:#507CBE!important}
+.page:not(#page-accueil) .service-choice input:focus-visible+span{outline:2px solid #5B8CFF;outline-offset:3px}
+.page:not(#page-accueil) .field{min-width:0}
+.page:not(#page-accueil) .field input,.page:not(#page-accueil) .field select,.page:not(#page-accueil) .field textarea{width:100%!important;min-width:0!important;color:#243A5C!important;background:#fff!important;border:1px solid #C9D7E9!important}
+.page:not(#page-accueil) input::placeholder,.page:not(#page-accueil) textarea::placeholder{color:#7789A4!important;opacity:1!important}
+.page:not(#page-accueil) .contact-builder{overflow:visible}
+@media(max-width:1000px){.page:not(#page-accueil) .contact-v14-grid{grid-template-columns:1fr!important}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.page:not(#page-accueil) .form-row{grid-template-columns:1fr!important}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .opt-grid{grid-template-columns:1fr!important}.page:not(#page-accueil) .price-card.featured{margin-top:19px}}
+@media(max-width:480px){.page:not(#page-accueil) .contact-services-choice{grid-template-columns:1fr!important}.page:not(#page-accueil) .sub-block .section-title,.page:not(#page-accueil) .offer-choice .section-title{font-size:clamp(1.75rem,8vw,2.25rem)!important}.page:not(#page-accueil) .tarif-row{grid-template-columns:minmax(0,1fr) 75px;font-size:13px}.page:not(#page-accueil) .faq-q{padding:17px}}
+
 </style>
 </head>
 <body>
