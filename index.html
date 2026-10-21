@@ -2470,6 +2470,18 @@ footer a,footer p,footer small{color:#586D8C}
 @media(max-width:700px){.page:not(#page-accueil) .form-row{grid-template-columns:1fr!important}.page:not(#page-accueil) .pricing-grid,.page:not(#page-accueil) .plans,.page:not(#page-accueil) .opt-grid{grid-template-columns:1fr!important}.page:not(#page-accueil) .price-card.featured{margin-top:19px}}
 @media(max-width:480px){.page:not(#page-accueil) .contact-services-choice{grid-template-columns:1fr!important}.page:not(#page-accueil) .sub-block .section-title,.page:not(#page-accueil) .offer-choice .section-title{font-size:clamp(1.75rem,8vw,2.25rem)!important}.page:not(#page-accueil) .tarif-row{grid-template-columns:minmax(0,1fr) 75px;font-size:13px}.page:not(#page-accueil) .faq-q{padding:17px}}
 
+
+/* V9 precise pricing alignment fix */
+#page-sites .pricing-grid.simple-pricing{align-items:stretch!important;padding-top:20px}
+#page-sites .pricing-grid.simple-pricing>.price-card{margin-top:0!important;align-self:stretch!important}
+#page-sites .pricing-grid.simple-pricing>.price-card.featured{margin-top:0!important}
+#page-sites .pricing-grid.simple-pricing>.price-card::before,
+#page-sites .pricing-grid.simple-pricing>.price-card::after{max-width:100%;box-sizing:border-box}
+#page-sites .pricing-grid.simple-pricing>.price-card::before{left:0!important;right:0!important;width:100%!important;border-radius:16px 16px 0 0}
+#page-sites .pricing-grid.simple-pricing>.price-card.featured .flag{top:-16px}
+#page-sites .pricing-grid.simple-pricing>.price-card .price-amount{gap:7px}
+#page-sites .pricing-grid.simple-pricing>.price-card .price-amount .price-from{font-size:13px;line-height:1;align-self:baseline;margin-right:2px}
+
 </style>
 </head>
 <body>
