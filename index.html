@@ -2482,6 +2482,19 @@ footer a,footer p,footer small{color:#586D8C}
 #page-sites .pricing-grid.simple-pricing>.price-card .price-amount{gap:7px}
 #page-sites .pricing-grid.simple-pricing>.price-card .price-amount .price-from{font-size:13px;line-height:1;align-self:baseline;margin-right:2px}
 
+
+/* V9 pricing definitive correction: no pseudo stripes or floating badge */
+#page-sites .pricing-grid.simple-pricing{display:grid;align-items:stretch!important;padding-top:0!important;gap:24px}
+#page-sites .pricing-grid.simple-pricing>.price-card,
+#page-sites .pricing-grid.simple-pricing>.price-card.featured{margin:0!important;transform:none!important;overflow:hidden!important;align-self:stretch!important;border:1px solid #DCE5F1!important;border-radius:18px!important;box-shadow:0 12px 30px rgba(38,63,110,.035)!important;background:#fff!important;background-clip:border-box!important}
+#page-sites .pricing-grid.simple-pricing>.price-card.featured{border-color:#658BCE!important;background:#F3F7FF!important}
+#page-sites .pricing-grid.simple-pricing>.price-card::before,
+#page-sites .pricing-grid.simple-pricing>.price-card::after{content:none!important;display:none!important}
+#page-sites .pricing-grid.simple-pricing>.price-card:hover{transform:none!important;box-shadow:0 15px 38px rgba(38,63,110,.09)!important}
+#page-sites .pricing-grid.simple-pricing>.price-card .flag{position:static!important;left:auto!important;top:auto!important;transform:none!important;order:-1;display:table;margin:0 auto 18px!important;box-shadow:none!important;padding:6px 15px!important}
+#page-sites .pricing-grid.simple-pricing>.price-card.featured{padding-top:24px!important}
+#page-sites .pricing-grid.simple-pricing>.price-card.featured .price-tier{margin-top:0}
+
 </style>
 </head>
 <body>
