@@ -2557,6 +2557,42 @@ footer a,footer p,footer small{color:#586D8C}
 @media(max-width:600px){#page-accueil .v10-stage{height:380px}#page-accueil .v10-object-inner{width:190px;height:190px}#page-accueil .v10-front{font-size:5rem}#page-accueil .v10-stage-top,#page-accueil .v10-stage-bottom{font-size:8px;left:16px;right:16px}#page-realisations .v10-project-visual{min-height:300px}#page-realisations .v10-browser{width:84%}#page-realisations .v10-browser-screen{min-height:205px;padding:30px}#page-realisations .v10-portfolio-intro{display:block}#page-realisations .v10-portfolio-intro p{margin-top:14px}#page-realisations .v10-portfolio{gap:60px}}
 @media(prefers-reduced-motion:reduce){#page-accueil .v10-object-inner,#page-realisations .v10-browser{transition:none!important;transform:none!important}}
 
+
+/* V11 — autonomous motion hero; no pointer interaction required */
+#page-accueil .v7-hero-inner{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+#page-accueil .v7-heading h1{font-size:clamp(3.1rem,5.4vw,6.15rem)}
+#page-accueil .v11-stage{height:clamp(445px,44vw,570px);position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 52% 45%,#E0EAFE 0%,#F6F9FF 56%,#fff 100%);border:1px solid #DFE8F5;border-radius:24px;box-shadow:0 34px 90px rgba(44,80,142,.1)}
+#page-accueil .v11-topline,#page-accueil .v11-bottomline{position:absolute;z-index:8;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#7489A9;font:700 9px 'DM Sans',sans-serif;letter-spacing:.13em}
+#page-accueil .v11-topline{top:24px}#page-accueil .v11-bottomline{bottom:22px}
+#page-accueil .v11-motion{position:absolute;inset:0;display:grid;place-items:center;perspective:1000px}
+#page-accueil .v11-loop{position:absolute;width:85%;aspect-ratio:1;border:1px solid rgba(77,118,195,.19);border-radius:50%;transform:rotate(-25deg) scaleY(.53);animation:v11Orbit 24s linear infinite}
+#page-accueil .v11-loop-b{width:108%;border-style:dashed;border-color:rgba(77,118,195,.13);animation-direction:reverse;animation-duration:34s}
+#page-accueil .v11-glass{position:absolute;width:52%;height:61%;border:1px solid rgba(255,255,255,.9);border-radius:23px;box-shadow:0 27px 60px rgba(34,75,142,.14);display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,2.5vw,28px);will-change:transform}
+#page-accueil .v11-glass>span,#page-accueil .v11-glass small{font:700 9px 'DM Sans',sans-serif;letter-spacing:.14em}
+#page-accueil .v11-glass-back{background:linear-gradient(145deg,#253F70,#4874B9);color:#fff;left:13%;top:13%;transform:rotate(-13deg);animation:v11Back 8s ease-in-out infinite alternate}
+#page-accueil .v11-glass-back strong{font:500 clamp(2.2rem,4.3vw,4.5rem)/1.13 'Plus Jakarta Sans',sans-serif;letter-spacing:-.07em}
+#page-accueil .v11-glass-back i{font-style:normal;font-size:25px;align-self:end;color:#FFBB8C}
+#page-accueil .v11-glass-front{background:linear-gradient(160deg,rgba(255,255,255,.94),rgba(232,240,254,.91));color:#294368;right:12%;top:25%;border-color:#fff;backdrop-filter:blur(15px);transform:rotate(10deg);animation:v11Front 7s ease-in-out infinite alternate}
+#page-accueil .v11-mark{font:500 clamp(4.4rem,8vw,8rem) 'Plus Jakarta Sans',sans-serif;letter-spacing:-.13em;white-space:nowrap;align-self:center}
+#page-accueil .v11-mark b{color:#EA9157;font-weight:500;margin:0 .04em}
+#page-accueil .v11-glass-front small{align-self:end;color:#6480A6}
+#page-accueil .v11-chip{position:absolute;z-index:6;padding:13px 17px;border-radius:9px;font:750 10px 'DM Sans',sans-serif;letter-spacing:.11em;box-shadow:0 12px 30px rgba(37,67,115,.12);white-space:nowrap}
+#page-accueil .v11-chip-blue{top:15%;right:3%;background:#fff;border:1px solid #DAE5F5;color:#3A65A5;animation:v11Chip 5.2s ease-in-out infinite}
+#page-accueil .v11-chip-orange{bottom:17%;left:2%;background:#FFF4EB;border:1px solid #F3D9C1;color:#AE6D3F;animation:v11Chip 6s ease-in-out -2s infinite}
+#page-accueil .v11-spark{position:absolute;color:#7EA0D5;font-size:27px;animation:v11Twinkle 4s ease-in-out infinite alternate}
+#page-accueil .v11-spark-one{left:8%;top:28%}#page-accueil .v11-spark-two{right:9%;bottom:14%;animation-delay:1.8s}
+#page-accueil .v11-running{height:2px;min-width:30px;flex:1;overflow:hidden;position:relative;background:#DCE6F5;border-radius:2px}
+#page-accueil .v11-running:after{content:"";position:absolute;left:-30%;width:30%;height:100%;background:#5B8CFF;animation:v11Progress 3.8s linear infinite}
+@keyframes v11Back{0%{transform:translate3d(-7px,11px,0) rotate(-13deg)}100%{transform:translate3d(15px,-14px,0) rotate(-8deg)}}
+@keyframes v11Front{0%{transform:translate3d(10px,-14px,0) rotate(10deg)}100%{transform:translate3d(-14px,14px,0) rotate(5deg)}}
+@keyframes v11Orbit{from{transform:rotate(0deg) scaleY(.53)}to{transform:rotate(360deg) scaleY(.53)}}
+@keyframes v11Chip{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes v11Twinkle{0%{opacity:.25;transform:scale(.8) rotate(0)}100%{opacity:1;transform:scale(1.2) rotate(80deg)}}
+@keyframes v11Progress{to{left:110%}}
+@media(max-width:900px){#page-accueil .v7-hero-inner{grid-template-columns:1fr}#page-accueil .v11-stage{width:100%;max-width:630px;margin-inline:auto}}
+@media(max-width:600px){#page-accueil .v11-stage{height:350px;border-radius:18px}#page-accueil .v11-glass{height:58%;width:56%;border-radius:15px;padding:15px}#page-accueil .v11-mark{font-size:clamp(3.3rem,14vw,5rem)}#page-accueil .v11-glass-back strong{font-size:clamp(1.9rem,7.5vw,3rem)}#page-accueil .v11-chip{font-size:8px;padding:9px 10px}#page-accueil .v11-topline,#page-accueil .v11-bottomline{font-size:7px;left:13px;right:13px}}
+@media(prefers-reduced-motion:reduce){#page-accueil .v11-stage *,#page-accueil .v11-stage *::before,#page-accueil .v11-stage *::after{animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -2628,15 +2664,17 @@ footer a,footer p,footer small{color:#586D8C}
           <a href="#contact" data-route="contact" class="v7-btn v7-btn-outline">Discuter de votre projet <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="v10-stage" id="v10Stage" aria-label="Sculpture numérique interactive Brothers Studios">
-        <div class="v10-stage-top"><span>INTERACTIVE EXPERIENCE / 001</span><span>MOVE TO EXPLORE ↗</span></div>
-        <div class="v10-aura"></div>
-        <div class="v10-rings" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="v10-object" aria-hidden="true">
-          <div class="v10-object-inner"><span class="v10-face v10-front">B<span class="v10-divider">/</span>S</span><span class="v10-face v10-back">BS</span><span class="v10-face v10-right"></span><span class="v10-face v10-left"></span><span class="v10-face v10-top"></span><span class="v10-face v10-bottom"></span></div>
+      <div class="v11-stage" aria-label="Animation créative Brothers Studios">
+        <div class="v11-topline"><span>THE BROTHERS EXPERIENCE</span><span>DESIGN IN MOTION / 001</span></div>
+        <div class="v11-motion" aria-hidden="true">
+          <div class="v11-loop v11-loop-a"></div><div class="v11-loop v11-loop-b"></div>
+          <div class="v11-glass v11-glass-back"><span>EXPLORE</span><strong>Beyond<br>ordinary.</strong><i>↗</i></div>
+          <div class="v11-glass v11-glass-front"><span>BROTHERS / STUDIOS</span><div class="v11-mark">B<b>/</b>S</div><small>IDEAS INTO IMPACT</small></div>
+          <div class="v11-chip v11-chip-blue">✳ DIGITAL DESIGN</div>
+          <div class="v11-chip v11-chip-orange">● CREATIVE STUDIO</div>
+          <div class="v11-spark v11-spark-one">✦</div><div class="v11-spark v11-spark-two">+</div>
         </div>
-        <div class="v10-coordinate v10-coordinate-a">CREATIVE / 48°</div><div class="v10-coordinate v10-coordinate-b">DIGITAL / STUDIO</div>
-        <div class="v10-stage-bottom"><span>UNE IDENTITÉ QUI NE RESTE PAS IMMOBILE</span><span class="v10-pointer">↗</span></div>
+        <div class="v11-bottomline"><span>IMAGINER — CRÉER — DÉVELOPPER</span><span class="v11-running"></span><span>EN MOUVEMENT</span></div>
       </div>
       <div class="v7-hero-index"><span>INDÉPENDANT · BASÉ DANS L'AISNE</span><span>SCROLL TO EXPLORE ↓</span></div>
     </div>
