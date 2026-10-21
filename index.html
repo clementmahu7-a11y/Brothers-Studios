@@ -2495,6 +2495,68 @@ footer a,footer p,footer small{color:#586D8C}
 #page-sites .pricing-grid.simple-pricing>.price-card.featured{padding-top:24px!important}
 #page-sites .pricing-grid.simple-pricing>.price-card.featured .price-tier{margin-top:0}
 
+
+/* V10 Creative Tech — homepage interactive art direction */
+#page-accueil .v7-hero{background:#F8FAFD}
+#page-accueil .v7-hero-inner{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(20px,4vw,70px)}
+#page-accueil .v7-heading h1{font-weight:500;font-size:clamp(3.2rem,5.7vw,6.3rem);line-height:1.18;letter-spacing:-.07em}
+#page-accueil .v7-heading h1 span{color:#6686C1}
+#page-accueil .v10-stage{--rx:-11deg;--ry:23deg;--px:50%;--py:50%;position:relative;isolation:isolate;height:clamp(420px,42vw,570px);perspective:1050px;overflow:hidden;border:1px solid #DFE7F3;border-radius:26px;background:radial-gradient(ellipse at var(--px) var(--py),rgba(91,140,255,.19),transparent 55%),linear-gradient(148deg,#FDFEFF,#EAF0FC);box-shadow:0 35px 80px rgba(43,72,125,.08)}
+#page-accueil .v10-stage-top,#page-accueil .v10-stage-bottom{position:absolute;z-index:5;left:25px;right:25px;display:flex;justify-content:space-between;gap:16px;font:700 9px 'DM Sans',sans-serif;letter-spacing:.13em;color:#667FA8}
+#page-accueil .v10-stage-top{top:24px}#page-accueil .v10-stage-bottom{bottom:22px}
+#page-accueil .v10-aura{position:absolute;inset:16%;border-radius:50%;background:radial-gradient(circle,rgba(91,140,255,.3),rgba(91,140,255,.08) 40%,transparent 75%);filter:blur(24px)}
+#page-accueil .v10-rings{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+#page-accueil .v10-rings span{position:absolute;width:70%;aspect-ratio:1;border:1px solid rgba(82,118,179,.16);border-radius:50%;transform:rotate(-25deg) scaleY(.58)}
+#page-accueil .v10-rings span:nth-child(2){width:88%;transform:rotate(33deg) scaleY(.58)}
+#page-accueil .v10-rings span:nth-child(3){width:104%;transform:rotate(85deg) scaleY(.55)}
+#page-accueil .v10-object{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d}
+#page-accueil .v10-object-inner{position:relative;width:clamp(190px,23vw,310px);height:clamp(190px,23vw,310px);transform-style:preserve-3d;transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .17s ease-out;filter:drop-shadow(0 24px 35px rgba(44,69,120,.19))}
+#page-accueil .v10-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;border:1px solid rgba(255,255,255,.5);border-radius:24px}
+#page-accueil .v10-front{transform:translateZ(48px);background:linear-gradient(130deg,#3E6DB8,#83A8E9);color:white;font:600 clamp(5rem,9vw,8.5rem) 'Plus Jakarta Sans',sans-serif;letter-spacing:-.1em;box-shadow:inset 0 2px 40px rgba(255,255,255,.24)}
+#page-accueil .v10-divider{color:#FFAE77;letter-spacing:-.05em;margin:0 .08em}
+#page-accueil .v10-back{transform:rotateY(180deg) translateZ(48px);background:#375C9B;color:#fff;font:700 5rem 'DM Sans',sans-serif}
+#page-accueil .v10-right,#page-accueil .v10-left{width:96px;left:calc(50% - 48px);background:#28508F;border-radius:12px}
+#page-accueil .v10-right{transform:rotateY(90deg) translateZ(clamp(95px,11.5vw,155px))}
+#page-accueil .v10-left{transform:rotateY(-90deg) translateZ(clamp(95px,11.5vw,155px))}
+#page-accueil .v10-top,#page-accueil .v10-bottom{height:96px;top:calc(50% - 48px);background:#7EA3E1;border-radius:12px}
+#page-accueil .v10-top{transform:rotateX(90deg) translateZ(clamp(95px,11.5vw,155px))}
+#page-accueil .v10-bottom{transform:rotateX(-90deg) translateZ(clamp(95px,11.5vw,155px));background:#28508F}
+#page-accueil .v10-coordinate{position:absolute;z-index:2;font:700 9px 'DM Sans',sans-serif;letter-spacing:.1em;color:#88A0C4}
+#page-accueil .v10-coordinate-a{top:24%;left:6%}#page-accueil .v10-coordinate-b{bottom:23%;right:5%}
+#page-accueil .v10-pointer{font-size:20px;color:#5D83C1}
+#page-realisations .v10-portfolio-intro{display:flex;justify-content:space-between;align-items:start;gap:25px;border-bottom:1px solid #DCE5F1;padding-bottom:30px;margin-bottom:55px}
+#page-realisations .v10-portfolio-intro span{font:700 10px 'DM Sans',sans-serif;letter-spacing:.16em;color:#6082B4}
+#page-realisations .v10-portfolio-intro p{max-width:350px;color:#6B7C94}
+#page-realisations .v10-portfolio{display:grid;gap:100px}
+#page-realisations .v10-project{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:clamp(28px,5vw,85px);align-items:center}
+#page-realisations .v10-project-visual{min-height:420px;position:relative;border-radius:20px;overflow:hidden;display:grid;place-items:center;background:#E8EFFB}
+#page-realisations .v10-project-real .v10-project-visual{background:linear-gradient(145deg,#C8D4F3,#EEF2FB)}
+#page-realisations .v10-browser{width:78%;border:1px solid rgba(255,255,255,.65);border-radius:14px;overflow:hidden;transform:rotate(-5deg) translateY(22px);box-shadow:0 30px 70px rgba(31,55,108,.24);transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#page-realisations .v10-project:hover .v10-browser{transform:rotate(-1deg) translateY(4px) scale(1.035)}
+#page-realisations .v10-browser-top{padding:13px 17px;background:#fff;color:#7083A4;display:flex;justify-content:space-between;font:700 9px 'DM Sans',sans-serif}
+#page-realisations .v10-browser-screen{background:#233D6A;padding:48px 35px;min-height:265px;color:#fff;position:relative;overflow:hidden}
+#page-realisations .v10-browser-screen>span{font:700 10px 'DM Sans',sans-serif;letter-spacing:.18em;color:#B9CAEA}
+#page-realisations .v10-browser-screen strong{display:block;font:500 clamp(2rem,3.7vw,3.8rem)/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-.05em;margin-top:20px}
+#page-realisations .v10-browser-stripes{position:absolute;width:180px;height:180px;border:30px solid #F6CB53;border-radius:50%;right:-75px;bottom:-85px}
+#page-realisations .v10-project-label{position:absolute;left:22px;bottom:18px;font:700 9px 'DM Sans',sans-serif;letter-spacing:.13em;color:#48648E;background:rgba(255,255,255,.9);padding:8px 12px;border-radius:6px}
+#page-realisations .v10-project-info>span{font:700 10px 'DM Sans',sans-serif;letter-spacing:.15em;color:#6D8BBA}
+#page-realisations .v10-project-info h2{font:500 clamp(2rem,3.2vw,3.5rem)/1.2 'Plus Jakarta Sans',sans-serif;letter-spacing:-.055em;margin:23px 0;color:#1C3152}
+#page-realisations .v10-project-info p{color:#6B7990;font-size:16px;line-height:1.8;margin-bottom:30px}
+#page-realisations .v10-project-info a{display:inline-flex;border-bottom:1px solid #5279B5;padding-bottom:11px;font:700 13px 'DM Sans',sans-serif;color:#355D9B;transition:transform .2s}
+#page-realisations .v10-project-info a:hover{transform:translateX(6px)}
+#page-realisations .v10-concept-art,#page-realisations .v10-architect-art{width:100%;height:100%;padding:clamp(40px,6vw,75px);display:flex;flex-direction:column;align-items:start;justify-content:center;position:relative}
+#page-realisations .v10-concept-art{background:#F1EBE1;color:#60513F}
+#page-realisations .v10-concept-art span,#page-realisations .v10-architect-art span{font:700 10px 'DM Sans',sans-serif;letter-spacing:.16em}
+#page-realisations .v10-concept-art strong{font:italic 500 clamp(3rem,5.5vw,6rem)/1.15 Georgia,serif;letter-spacing:-.05em;margin:25px 0}
+#page-realisations .v10-concept-art i{font:700 10px 'DM Sans',sans-serif;letter-spacing:.15em}
+#page-realisations .v10-architect-art{background:#DCE9F4;color:#284663}
+#page-realisations .v10-architect-art strong{font:500 clamp(2.8rem,4.8vw,5rem)/1.16 'Plus Jakarta Sans',sans-serif;letter-spacing:-.06em;margin-top:34px}
+#page-realisations .v10-arch-lines{position:absolute;right:4%;bottom:5%;width:45%;height:75%;border:1px solid rgba(48,92,140,.24);transform:skewY(-16deg);pointer-events:none}
+#page-realisations .v10-arch-lines:after{content:"";position:absolute;inset:22%;border:1px solid rgba(48,92,140,.24)}
+@media(max-width:900px){#page-accueil .v7-hero-inner{grid-template-columns:1fr}#page-accueil .v10-stage{max-width:650px;width:100%;margin:auto}#page-realisations .v10-project{grid-template-columns:1fr;gap:30px}#page-realisations .v10-portfolio{gap:72px}}
+@media(max-width:600px){#page-accueil .v10-stage{height:380px}#page-accueil .v10-object-inner{width:190px;height:190px}#page-accueil .v10-front{font-size:5rem}#page-accueil .v10-stage-top,#page-accueil .v10-stage-bottom{font-size:8px;left:16px;right:16px}#page-realisations .v10-project-visual{min-height:300px}#page-realisations .v10-browser{width:84%}#page-realisations .v10-browser-screen{min-height:205px;padding:30px}#page-realisations .v10-portfolio-intro{display:block}#page-realisations .v10-portfolio-intro p{margin-top:14px}#page-realisations .v10-portfolio{gap:60px}}
+@media(prefers-reduced-motion:reduce){#page-accueil .v10-object-inner,#page-realisations .v10-browser{transition:none!important;transform:none!important}}
+
 </style>
 </head>
 <body>
@@ -2559,25 +2621,22 @@ footer a,footer p,footer small{color:#586D8C}
     <div class="wrap v7-hero-inner">
       <div class="v7-heading">
         <div class="v7-overline"><span class="v7-signal"></span> BROTHERS STUDIOS <span class="v7-slash">/</span> STUDIO DIGITAL CRÉATIF</div>
-        <h1 id="home-title">Des idées qui<br><span>prennent vie.</span></h1>
-        <p>Nous imaginons des sites web, des identités et des expériences numériques qui ne ressemblent qu'à vous.</p>
+        <h1 id="home-title">L’imagination<br><span>en mouvement.</span></h1>
+        <p>Des expériences digitales pensées pour faire la différence. Explorez notre univers : il prend vie sous votre curseur.</p>
         <div class="v7-actions">
           <a href="#realisations" data-route="realisations" class="v7-btn v7-btn-main">Découvrir nos projets <span aria-hidden="true">↗</span></a>
           <a href="#contact" data-route="contact" class="v7-btn v7-btn-outline">Discuter de votre projet <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="v7-scene" id="v7Scene" aria-label="Présentation interactive de nos expertises">
-        <div class="v7-glow" aria-hidden="true"></div>
-        <div class="v7-gridlines" aria-hidden="true"></div>
-        <div class="v7-scene-label">DESIGN × DEVELOPMENT × STRATEGY <span>2026 / FR</span></div>
-        <div class="v7-panel v7-panel-main" data-depth="0.7">
-          <div class="v7-panel-chrome"><span class="v7-chrome-dots"><i></i><i></i><i></i></span><span>brothers / studio</span><span>↗</span></div>
-          <div class="v7-panel-content"><div class="v7-panel-eyebrow">L'EXPÉRIENCE EST NOTRE SIGNATURE</div><div class="v7-panel-word">Make it<br><em>matter.</em></div><div class="v7-panel-footer"><span>01 — STUDIO</span><span>EXPLORE THE POSSIBLE →</span></div></div>
+      <div class="v10-stage" id="v10Stage" aria-label="Sculpture numérique interactive Brothers Studios">
+        <div class="v10-stage-top"><span>INTERACTIVE EXPERIENCE / 001</span><span>MOVE TO EXPLORE ↗</span></div>
+        <div class="v10-aura"></div>
+        <div class="v10-rings" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="v10-object" aria-hidden="true">
+          <div class="v10-object-inner"><span class="v10-face v10-front">B<span class="v10-divider">/</span>S</span><span class="v10-face v10-back">BS</span><span class="v10-face v10-right"></span><span class="v10-face v10-left"></span><span class="v10-face v10-top"></span><span class="v10-face v10-bottom"></span></div>
         </div>
-        <div class="v7-panel v7-panel-social" data-depth="1.25"><span class="v7-micro">02 / CONTENT</span><div class="v7-social-art"><span>●</span><span>✳</span><span>◒</span></div><strong>Créer l'attention.</strong><small>PHOTO · SOCIAL · VIDÉO</small></div>
-        <div class="v7-panel v7-panel-code" data-depth="1.65"><span class="v7-micro">03 / BUILD</span><div class="v7-code-lines"><i></i><i></i><i></i><i></i></div><strong>Digital by design<span>↗</span></strong></div>
-        <div class="v7-cross v7-cross-1" aria-hidden="true">+</div><div class="v7-cross v7-cross-2" aria-hidden="true">+</div>
-        <div class="v7-scene-foot">BOUGEZ VOTRE SOURIS POUR EXPLORER <span>↗</span></div>
+        <div class="v10-coordinate v10-coordinate-a">CREATIVE / 48°</div><div class="v10-coordinate v10-coordinate-b">DIGITAL / STUDIO</div>
+        <div class="v10-stage-bottom"><span>UNE IDENTITÉ QUI NE RESTE PAS IMMOBILE</span><span class="v10-pointer">↗</span></div>
       </div>
       <div class="v7-hero-index"><span>INDÉPENDANT · BASÉ DANS L'AISNE</span><span>SCROLL TO EXPLORE ↓</span></div>
     </div>
@@ -3071,68 +3130,21 @@ footer a,footer p,footer small{color:#586D8C}
   <div class="page-body">
     <div class="wrap">
 
-      <div class="works-grid">
-        <article class="work reveal">
-          <div class="work-cover">
-            <div class="cover-bg cover-usap"></div>
-            <span class="work-badge real">● En ligne</span>
-            <div class="glyph">US ANIZY<br>PINON<small>Club de football</small></div>
-          </div>
-          <div class="work-body">
-            <span class="work-cat">Association sportive</span>
-            <h3>US Anizy Pinon</h3>
-            <p>Site complet pour un club de football de l'Aisne : présentation du club, équipes et éducateurs, partenaires, actualités et formulaire de licence. Plusieurs rubriques claires dans un site très rapide.</p>
-            <div class="work-chips">
-              <span class="chip">Site complet</span><span class="chip">SEO local</span><span class="chip">Google Maps</span>
-            </div>
-            <a class="btn btn-ghost work-btn" href="https://usanizypinon.fr" target="_blank" rel="noopener">
-              Visiter le site
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
+      <div class="v10-portfolio-intro"><span>SELECTED WORK / 2026</span><p>Une sélection de projets et de concepts pour explorer nos savoir-faire.</p></div>
+      <div class="v10-portfolio">
+        <article class="v10-project v10-project-real">
+          <div class="v10-project-visual"><div class="v10-browser"><div class="v10-browser-top"><span>● ● ●</span><span>usanizypinon.fr</span></div><div class="v10-browser-screen"><span>US ANIZY-PINON</span><strong>Un club.<br>Une identité.</strong><div class="v10-browser-stripes"></div></div></div><span class="v10-project-label">PROJET RÉEL / SITE EN LIGNE</span></div>
+          <div class="v10-project-info"><span>01 / ASSOCIATION SPORTIVE</span><h2>US Anizy-Pinon</h2><p>Site internet pour présenter le club, ses équipes et ses actualités.</p><a href="https://usanizypinon.fr" target="_blank" rel="noopener noreferrer">Explorer ce projet ↗</a></div>
         </article>
-
-        <article class="work reveal d1">
-          <div class="work-cover">
-            <div class="cover-bg cover-resto"></div>
-            <span class="work-badge">Concept de démonstration</span>
-            <div class="glyph">RESTAURANT<small>Concept vitrine</small></div>
-          </div>
-          <div class="work-body">
-            <span class="work-cat">Restauration · Concept</span>
-            <h3>Restaurant local</h3>
-            <p>Concept de démonstration pour un restaurant : menu mis en valeur, galerie de plats, réservation par téléphone en un clic, avis clients et carte interactive. Exemple de ce que nous pouvons créer.</p>
-            <div class="work-chips">
-              <span class="chip">Menu en ligne</span><span class="chip">Avis clients</span><span class="chip">Réservation</span>
-            </div>
-            <a class="btn btn-ghost work-btn" href="./anizette_pro.html" target="_blank" rel="noopener">
-              Voir le site restaurant
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
+        <article class="v10-project v10-project-concept">
+          <div class="v10-project-visual"><div class="v10-concept-art"><span>ÉTUDE CRÉATIVE</span><strong>L'art de<br>recevoir.</strong><i>CONCEPT RESTAURANT</i></div><span class="v10-project-label">CONCEPT / PAS UN CLIENT RÉEL</span></div>
+          <div class="v10-project-info"><span>02 / CONCEPT DÉMONSTRATION</span><h2>Restaurant local</h2><p>Maquette exploratoire pour présenter un établissement et sa carte.</p><a href="./anizette_pro.html" target="_blank" rel="noopener noreferrer">Voir le concept ↗</a></div>
         </article>
-
-        <article class="work reveal d2">
-          <div class="work-cover">
-            <div class="cover-bg cover-artisan"></div>
-            <span class="work-badge">Concept de démonstration</span>
-            <div class="glyph">ARTISAN<small>Concept vitrine</small></div>
-          </div>
-          <div class="work-body">
-            <span class="work-cat">Artisanat · Concept</span>
-            <h3>Artisan du bâtiment</h3>
-            <p>Concept de démonstration pour un artisan : galerie de réalisations avant/après, zones d'intervention, demande de devis simplifiée et mise en avant du savoir-faire. Exemple de ce que nous pouvons créer.</p>
-            <div class="work-chips">
-              <span class="chip">Galerie travaux</span><span class="chip">Devis en ligne</span><span class="chip">Zone d'intervention</span>
-            </div>
-            <a class="btn btn-ghost work-btn" href="./cpedc.html" target="_blank" rel="noopener">
-              Voir le site artisan
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </a>
-          </div>
+        <article class="v10-project v10-project-concept v10-project-last">
+          <div class="v10-project-visual"><div class="v10-architect-art"><span>EXPLORATION / ARTISAN</span><strong>Construire<br>autrement.</strong><div class="v10-arch-lines"></div></div><span class="v10-project-label">CONCEPT / PAS UN CLIENT RÉEL</span></div>
+          <div class="v10-project-info"><span>03 / CONCEPT DÉMONSTRATION</span><h2>Artisan du bâtiment</h2><p>Concept de site pour mettre en valeur les réalisations d'un artisan.</p><a href="./cpedc.html" target="_blank" rel="noopener noreferrer">Voir le concept ↗</a></div>
         </article>
       </div>
-
       <p class="works-note reveal">Votre projet pourrait être le prochain. <a href="#contact" data-route="contact" class="grad-text" style="font-weight:700">Parlons-en →</a></p>
 
     </div>
@@ -3848,6 +3860,20 @@ footer a,footer p,footer small{color:#586D8C}
  }
  scene.addEventListener('pointermove',function(e){px=e.clientX;py=e.clientY;if(!frame)frame=requestAnimationFrame(draw);},{passive:true});
  scene.addEventListener('pointerleave',function(){if(frame)cancelAnimationFrame(frame);frame=0;panels.forEach(el=>{el.style.setProperty('--mx',0);el.style.setProperty('--my',0)});scene.style.setProperty('--px','50%');scene.style.setProperty('--py','48%');});
+})();
+</script>
+<script>
+/* Creative Tech V10: frame-coalesced interactive sculpture and reveal */
+(function(){
+  const stage=document.getElementById('v10Stage'),obj=stage&&stage.querySelector('.v10-object-inner');
+  const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(stage&&obj&&!reduced&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    let raf=0,x=0,y=0;
+    function draw(){raf=0;const r=stage.getBoundingClientRect(),nx=Math.max(0,Math.min(1,(x-r.left)/r.width)),ny=Math.max(0,Math.min(1,(y-r.top)/r.height));
+      stage.style.setProperty('--px',(nx*100)+'%');stage.style.setProperty('--py',(ny*100)+'%');stage.style.setProperty('--rx',(-11+(ny-.5)*34)+'deg');stage.style.setProperty('--ry',(23+(nx-.5)*46)+'deg');}
+    stage.addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;if(!raf)raf=requestAnimationFrame(draw)},{passive:true});
+    stage.addEventListener('pointerleave',()=>{if(raf)cancelAnimationFrame(raf);raf=0;stage.style.setProperty('--rx','-11deg');stage.style.setProperty('--ry','23deg');stage.style.setProperty('--px','50%');stage.style.setProperty('--py','50%')});
+  }
 })();
 </script>
 </body>
